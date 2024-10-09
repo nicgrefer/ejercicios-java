@@ -1,0 +1,16 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class EcuacionCuadratica {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		System.out.print("cuanto equibale el valor de la A: ");
+		double A= teclado.nextDouble();
+		
+	}
+
+}

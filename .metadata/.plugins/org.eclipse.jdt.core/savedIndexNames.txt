@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\jovcubni\Documents\NetBeansProjects\mavenproject1\src\main\java\ejercicios\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1541587640.index
+3413270776.index

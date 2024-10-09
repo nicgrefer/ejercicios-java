@@ -1,0 +1,19 @@
+package T3ejemplos;
+
+public class bucle1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int n=0;
+		while(n<100) {
+			n++;
+			System.out.print(n);
+			
+		}
+		
+		
+	}
+
+}
