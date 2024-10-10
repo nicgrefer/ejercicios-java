@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ejemploBucles2 {
 
 	public static void main(String[] args) {
-		ejer4();
+		ejer7();
 	}
 	
 	
