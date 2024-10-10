@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ejemploBucles2 {
 
 	public static void main(String[] args) {
-		ejer7();
+		ejer6();
 	}
 	
 	
@@ -99,38 +99,35 @@ public class ejemploBucles2 {
 	
 	public static void ejer5() {//genere 25 aleatorios entre 1-100 y diga cuantos pares/impares salieron
 	
-		        int n = 0;
+		        int i = 0;
 		        int par = 0;
 		        int impar = 0;
 		        Random aleatorio = new Random();
 
-		        while (n < 25) { // Cambié "<= a"  para generar exactamente 25 números
-		            int numero = aleatorio.nextInt(100) + 1; // Genera un número entre 1 y 100
-		            n++;
-		            System.out.println(numero);
-		            if (numero % 2 == 0) {
+		        while (i < 25) { // Cambié "<= a"  para generar exactamente 25 números
+		            int numeroAleatorio = aleatorio.nextInt(100) + 1; // Genera un número entre 1 y 100
+		            i++;
+		            if (numeroAleatorio % 2 == 0) {
 		                par++;
 		            } else {
 		                impar++;
 		            }
 		        }
 
-		        System.out.println("Son " + par + " pares");
-		        System.out.println("Son " + impar + " impares");
+		        System.out.println("Han salido " + par + " pares");
+		        System.out.println("Y " + impar + " impares");
 	}
 
 	
 	public static void ejer6() {//muestre y cuente multipols de 2/3 entre 1-100
-		int n=0;
 		int m2=0;
 		int m3=0;
-		while (n<100) {
-			n++;
-			if (n%2==0) {
-				System.out.println(n + " es multiplo de 2");
+		for (int i=1; i<100; i++) {
+			if (i%2==0) {
+				System.out.println(i + " es multiplo de 2");
 				m2++;
-			}else if (n%3==0) {
-				System.out.println(n + " es multiplo de 3");
+			} if (i%3==0) {
+				System.out.println(i + " es multiplo de 3");
 				m3++;
 			}
 			
