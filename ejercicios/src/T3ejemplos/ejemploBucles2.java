@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ejemploBucles2 {
 
 	public static void main(String[] args) {
-		ejer6();
+		ejer11();
 	}
 	
 	
@@ -176,7 +176,80 @@ public class ejemploBucles2 {
         }
         
     }
+	
+	
+	public static void ejer8() {//Siula el lanzamiento de una moneda al aire y mostrar si a salido cara o cruz
+		Random aleatorio=new Random();
+		int moneda=aleatorio.nextInt(0,2);//crea aleatorio
+		///
+		//System.out.println(moneda);
+		//
+		if (moneda>=0 && moneda<1) {//comprobacion
+			System.out.print("Cara");
+		}else {
+			System.out.print("Cruz");
+		}
+		
+	}
+	
+	public static void ejer9() {//Lanza la moneda 20 veces
+		
+		for(int i=1; i<=20; i++) {//bucle
+			Random aleatorio=new Random();
+			int moneda=aleatorio.nextInt(0,2);//crea aleatorio
+			///
+			//System.out.println(moneda);
+			//
+			if (moneda>=0 && moneda<1) {//comprobacion
+				System.out.println("Cara");
+			}else {
+				System.out.println("Cruz");
+			}
+		}
+		
+		
+	}
+	
+	public static void ejer10() {//Lanza el dado 100 vaces y contar cuantos 6 an salido
+		
+		int n6=0;
+		for(int i=1; i<=100; i++) {//Bucle
+			Random aleatorio=new Random();
+			int dado=aleatorio.nextInt(1,7);//genera numero del 1-6
+			//comprobacion
+			//System.out.println(dado);
+			//
+			switch(dado) {
+			case 6-> n6++;
+			
+			}
+			
+		}
+		 System.out.print("A salido " + n6 + " seis");
+		 
+	}
+	
+	public static void ejer11() {//Genera aleatoriamente una columna de la quiniela de fútbol
+		System.out.println("Columna de la quiniela: ");
+		for(int i=1; i<=12; i++) {
+			Random aleatorio=new Random();
+			int quiniela=aleatorio.nextInt(0,2);
 
+			if (quiniela>=0 && quiniela<1) {
+				System.out.println(i+"  Equipo 1 X || Equipo 2 0 ");
+			}else {
+				System.out.println(i+"  Equipo 1 0 || Equipo 2 X ");
+			}
+			
+			
+		}
+		
+	}
+	
+	public static void ejerX() {
+		
+		
+	}
 	
 	
 
