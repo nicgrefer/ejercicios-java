@@ -1,0 +1,61 @@
+package T3ejemplos;
+
+import java.util.Scanner;
+
+public class MCD {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int d2=0;
+		int D2=0;
+		int d3=0;
+		int D3=0;
+		int d5=0;
+		int D5=0;
+		int d7=0;
+		int D7=0;
+		
+		Scanner teclado=new Scanner(System.in);
+		
+		System.out.println("Dame un número");
+		int n1=teclado.nextInt();
+		System.out.println("Dame otro número");
+		int n2=teclado.nextInt();
+		
+		// Haciendo MCD
+		System.out.println("Haciendo MCD");
+		//
+		
+		while (n1<0) {
+			if (n1%2==0) {
+				d2++;
+			}if (n1%3==0) {
+				d3++;
+			}if (n1%2==0) {
+				d5++;
+			}if (n1%2==0) {
+				d7++;
+			}
+			
+			
+			while (n2<0) {
+				if (n1%2==0) {
+					D2++;
+				}if (n1%3==0) {
+					D3++;
+				}if (n1%2==0) {
+					D5++;
+				}if (n1%2==0) {
+					D7++;
+				}
+			
+		}
+		
+		
+		
+		
+	}
+
+}
+

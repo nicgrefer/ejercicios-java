@@ -1,0 +1,27 @@
+package T3ejemplos;
+
+import java.util.Scanner;
+
+public class MCD {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		
+		System.out.println("Dame un número");
+		int n1=teclado.nextInt();
+		System.out.println("Dame otro número");
+		int n2=teclado.nextInt();
+		
+		// Haciendo MCD
+		System.out.println("Haciendo MCD");
+		//
+		
+		
+		
+		
+	}
+
+}
+
