@@ -247,11 +247,6 @@ public class ejemploBucles2 {
 	}
 	
 	public static void ejerX() {
-		//Programa que simule una carrera de 2 caballos, con la misma probabilidad de ganar.
-		//cada vez que avanza, lo hacen en una unidad
-		//ambos parten del valor 0 hasta la meta que se encuentra en un balor aleatorio del 100 al 200
-		//El caballo que llege primero a la meta gana
-		
 		
 		
 	}

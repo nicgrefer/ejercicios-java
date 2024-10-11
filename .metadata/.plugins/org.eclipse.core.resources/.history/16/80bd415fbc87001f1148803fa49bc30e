@@ -1,0 +1,28 @@
+package T3ejemplos;
+
+public class CarreraCaballos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Programa que simule una carrera de 2 caballos, con la misma probabilidad de ganar.
+		//cada vez que avanza, lo hacen en una unidad
+		//ambos parten del valor 0 hasta la meta que se encuentra en un balor aleatorio del 100 al 200
+		//El caballo que llege primero a la meta gana
+				
+		System.out.println("Empieza la carrera de caballos");
+		System.out.println("Ganara el caballo 1 o el 2???");
+		
+		///
+		int tamañoPista=(int)((100-200)* Math.random()+100);
+		System.out.print("La distancia a recorrer es " + tamañoPista);
+		
+		//
+		
+		int caballo1=(int)((0-10)* Math.random()+0);
+		int caballo2=(int)((0-10)* Math.random()+0);
+		
+		
+		
+	}
+
+}
