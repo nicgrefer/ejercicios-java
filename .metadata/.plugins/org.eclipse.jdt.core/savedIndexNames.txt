@@ -1,3 +1,7 @@
 INDEX VERSION 1.134+C:\Users\nicol\OneDrive\Escritorio\java_github\ejercicios-java\.metadata\.plugins\org.eclipse.jdt.core
+<<<<<<< Updated upstream
+=======
+956031691.index
+>>>>>>> Stashed changes
 1865797976.index
 1541587640.index
