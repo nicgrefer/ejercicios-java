@@ -8,8 +8,8 @@ public class CarreraCaballos {
         // Ambos parten del valor 0 hasta la meta que se encuentra en un valor aleatorio del 100 al 200.
         // El caballo que llegue primero a la meta gana.
 
-        int aux1 = 0; // distancia recorrida por el caballo 1
-        int aux2 = 0; // distancia recorrida por el caballo 2
+        int dis1 = 0; // distancia recorrida por el caballo 1
+        int dis2 = 0; // distancia recorrida por el caballo 2
         int nCarrera=1;
 
         System.out.println("Empieza la carrera de caballos");
@@ -26,7 +26,7 @@ public class CarreraCaballos {
         System.out.println("La distancia a recorrer es " + tamañoPista);
 
         // Simulación de la carrera
-        while (aux1 < tamañoPista && aux2 < tamañoPista) {
+        while (dis1 < tamañoPista && dis2 < tamañoPista) {
             int avanceCaballo1 = (int)(Math.random() * 11); // número aleatorio del 0 al 10
             int avanceCaballo2 = (int)(Math.random() * 11); // número aleatorio del 0 al 10
 
@@ -35,13 +35,13 @@ public class CarreraCaballos {
 
             // Representación gráfica del avance
             System.out.print(nCarrera + ": ");
-            for (int i = 0; i < aux1; i++) {
+            for (int i = 0; i < dis1; i++) {
                 System.out.print("1");
             }
             System.out.println(" ");
             
             System.out.print(nCarrera + ": ");
-            for (int j = 0; j < aux2; j++) {
+            for (int j = 0; j < dis2; j++) {
                 System.out.print("2");
             }
             System.out.println(" ");
