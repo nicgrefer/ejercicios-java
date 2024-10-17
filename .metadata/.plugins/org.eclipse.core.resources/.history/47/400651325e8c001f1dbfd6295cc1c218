@@ -9,7 +9,7 @@ public class BucleAnidado {
 			for (int i=0; i<11; i++) {
 				System.out.print(i + " ");
 			}
-			System.out.println(" ");//Salto de línea
+			System.out.println(" ");
 		}
 	}
 
