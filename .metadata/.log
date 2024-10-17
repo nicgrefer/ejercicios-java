@@ -1918,6 +1918,7 @@ not correct please set the HOME environment variable and restart Eclipse. Otherw
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 >>>>>>> Stashed changes
+<<<<<<< HEAD
 !SESSION 2024-10-17 09:22:18.056 -----------------------------------------------
 eclipse.buildId=4.33.0.20240905-0613
 java.version=21.0.3
@@ -2253,3 +2254,5 @@ java.nio.file.NoSuchFileException: C:\Users\nicol\.p2\pool\plugins\org.eclipse.j
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+=======
+>>>>>>> origin/main
