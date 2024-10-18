@@ -1,0 +1,21 @@
+package T3ejemplos;
+
+public class Variaciones {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int aux=111;
+int aux1=2221;
+int aux2=3331;
+int aux4=4441;
+		for (int i=1;i<=4;i++) {
+			for(int j=1;j<=1;j++) {
+				System.out.print(aux);
+				aux++;
+			}
+			System.out.println();
+			
+		}
+	}
+
+}
