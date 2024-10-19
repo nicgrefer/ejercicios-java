@@ -1,5 +1,7 @@
 package T3ejemplos;
 
+import java.util.Scanner;
+
 public class Concatenación_de_cadenas {
 
 	public static void main(String[] args) {
@@ -8,6 +10,20 @@ public class Concatenación_de_cadenas {
 		//y las concatene. A la pregunta, ¿cuantas cadenas tiene que meter? Las que quiera, hasta que no meta
 		//nada. Momento en el que se mostrarán todas las cadenas introducidas concatenadas.
 		
+		 Scanner teclado = new Scanner(System.in);
+	        String cadena = "";
+	        
+	        while (true) {
+	            System.out.print("Introduzca cadena: ");
+	            String input = teclado.nextLine();
+	            if (input.equals("")) {
+	                break;
+	            }
+	            cadena += input + " ";
+	        }
+	        
+	        System.out.println("La cadena es: " + cadena);
 	}
 
 }
+
