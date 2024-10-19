@@ -11,18 +11,18 @@ public class Concatenación_de_cadenas {
 		//nada. Momento en el que se mostrarán todas las cadenas introducidas concatenadas.
 		
 		 Scanner teclado = new Scanner(System.in);
-	     String cadena = "";//Donde se guardará el mensaje por completo
+	        String cadena = "";
 	        
 	        while (true) {
 	            System.out.print("Introduzca cadena: ");
 	            String input = teclado.nextLine();
-	            if (input.equals("")) {//función de comprobasr si quiere salir del bucle
+	            if (input.equals("")) {
 	                break;
 	            }
-	            cadena += input + " ";//acumula lo dicho con la nueva palabra
+	            cadena += input + " ";
 	        }
 	        
-	        System.out.println("La cadena es: " + cadena);//printea "la solución"
+	        System.out.println("La cadena es: " + cadena);
 	}
 
 }

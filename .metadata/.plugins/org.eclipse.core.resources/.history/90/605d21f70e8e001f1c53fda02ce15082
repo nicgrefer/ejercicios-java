@@ -15,14 +15,14 @@ public class CifradoCésar {
 		 Scanner teclado = new Scanner(System.in);
 	        String mensajeCodificado = "";//aux para guardar el mensaje codificado
 
-	        System.out.print("Escriba el mensaje: ");
+	        System.out.println("Escriba el mensaje: ");
 	        String mensaje = teclado.nextLine();
 
-	        System.out.print("Codificación (introduce número): ");
+	        System.out.println("Codificación (introduce número): ");
 	        int codificador = teclado.nextInt();
 
 	        // Aplicar el cifrado
-	        for (int i = 0; i < mensaje.length(); i++) {//Calcula la longitud del mensaje y creamos bucle  para transcribir caracter a caaracter
+	        for (int i = 0; i < mensaje.length(); i++) {
 	            char n = mensaje.charAt(i);//ba cojiendo caracter por caracter
 	            n = (char) (n + codificador);//introduce el codificador
 	            if (n > 126) {//Si al codificarlo sale de la lista
