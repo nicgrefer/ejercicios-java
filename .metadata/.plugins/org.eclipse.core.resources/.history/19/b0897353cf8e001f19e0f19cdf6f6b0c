@@ -14,17 +14,19 @@ public class Ejrer03Triángulo {
 		//J A
 		//J A V A
 
-		Scanner teclado = new Scanner(System.in);
-
-        System.out.print("Introduce la palabra: ");
-        String palabra = teclado.nextLine();//Guarda el valor
-
-        // Construir y mostrar el triángulo
-        for (int i = 0; i < palabra.length(); i++) {//bucle hasta quedarse sin letras
-            for (int j = 0; j <= i; j++) {
-                System.out.print(palabra.charAt(j) + " ");//printea lo que se encuentre en dicho caracter
-            }
-            System.out.println();
-        }
+		Scanner teclado=new Scanner(System.in);
+		char letra="";
+		
+		System.out.print("Introduce la palabra: ");
+		String palabra=teclado.next();
+		
+		for (int i = 0; i < palabra.length(); i++) {
+			letra+=palabra.length(i);
+			for(int j=0; j<i; j++) {
+				System.out.print(letra);
+			}
+		}
+		System.out.println();
 	}
+
 }

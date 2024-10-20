@@ -11,13 +11,13 @@ public class Concatenación_de_cadenas {
 		//nada. Momento en el que se mostrarán todas las cadenas introducidas concatenadas.
 		
 		Scanner teclado=new Scanner(System.in);
-		String cadena=".";
+		String cadena=" ";
 		String aux=" ";
 		
-		while(cadena!=" ") {
-			System.out.print("Escrebe cadena: ");
+		while(cadena!=' ') {
+			System.out.print("Escrebe cadena");
 			cadena=teclado.next();
-			aux+=cadena;
+			aux=aux+cadena;
 		}
 		System.out.print(aux);
 	}

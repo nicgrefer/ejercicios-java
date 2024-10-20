@@ -15,9 +15,9 @@ public class Concatenación_de_cadenas {
 		String aux=" ";
 		
 		while(cadena!=" ") {
-			System.out.print("Escrebe cadena: ");
+			System.out.print("Escrebe cadena");
 			cadena=teclado.next();
-			aux+=cadena;
+			aux=aux+cadena;
 		}
 		System.out.print(aux);
 	}
