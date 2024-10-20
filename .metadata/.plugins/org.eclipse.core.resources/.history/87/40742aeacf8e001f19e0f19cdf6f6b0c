@@ -20,9 +20,9 @@ public class Ejrer03Triángulo {
         String palabra = teclado.nextLine();//Guarda el valor
 
         // Construir y mostrar el triángulo
-        for (int i = 0; i < palabra.length(); i++) {//bucle hasta quedarse sin letras
+        for (int i = 0; i < palabra.length(); i++) {
             for (int j = 0; j <= i; j++) {
-                System.out.print(palabra.charAt(j) + " ");//printea lo que se encuentre en dicho caracter
+                System.out.print(palabra.charAt(j) + " ");
             }
             System.out.println();
         }
