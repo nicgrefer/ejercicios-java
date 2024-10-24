@@ -1,0 +1,10 @@
+package T4ejercicios;
+
+public class MasLarga {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
