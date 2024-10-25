@@ -1,0 +1,10 @@
+package T4ejemplos;
+
+public class EjempoRamdom {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
