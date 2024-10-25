@@ -1,0 +1,21 @@
+package T4ejercicios;
+
+import java.util.Scanner;
+
+public class Ordenar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		System.out.print("Introduce par de palabras: ");
+		String palabras=teclado.nextLine();
+		String palabra1=palabras.valueOf("");
+		
+		System.out.print(palabra1);
+		
+		
+		
+	}
+
+}
