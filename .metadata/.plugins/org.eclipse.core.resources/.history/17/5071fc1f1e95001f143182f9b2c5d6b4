@@ -7,7 +7,6 @@ import java.time.Month;
 import java.time.Period;
 import java.time.Year;
 import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.Locale;
 import java.util.Set;
 
@@ -72,18 +71,15 @@ System.out.println("-------------------------------------");
 		
 		
 		
-		// Listar zonas horarias disponibles
-        Set<String> zonas = ZoneId.getAvailableZoneIds();
-        for (String zona : zonas) {
-            System.out.println(zona);
-        }
-
-        // Definir la zona horaria de Japón
-        ZoneId japon = ZoneId.of("Japan");
-        ZonedDateTime horaJapon = ZonedDateTime.now(japon);
-
-        // Imprimir la hora actual en Japón
-        System.out.println("Hora actual en Japón: " + horaJapon);
+		// Camiar de forma horaria
+		
+		//--> ver zonas horarias disponibles
+		Set<String> zonas= ZoneId.getAvailableZoneIds();
+		for(String zona:zonas) {
+			System.out.println(zonas);
+			
+		}
+		
 		
 	}
 
