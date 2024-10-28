@@ -1,0 +1,22 @@
+package T4ejemplos;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Locale;
+
+public class EjemplosFechas {
+
+	public static void main(String[] args) {
+		
+
+		//Obtener fecha y hora del sistema
+		LocalDate hoy = LocalDate.now();
+		System.out.println("Hoy es: " + hoy);
+		LocalTime hora= LocalTime.now();
+		System.out.print("con hora de : " + hora);
+		
+		
+		
+	}
+
+}
