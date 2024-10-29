@@ -1,6 +1,6 @@
-package clasesextra;
+package T4ejercicios;
 
-public class b {
+public class Fecha3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
