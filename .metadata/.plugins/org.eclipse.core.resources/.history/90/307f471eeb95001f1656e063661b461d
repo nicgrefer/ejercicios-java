@@ -39,7 +39,7 @@ public class FormateoDefechas {
                 
                 
         try {
-        	 String cadena="29/10</2024";
+        	 String cadena="29/10/2024";
              
              dtf=DateTimeFormatter.ofPattern("dd/MM/yyyy");
              LocalDate fechaUsuario=LocalDate.parse(cadena, dtf);

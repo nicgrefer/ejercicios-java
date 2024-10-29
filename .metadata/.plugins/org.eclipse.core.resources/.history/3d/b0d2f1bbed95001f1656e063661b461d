@@ -1,0 +1,36 @@
+package T4ejercicios;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Scanner;
+
+public class Fecha2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado=new Scanner(System.in);
+		LocalDate hoy=LocalDate.now();
+		System.out.println("Introduce una fecha distinta a la de hoy(dd/MM/yyyy):");
+		String fechaS=teclado.nextLine();
+		LocalDate fecha = LocalDate.parse(fechaS);
+		 
+		try {
+       	             
+			DateTimeFormatter dtf=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate naces=LocalDate.parse(fechaS, dtf);
+            System.out.print("hay una diferencia entre");
+			System.out.print(Period.between(fecha, hoy).getMonths() + " años, " );
+            System.out.print(Period.between(fecha, hoy).getMonths() + " meses y " );
+    		System.out.println(Period.between(fecha, hoy).getDays() + " dias " );
+            
+       } catch (DateTimeParseException ex){
+       	System.err.print("Error, fecha no valida");
+       }
+      
+		
+	}
+
+}
