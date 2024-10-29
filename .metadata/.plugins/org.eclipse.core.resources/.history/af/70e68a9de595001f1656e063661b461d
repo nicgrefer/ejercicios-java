@@ -1,0 +1,50 @@
+package T4ejemplos;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+public class FormateoDefechas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/* Se usa la función DateTimeFormatter
+		El formateo pasa de localX a una cadena(String)
+		Un parse pasa de String a LocalX
+		*/
+		        // Current date
+		        LocalDate hoy = LocalDate.now();
+		        System.out.println("Formateo predefinido: " + hoy);
+
+		        // ISO format
+		        DateTimeFormatter dtf = DateTimeFormatter.ISO_LOCAL_DATE;
+		        System.out.println("Formato iso: " + dtf.format(hoy));
+
+		        // Current date and time
+		        LocalDateTime ahora = LocalDateTime.now();
+
+		        // Medium format
+		        dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
+		        System.out.println("Formato medio: " + dtf.format(ahora));
+
+		        // Full format
+		        dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL);
+		        System.out.println("Formato completo: " + dtf.format(ahora));
+
+		        // Short format
+		        dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+		        System.out.println("Formato corto: " + dtf.format(ahora));
+
+		        // Custom pattern
+		        dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		        System.out.println("Formato plantilla: " + dtf.format(hoy));
+		    }
+		}
+
+		
+		
+
+	}
+
+}
