@@ -1,0 +1,36 @@
+package T4ejercicios;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.format.FormatStyle;
+import java.util.Scanner;
+
+public class Fecha1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try {
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Introduce que dia naciste:");
+		int dia=teclado.nextInt();
+		System.out.println("Introduce en que mes naciste (en números y con 2 dígitos): ");
+		int mes=teclado.nextInt();
+		System.out.println("Introduce en que año naciste: ");
+		int año=teclado. nextInt();
+		
+		LocalDate fechaNacimiento= LocalDate.of(dia, mes, año);
+		 
+		DateTimeFormatter dtfS=DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+		DateTimeFormatter dtfL=DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG);
+		
+		System.out.print("Fecha nacimiento corto " +dtfS );
+		System.out.print("Fecha nacimiento largo " +dtfL );
+		}catch (DateTimeParseException ex) {
+            System.err.println("Error, fecha no válida");
+       }
+		
+	}
+
+}

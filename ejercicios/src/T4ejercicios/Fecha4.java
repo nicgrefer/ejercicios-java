@@ -1,0 +1,18 @@
+package T4ejercicios;
+
+import java.util.Scanner;
+
+public class Fecha4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner teclado=new Scanner(System.in);
+		System.out.print("Introduce una fecha conel siguiente estilo \"5 de agosto de 2022\": ");
+		String fecha1=teclado.nextLine();
+		
+		
+		
+	}
+
+}
