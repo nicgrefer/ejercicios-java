@@ -21,10 +21,10 @@ public class Fecha2 {
             //-->El resultado siempre lo voy a dar fecha mas antigua a mas reciente
             if(fechabuena.isAfter(ahora)) {
             	long dias= fechabuena.toEpochDay()-ahora.toEpochDay();
-            	System.out.print("La diferencia de dias entre "+ ahora +" y "+ fechabuena +" es de " +dias+ " días");
+            	System.out.print("La diferencia de dias entre"+ fechabuena +" y "+ ahora +" es " +dias);
             }else {
             	long dias= ahora.toEpochDay()-fechabuena.toEpochDay();
-            	System.out.print("La diferencia de dias entre "+ fechabuena+" y "+ ahora  +" es de " +dias+ " días");
+            	System.out.print("La diferencia de dias entre"+ ahora+" y "+ fechabuena +" es " +dias);
             	
             }
             

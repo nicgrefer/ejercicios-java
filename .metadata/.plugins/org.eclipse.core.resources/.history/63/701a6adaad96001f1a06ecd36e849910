@@ -1,0 +1,34 @@
+package T4ejercicios;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Scanner;
+
+public class Fecha2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Introduce una fecha formato dd/mm/yyyy: ");
+        String fecha = teclado.nextLine();
+        //cambio el formato de la fecha para que se ajuste a mi programa
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        try {
+        	try {
+                //convierto la fecha a localdate para trabajar con ella
+                LocalDate fechabuena = LocalDate.parse(fecha, dtf);
+                //guardo en una variable la fecha actual
+                LocalDate ahora = LocalDate.now();
+                //calculo los dias entre la fecha introducida y la actual
+                long dias = ChronoUnit.DAYS.between(fechabuena, ahora);
+                System.out.println("La diferencia de dias entre " + fecha + " y " + ahora + " es: " + dias);
+            } catch (DateTimeParseException e) {
+                System.err.println("Formato incorrecto");
+            }
+
+        }
+    }
