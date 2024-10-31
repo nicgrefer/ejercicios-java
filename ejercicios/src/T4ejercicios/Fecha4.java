@@ -26,7 +26,7 @@ public class Fecha4 {
 
             // Mostrar la fecha en formato corto
             System.out.println("La fecha en formato corto es: " + fechaCorta);
-        } catch (DateTimeParseException e) {
+        } catch (DateTimeParseException e) {//Si introduce fecha incorrecta ERR
             System.out.println("Formato de fecha no válido. Asegúrate de usar el formato '5 de agosto de 2022'.");
         }
     }

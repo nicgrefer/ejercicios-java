@@ -11,11 +11,11 @@ public class Fecha2 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduce una fecha formato dd/MM/yyyy: ");
-        String fecha = teclado.nextLine();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String fecha = teclado.nextLine();//Guardamos fecha
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");//Establecemos el formato de introducción de fecha
 
         try {
-            LocalDate fechabuena = LocalDate.parse(fecha, dtf);
+            LocalDate fechabuena = LocalDate.parse(fecha, dtf);// Combierte el String a Date
             LocalDate ahora = LocalDate.now();
             
             //-->El resultado siempre lo voy a dar fecha mas antigua a mas reciente
@@ -28,7 +28,7 @@ public class Fecha2 {
             	
             }
             
-        } catch (DateTimeParseException e) {
+        } catch (DateTimeParseException e) {//Si introduce fecha incorrecta ERR
             System.err.println("Formato incorrecto");
         }
     }
