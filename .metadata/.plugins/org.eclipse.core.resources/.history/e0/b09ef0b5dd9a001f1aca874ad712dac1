@@ -1,0 +1,21 @@
+package T4ejercicios;
+
+import java.util.Scanner;
+
+public class DNI {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce el DNI con la letra: ");
+        String dni = sc.nextLine();
+
+        if (dni.length() == 9) {
+            System.out.println("DNI válido: " + dni);
+        } else {
+            System.err.println("Valor no válido. Vuelve a intentarlo.");
+        }
+
+
+    }
+}
