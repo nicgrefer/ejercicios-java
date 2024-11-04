@@ -1,0 +1,38 @@
+package T4ejemplos;
+
+import java.text.NumberFormat;
+
+public class FormateoNumeros {
+
+	public static void main(String[] args) {
+		
+		
+		//Formateo con  NumberFormat
+		
+		double num1=0.0123;
+		double num2=123456.89;
+		
+		//->Creamos formateador
+			NumberFormat nf1=NumberFormat.getInstance();
+			nf1.setMaximumFractionDigits(2);
+		//Formatiemos lo dado con la plantilla
+		System.out.println(nf1.format(num1));
+		System.out.println(nf1.format(num2));
+		
+		
+		//->Creamos formateador
+		NumberFormat nf2=NumberFormat.getCurrencyInstance();
+		nf2.setMaximumFractionDigits(2);
+		
+		//Formatiemos lo dado con la plantilla
+		System.out.println(nf1.format(num1));
+		System.out.println(nf1.format(num2));
+		
+		
+		//Formateo con DecimalFormat
+
+		
+		
+	}
+
+}

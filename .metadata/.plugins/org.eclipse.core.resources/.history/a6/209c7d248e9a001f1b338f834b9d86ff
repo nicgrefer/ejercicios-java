@@ -18,7 +18,7 @@ public class Fecha4 {
         DateTimeFormatter formatoCorto = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         try {
-            // Comprobar si lo introducido coincide con lo pedido(con la plantilla)
+            // Parsear la fecha larga a un objeto LocalDate
             LocalDate fecha = LocalDate.parse(fechaLarga, formatoLargo);
 
             // Formatear la fecha al formato corto
