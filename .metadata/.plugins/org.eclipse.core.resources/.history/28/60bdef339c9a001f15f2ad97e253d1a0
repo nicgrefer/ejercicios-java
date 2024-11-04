@@ -10,7 +10,7 @@ public class FormateoNumeros {
 		
 		
 	/**Formateo con  NumberFormat**/
-	
+	/*
 		double num1=0.0123;
 		double num2=123456.89;
 		
@@ -45,7 +45,7 @@ public class FormateoNumeros {
 		//Formatiemos lo dado con la plantilla
 		System.out.println(nf4.format(num1));
 
-	System.out.println("-------------------");
+		*/
 		
 		
 	/**Formateo con DecimalFormat**/
@@ -70,6 +70,10 @@ public class FormateoNumeros {
 		System.out.println(df.format(num5));
 		System.out.println(df.format(num6));
 
+		//formateo con marcadores porcental %
+		String.format("|%id|");
+		
+		
 		
 	}
 

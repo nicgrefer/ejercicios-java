@@ -8,9 +8,9 @@ public class FormateoNumeros {
 
 	public static void main(String[] args) {
 		
+		/*
+	//Formateo con  NumberFormat
 		
-	/**Formateo con  NumberFormat**/
-	
 		double num1=0.0123;
 		double num2=123456.89;
 		
@@ -45,10 +45,10 @@ public class FormateoNumeros {
 		//Formatiemos lo dado con la plantilla
 		System.out.println(nf4.format(num1));
 
-	System.out.println("-------------------");
+		*/
 		
 		
-	/**Formateo con DecimalFormat**/
+	//Formateo con DecimalFormat
 		double num3=999666887777.654;
 		double num4=.123;
 		double num5= 12.56;
@@ -57,11 +57,8 @@ public class FormateoNumeros {
 		//Creacción de plantilla
 		DecimalFormat df=new DecimalFormat();
 				
-		df.applyPattern("#,##0.00;(#,##0.00)");
-		/** 
-		 	df.applyPattern("#,##0.00") positivo
-		 	df.applyPattern(";(#,##0.00)") negativo
-		 */
+		df.applyPattern("#,##0.00;");
+		
 		
 		
 		
@@ -70,6 +67,7 @@ public class FormateoNumeros {
 		System.out.println(df.format(num5));
 		System.out.println(df.format(num6));
 
+		
 		
 	}
 
