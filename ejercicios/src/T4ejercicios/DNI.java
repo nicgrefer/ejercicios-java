@@ -13,7 +13,7 @@ public class DNI {
         char letra=dni.charAt(9);
        
 
-            if (dni.length() == 9 && (letra=='A' ||letra=='B' ||letra=='B' ||letra=='D' ||letra=='E' ||letra=='F' ||letra=='G' ||letra=='H' ||letra=='I' ||letra=='J' ||letra=='K'|| letra=='L' ||letra=='M' ||letra=='N' ||letra=='Ñ'||letra=='O'||letra=='P'||letra=='Q'||letra=='R'||letra=='S'||letra=='T'||letra=='U'||letra=='V'||letra=='W'||letra=='X'||letra=='Y'||letra=='Z') ) {
+            if (dni.length() == 9 && (letra=='A' ||letra=='B' ||letra=='C' ||letra=='D' ||letra=='E' ||letra=='F' ||letra=='G' ||letra=='H' ||letra=='I' ||letra=='J' ||letra=='K'|| letra=='L' ||letra=='M' ||letra=='N' ||letra=='Ñ'||letra=='O'||letra=='P'||letra=='Q'||letra=='R'||letra=='S'||letra=='T'||letra=='U'||letra=='V'||letra=='W'||letra=='X'||letra=='Y'||letra=='Z') ) {
 
             	
             	
