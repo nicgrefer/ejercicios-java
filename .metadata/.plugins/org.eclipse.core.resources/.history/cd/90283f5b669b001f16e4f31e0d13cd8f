@@ -6,13 +6,14 @@ public class DNI {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String dni; //dni introducido por el usuario
-        final int  MAX=3; //l�mite de intentos permitidos
+        String dni = "";//Introducido por el usuario
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        int contador=0; //contador de intentos fallidos
-        char letradni=0; //letra DNI introducida por el usuario
-        char letracorrecta = 0; //letra DNI calculadada
-        //bucle de validacion del dni
+        int contador = 0;//Contador intentos 
+        char letradni = 0;//del usuario
+        char letracorrecta = 0;//la que sale en la divisio
+        int max=3;
+        // bucle de balidación
+        
         do {
             System.out.print("Introduce un DNI: ");
             dni = sc.nextLine().toUpperCase();
@@ -30,13 +31,15 @@ public class DNI {
             } else {
                 System.out.println("Formato de DNI incorrecto");
                 contador++;
-            }           
-            if (contador < MAX) {
+            }
+            
+            if (contador < 3) {
                 System.out.println("Intento " + contador + " de 3");
             }
-        } while (contador < MAX && !dni.matches("\\d{8}[A-Z]"));
+            
+        } while (contador < max || dni.matches("\\d{8}[A-Z]"));
         
-        if (contador == MAX) {
+        if (contador == max) {
             System.out.println("Has alcanzado el limite de intentos");
         }
     }
