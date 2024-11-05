@@ -1,0 +1,10 @@
+package clasesextra;
+
+public class Asignatura {
+
+	String nombre;
+	int horas;
+	String nombreProfesor;
+	
+	
+	}
