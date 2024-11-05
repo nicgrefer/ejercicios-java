@@ -20,11 +20,7 @@ public class Operaciones {
 	        System.out.println("Resta: " + op.resta(n1, n2));
 	        System.out.println("Multiplicación: " + op.multiplica(n1, n2));
 	        System.out.println("División: " + op.divide(n1, n2));
-<<<<<<< HEAD
-		sc.close();
-=======
-		
->>>>>>> origin/main
+
 	 }
 	 
 	        public int suma(int a, int b) {
