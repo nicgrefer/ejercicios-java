@@ -6,26 +6,40 @@ public class DNI {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        for (int i = 1; i <= 3; i++) {
-            System.out.print("Introduce el DNI con la letra: ");
-            String dni = sc.nextLine();
-
-            if (dni.length() == 9) {  // Verificamos que la longitud sea 9
-                char letra = Character.toUpperCase(dni.charAt(8));  // Último carácter
-
-                // Comprobamos que la letra esté en el rango 'A' - 'Z'
-                if (letra >= 'A' && letra <= 'Z') {
-                    System.out.println("DNI válido: " + dni);
-                    return;  // Salimos del programa si el DNI es válido
+        String dni = "";//Introducido por el usuario
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        int contador = 1;//Contador intentos 
+        char letradni = 0;//del usuario
+        char letracorrecta = 0;//la que sale en la divisio
+        // bucle de balidación
+        
+        do {
+            System.out.print("Introduce un DNI: ");
+            dni = sc.nextLine().toUpperCase();
+            if (dni.matches("\\d{8}[A-Z]")) {
+                int numerodni = Integer.parseInt(dni.substring(0, 8));
+                letradni = dni.charAt(8);
+                int resto = numerodni % 23;
+                letracorrecta = letras.charAt(resto);
+                if (letradni == letracorrecta) {
+                    System.out.println("El DNI es valido");
                 } else {
-                    System.err.println("La letra no es válida. Debe ser una letra entre A y Z.");
+                    System.out.println("La letra del DNI deberia ser: " + letracorrecta);
+                    contador++;
                 }
             } else {
-                System.err.println("Valor no válido. El DNI debe tener exactamente 9 caracteres.");
+                System.out.println("Formato de DNI incorrecto");
+                contador++;
             }
+            
+            if (dni.length() != 9 && contador < 3) {
+                System.out.println("Intento " + contador + " de 3");
+            }
+            
+        } while (contador < 3 || dni.matches("\\d{8}[A-Z]"));
+        
+        if (contador == 3) {
+            System.out.println("Has alcanzado el limite de intentos");
         }
-        System.err.println("No se ha introducido un DNI válido en los 3 intentos.");
-      
     }
 }

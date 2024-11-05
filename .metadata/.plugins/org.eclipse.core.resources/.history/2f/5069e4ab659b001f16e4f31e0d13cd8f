@@ -1,0 +1,40 @@
+package T4ejercicios;
+
+import java.util.Scanner;
+
+public class DNI {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String dni = "";//Introducido por el usuario
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        int contador = 0;//Contador intentos 
+        char letradni = 0;//del usuario
+        char letracorrecta = 0;//la que sale en la divisio
+        // bucle de balidación
+        do {
+            System.out.print("Introduce un DNI: ");
+            dni = sc.nextLine().toUpperCase();
+            if (dni.matches("\\d{8}[A-Z]")) {
+                int numerodni = Integer.parseInt(dni.substring(0, 8));
+                letradni = dni.charAt(8);
+                int resto = numerodni % 23;
+                letracorrecta = letras.charAt(resto);
+                if (letradni == letracorrecta) {
+                    System.out.println("El DNI es valido");
+                } else {
+                    System.out.println("La letra del DNI deberia ser: " + letracorrecta);
+                }
+            } else {
+                System.out.println("Formato de DNI incorrecto");
+            }
+            contador++;
+            if (dni.length() != 9 && contador < 3) {
+                System.out.println("Intento " + contador + " de 3");
+            }
+            if (contador >= 3) {
+                System.out.println("Has alcanzado el limite de intentos");
+            }
+        } while (contador < 3 || dni.matches("\\d{8}[A-Z]"));
+    }
+}
