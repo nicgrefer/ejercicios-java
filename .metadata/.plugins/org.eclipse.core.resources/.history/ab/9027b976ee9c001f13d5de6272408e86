@@ -1,0 +1,54 @@
+package T5ejercicios;
+
+import java.util.Scanner;
+
+public class Utiles {
+	
+    public Scanner sc = new Scanner(System.in);
+    
+
+    public static void main(String[] args) {
+    	
+    	Utiles to = new Utiles();
+    	
+        double fahrenheit = to.toFahrenheit();
+        
+        System.out.print("Introduce un número: ");
+        int numeroDado = to.sc.nextInt(); // Usar el scanner del objeto 'to'
+        
+        int divisor = to.divisor(numeroDado);
+        System.out.println("El mayor divisor de " + numeroDado + " es: " + divisor);
+        
+        boolean par=to.par(numero);
+    }
+    
+    
+    /***/
+    public double toFahrenheit() {
+        System.out.print("Introduce la temperatura en celsius: ");
+        double celsius = sc.nextDouble();
+
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        System.out.println("La temperatura en fahrenheit es " + fahrenheit + "ºF");	
+        return fahrenheit;
+    }
+    
+    /***/
+    
+    public int divisor(int numero) {
+        for (int i = numero-1; i>0; i--) {
+            if (numero % i == 0) {
+                return i;
+            }
+        }
+        return 1; // Si no se encuentra otro divisor, el mayor es 1 porque es primo
+    }
+    
+    /***/
+    public boolean par(int numero) {
+    	return(numero%2==0);
+    	
+    }
+    
+    
+}

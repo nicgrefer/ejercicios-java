@@ -1,0 +1,13 @@
+package T5ejercicios;
+
+public class PruebaMetodos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Utiles app=new Utiles();
+		
+		
+	}
+
+}

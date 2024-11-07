@@ -1,0 +1,21 @@
+package T5ejercicios;
+
+import java.util.Scanner;
+
+public class toFahrenheit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("Introduce la temperatura en celsius: ");
+		double celsius= sc.nextDouble();
+		
+		double fahrenheit=(celsius*9/5+32);
+		
+		System.out.print("La temperatura en fahrenheit es " + fahrenheit + "ºF");
+		
+	}
+
+}

@@ -1,0 +1,37 @@
+package T5ejercicios;
+
+import java.util.Scanner;
+
+public class Utiles {
+	
+    public Scanner sc = new Scanner(System.in);
+       
+    /***/
+    public double toFahrenheit() {
+        System.out.print("Introduce la temperatura en celsius: ");
+        double celsius = sc.nextDouble();
+
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        System.out.println("La temperatura en fahrenheit es " + fahrenheit + "ºF");	
+        return fahrenheit;
+    }
+    
+    /***/
+    
+    public int divisor(int numero) {
+        for (int i = numero-1; i>0; i--) {
+            if (numero % i == 0) {
+                return i;
+            }
+        }
+        return 1; // Si no se encuentra otro divisor, el mayor es 1 porque es primo
+    }
+    
+    /***/
+    public boolean par(int numero) {
+    	return(numero%2==0);
+    	
+    }
+    
+    
+}
