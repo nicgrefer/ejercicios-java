@@ -27,8 +27,7 @@ public class MayorDe3 {
 			
 		}else {
 			//Es incorrecto
-			System.err.println("Algun valor es incorrecto o no valido.");
-			System.err.println("Repita el proceso");
+			System.out.println("Algun valor es incorrecto o no valido. Repita el proceso");
 		}
 		
 	}

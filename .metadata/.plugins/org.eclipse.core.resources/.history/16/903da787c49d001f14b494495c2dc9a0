@@ -1,0 +1,34 @@
+package T5ejemplos;
+
+import java.util.Scanner;
+
+public class MayorDe3 {
+
+	Scanner sc=new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MayorDe3 app=new MayorDe3();
+		app.pideNumero();
+		
+	}
+	
+	
+	/**Metodo que solicita el usuario que introduzca un numero*/
+	
+	public int pideNumero() {
+		try {
+		System.out.print("Introduce un nímero");
+		String entrada=sc.next();
+		
+		int n =Integer.parseInt(entrada);
+		}catch (NumberFormatException ex) {
+			// TODO: handle exception
+			System.err.print("Dato no valido");
+		}
+		return 1;
+	}
+	
+
+}
