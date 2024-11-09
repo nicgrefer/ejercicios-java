@@ -17,13 +17,14 @@
     <fullyQualifiedTypeName name="java.text.NumberFormat"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="T5ejemplos.Operaciones"/>
     <fullyQualifiedTypeName name="clasesextra.Persona"/>
     <fullyQualifiedTypeName name="clasesextra.Asignatura"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="T5ejercicios.toFahrenheit"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="T5ejercicios.MCD"/>
     <fullyQualifiedTypeName name="T5ejercicios.Coordenadas"/>
+    <fullyQualifiedTypeName name="T5ejercicios.Primo"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

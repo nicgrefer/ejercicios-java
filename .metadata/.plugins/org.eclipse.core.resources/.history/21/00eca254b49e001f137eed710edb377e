@@ -1,0 +1,61 @@
+package T5ejercicios;
+
+public class Primos {
+
+	int contadorDePrimos=0;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Primo app= new Primo();
+		
+		for (int n1=1; app.contadorDePrimos<100;n1++){
+			
+			boolean primo=app.esPrimo(n1);
+			String mensaje=primo==true? "El numero " + n1 + " es primo":"";
+			System.out.print(mensaje);
+		}
+	}
+
+	public boolean esPrimo(int numero) {
+		if (numero<=1) return false;
+		if (numero%numero==0 &&numero%1==0) {
+			contadorDePrimos++;
+			return true;
+		}else return false;
+	}
+	
+}
+
+/*
+package T5ejercicios;
+
+public class Primos {
+
+    int contadorDePrimos = 0;
+
+    public static void main(String[] args) {
+        Primos app = new Primos();
+
+        for (int n1 = 1; app.contadorDePrimos < 100; n1++) {
+            boolean primo = app.esPrimo(n1);
+            if (primo) {
+                System.out.println("El número " + n1 + " es primo");
+            }
+        }
+    }
+
+    public boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        contadorDePrimos++;
+        return true;
+    }
+}
+*/
