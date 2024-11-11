@@ -2,29 +2,20 @@ package T5ejercicios;
 
 public class Primos {
 
-    int contadorDePrimos = 0;
+    
 
     public static void main(String[] args) {
-        Primos app = new Primos();
+    	int contadorDePrimos = 0;
+        Primo appPrimo =new Primo();//Reutilización del programa anterior
 
-        for (int n1 = 1; app.contadorDePrimos < 100; n1++) {
-            boolean primo = app.esPrimo(n1);
+        for (int n1 = 1; contadorDePrimos < 100; n1++) {
+            boolean primo = appPrimo.esPrimo(n1);
             if (primo) {
                 System.out.println("El número " + n1 + " es primo");
+                contadorDePrimos++;
             }
         }
     }
 
-    public boolean esPrimo(int numero) {
-        if (numero <= 1) {
-            return false;
-        }
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
-            if (numero % i == 0) {
-                return false;
-            }
-        }
-        contadorDePrimos++;
-        return true;
-    }
+   
 }

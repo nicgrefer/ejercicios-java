@@ -1,0 +1,20 @@
+package T5ejercicios;
+
+public class Areas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		a
+	}
+
+	public int menu(int seleccionado) {
+		System.out.print("1. Área círculo: ");
+		System.out.print("2. Área cuadrado: ");
+		System.out.print("3. Área rectángulo: ");
+		System.out.print("4. Área triángulo: ");
+		System.out.print("0. Salir: ");
+	}
+	
+	
+}

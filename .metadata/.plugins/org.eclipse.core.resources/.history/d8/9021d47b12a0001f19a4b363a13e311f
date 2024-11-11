@@ -1,0 +1,21 @@
+package T5ejercicios;
+
+public class Primos {
+
+    int contadorDePrimos = 0;
+
+    public static void main(String[] args) {
+        Primos app = new Primos();
+        Primo app2 =new Primo();
+
+        for (int n1 = 1; app.contadorDePrimos < 100; n1++) {
+            boolean primo = app2.esPrimo(n1);
+            if (primo) {
+                System.out.println("El número " + n1 + " es primo");
+                contadorDePrimos++;
+            }
+        }
+    }
+
+   
+}

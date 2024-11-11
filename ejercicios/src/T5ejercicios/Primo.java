@@ -19,9 +19,15 @@ public class Primo {
 	}
 
 	public boolean esPrimo(int numero) {
-		if (numero%numero==0 &&numero%1==0) {
-			return true;
-		}else return false;
+		if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
 	}
 	
 }
