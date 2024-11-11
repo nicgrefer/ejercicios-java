@@ -14,7 +14,6 @@ public class Palindromo {
 		Scanner sc =new Scanner(System.in);
 		System.out.println("Introduce una palabra :");
 		String palabra=sc.next();
-		app.esPalindromo(palabra);
 		
 		if (app.esPalindromo(palabra)) {
 			System.out.print("La palabra introducida es un palindromo");
@@ -38,7 +37,7 @@ public class Palindromo {
 
 		String palabraVolteada=voltear(palabraOriginal);
 		
-		if (palabraOriginal==palabraVolteada) {
+		if (palabraOriginal.equals(palabraVolteada)) {
 			return true;
 		}else {
 			return false;
@@ -46,39 +45,3 @@ public class Palindromo {
 
 	}
 }
-///
-/**
- * public class Palindromo {
-   
-    public String voltear(String palabra){
-       String volteada="";
-       for(int i=palabra.length()-1;i>=0;i--){
-           volteada=volteada+palabra.charAt(i);
-       }
-       return volteada;
-    }
-   
-    public boolean esPalindromo(String palabra){
-        String palabVolt=voltear(palabra);
-        if(palabra.equals(palabVolt)) return true;
-        else return false;
-       
-    }
-   
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Escriba una palabra para determinar si es palindromo o no:");
-        String palabra=sc.next();
-       
-        Palindromo app=new Palindromo();
-        if(app.esPalindromo(palabra)){
-            System.out.println("Es un palindromo");
-           
-        }else{
-            System.out.println("No es un palindromo");
-        }
-       
-    }
-}
- */
-*/

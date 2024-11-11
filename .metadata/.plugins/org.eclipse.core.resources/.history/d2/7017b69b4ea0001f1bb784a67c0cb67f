@@ -1,0 +1,33 @@
+package T5ejercicios;
+
+import java.util.Scanner;
+
+public class CuentaPalabras {
+	
+
+	// Programa que calcual las palabras de un frase que introduce por teclado
+	
+		public static void main(String[] args) {
+			
+			Scanner sc=new Scanner(System.in);
+			CuentaPalabras app=new CuentaPalabras();
+			
+			System.out.print("Introduce una cadena don varias palabras: ");
+			String cadena =sc.nextLine();
+			app.contador(cadena);
+
+		}
+
+		//Metodo que devuelva el nº de palabras
+		public int contador (String frase) {
+			int contador=0;
+			if (frase.length()>0) {
+				int espacioPalabra =frase.indexOf(" ");
+				String palabra=frase.substring(0, espacioPalabra);
+				frase=frase.substring(espacioPalabra);
+				contador++;
+				}
+			return contador;
+		}
+		
+}
