@@ -1,0 +1,14 @@
+package T5ejercicios;
+
+public class Palindromo {
+
+	// Crea un programa que comprueba si un palabra es palindromo
+	// ej: seres, oro, somos ,oso ....
+	//
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

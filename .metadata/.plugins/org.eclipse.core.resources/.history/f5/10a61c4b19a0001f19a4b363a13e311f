@@ -1,0 +1,10 @@
+package T5ejercicios;
+
+public class CuentaPalabras {
+
+	public static void main(String[] args) {
+		// Programa que calcual las palabras de un frase que introduce por teclado
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package T5ejercicios;
+
+public class Palindromo {
+
+	// Crea un programa que comprueba si un palabra es palindromo
+	// ej: seres, oro, somos ,oso ....
+	//
+	
+	public static void main(String[] args) {
+		
+		Palindromo app=new Palindromo();
+		System.out.print(app.voltear("nicolas"));
+		
+
+	}
+
+	//bolteo
+	public String voltear(String palabra) {
+		String nueva="";
+		for (int i=palabra.length()-1;i>=0;i--) {
+			nueva=nueva+palabra.charAt(i);
+		}
+		
+		return nueva;
+		
+	}
+	
+	//Metodo que devuleva un buleano indicando si es palindramo
+	public boolean esPalindromo(String palabra) {
+
+		return true;
+	}
+}
