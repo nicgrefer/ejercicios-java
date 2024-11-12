@@ -1,0 +1,24 @@
+package clasesextra;
+
+public class ejem08_Pather_y_egemplos {
+	
+	public static void main(String[] args) {
+		String texto="Hola Mundo";
+		boolean coincide=texto.matches(".*[mM]undo");
+		if (coincide) 
+            System.out.println("El texto termina con la palabra mundo");
+        else 
+            System.out.println("El texto no termina con la palabra mundo");
+		
+		String nombre="Victor Vergel Rodríguez;Jorge García Pérez;Ana López García";
+		
+		
+		String[] cadena =texto.split (";");
+		String [] cadenas= nombre.split("[aeiouAEIOUáéíóú]");
+		for (String cadena:cadenas) {
+			System.out.print(cadena);
+		}
+	}
+	
+	
+}

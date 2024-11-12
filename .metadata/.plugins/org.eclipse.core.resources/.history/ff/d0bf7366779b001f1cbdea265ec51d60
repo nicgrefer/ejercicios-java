@@ -1,9 +1,0 @@
-package clasesextra;
-
-public class persona {
-	String nombre;
-	double altura;
-	double peso;
-	int edad;
-	
-}

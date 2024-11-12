@@ -28,7 +28,11 @@
     <fullyQualifiedTypeName name="T5ejercicios.Primo"/>
     <fullyQualifiedTypeName name="T5ejercicios.CuentaPalabras"/>
     <fullyQualifiedTypeName name="T5ejercicios.Palindromo"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="javax.security.auth.callback.TextOutputCallback"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+    <fullyQualifiedTypeName name="clasesextra.AplicaciónCalculadoradePuntos"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
