@@ -1,0 +1,17 @@
+package T5ejemplos;
+
+public class MetodosRecursivos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	//metodo que muestra los numeros del 0 al 100
+	public void mostrar (int i) {
+		if (i==101) return;
+		System.out.println(i);
+		mostrar++i;
+	}
+	
+}

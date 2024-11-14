@@ -1,0 +1,25 @@
+package T5ejercicios;
+
+public class Producto_de_enteros {
+
+	public class Producto {
+
+	    public int producto(int n1, int n2) {
+	        if (n2 == 0) {
+	            return 0;
+	        }
+
+	        if (n2 >= 0) {
+	            return n1 + producto(n1, --n2);
+	        } else {
+	            return -n1 + producto(n1, ++n2);
+	        }
+
+	    }
+
+	    public static void main(String[] args) {
+	        Producto pr = new Producto();
+	        System.out.println(pr.producto(-2, 3));
+	    }
+	}
+}

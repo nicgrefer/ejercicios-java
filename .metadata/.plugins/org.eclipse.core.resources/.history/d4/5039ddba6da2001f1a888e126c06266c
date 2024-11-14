@@ -1,0 +1,10 @@
+package T5ejercicios;
+
+public class Producto_de_enteros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

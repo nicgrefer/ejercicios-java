@@ -1,0 +1,19 @@
+package T5ejercicios;
+
+import java.util.Scanner;
+
+public class Sumatorio_de_nº {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc =new Scanner(null)
+		System.out.print("Dame un número para calcular su sumatorio: ");
+		int i=sc.
+		int sumatorioRecursivo=(app.factorial(i));
+		
+	}
+
+	public int factorial (int n) {
+		if (n==1)return 1;
+		return n*factorial(n-1);
+}
