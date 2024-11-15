@@ -1,0 +1,25 @@
+package xxx_Ejercicios_repaso_casa;
+
+import java.util.Scanner;
+
+public class Ejercicios_casa_002_NumeroPalindromo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner (System.in);
+		
+		
+		System.out.print("Introduce un numero para saber si es Palindromo");
+		int n= sc.nextInt();
+		
+		
+	}
+
+	public boolean esPalindromo (int i) {
+		
+		for
+		
+	}
+	
+}
