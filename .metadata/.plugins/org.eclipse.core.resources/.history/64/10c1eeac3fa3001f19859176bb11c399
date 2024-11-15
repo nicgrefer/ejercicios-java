@@ -1,6 +1,6 @@
 package T5ejercicios;
 
-public class MCD {
+public class MCD_Recursividad {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
