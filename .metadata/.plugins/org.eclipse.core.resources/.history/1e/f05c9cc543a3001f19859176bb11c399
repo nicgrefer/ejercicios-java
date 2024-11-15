@@ -1,0 +1,32 @@
+
+package T5ejercicios;
+
+import java.util.Scanner;
+
+public class Potenciarecursiva {
+    
+    public float potencia(int n1, int n2){
+        if(n1 == 0) return 0;
+        if(n2 == 0) return 1;
+        if(n2 == 1) return n1;
+        if(n2 > 1){
+            return n1 * potencia(n1, n2 - 1);
+        }else{
+            return 1/n1 * potencia(n1, n2 + 1);
+        }
+         
+    }
+    
+    public static void main(String[] args) {
+        Potenciarecursiva app = new Potenciarecursiva();
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Introduce un número: ");
+        int n1 = sc.nextInt();
+        
+        System.out.print("Introduce el exponente: ");
+        int n2 = sc.nextInt();
+        
+        System.out.println(app.potencia(n1, n2));
+    }
+}

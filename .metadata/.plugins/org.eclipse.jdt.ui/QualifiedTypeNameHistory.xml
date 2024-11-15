@@ -34,5 +34,7 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
     <fullyQualifiedTypeName name="clasesextra.AplicaciónCalculadoradePuntos"/>
+    <fullyQualifiedTypeName name="T5ejercicios.MCD_Recursividad"/>
+    <fullyQualifiedTypeName name="T5ejercicios.SerieGeometrica"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
