@@ -1,0 +1,10 @@
+package Practica1_Contraseñas;
+
+public class GeneraContraseña {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
