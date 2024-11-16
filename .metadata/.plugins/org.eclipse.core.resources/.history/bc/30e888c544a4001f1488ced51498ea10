@@ -29,8 +29,7 @@ public class GeneraContraseña {
 		app.datosPersonales();
 		//llamamos a la funcion para crear tres tipos de contraseñas diferentes con tres estilos posibles
 		//app.tipoContraseña();
-		 String contrasenia = app.caso3(8);
-		    System.out.println("Contraseña generada: " + contrasenia);
+		app.caso3(8);
 	}
 
 	//Pido los daros personales
