@@ -1,6 +1,6 @@
-package T5ejercicios;
+package Practica1_Contraseñas;
 
-public class Primo {
+public class Pruevas {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

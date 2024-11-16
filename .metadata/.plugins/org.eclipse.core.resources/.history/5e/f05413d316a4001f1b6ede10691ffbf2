@@ -1,0 +1,22 @@
+package Practica1_Contraseñas;
+
+import java.security.SecureRandom;
+import java.util.Random;
+
+
+public class Pruevas {
+
+	public static void main(String[] args) {
+		SecureRandom sr =new SecureRandom();
+		String contraseniaFinal="";
+		String caracteresValidos="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%/&()=";
+		
+		int longitudContraseniaTipo2=sr.nextInt(5)+4;
+		
+		for (int i =0;i<longitudContraseniaTipo2;i++) {
+			int posicionDelCararter=sr.nextInt(caracteresValidos.length());
+			contraseniaFinal=contraseniaFinal+caracteresValidos.charAt(posicionDelCararter);
+		}
+		
+	}
+}

@@ -1,0 +1,27 @@
+package Practica1_Contraseñas;
+
+import java.util.Scanner;
+
+public class Pruevas {
+
+    public static void main(String[] args) {
+    	Scanner sc=new Scanner(System.in);
+    	String DNI ="";
+    	String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        char letra = 0; // letra DNI calculada
+        do {
+            System.out.print("Introduce un DNI: ");
+            DNI = sc.nextLine().toUpperCase();
+            if (DNI.length() == 8 && DNI.matches("\\d{8}")) {
+                int numerodni = Integer.parseInt(DNI.substring(0, 8));
+                int resto = numerodni % 23;
+                letra = letras.charAt(resto);
+                DNI=DNI+letra;
+            } else {
+                System.err.println("DNI no válido. Inténtalo de nuevo.");
+            }
+        } while (DNI.length() != 8 || !DNI.matches("\\d{8}"));
+        
+        System.out.print(DNI);
+    }
+}

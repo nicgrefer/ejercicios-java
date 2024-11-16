@@ -1,86 +1,129 @@
 package Practica1_Contraseñas;
 
 import java.security.SecureRandom;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class GeneraContraseña {
 
 	public Scanner sc=new Scanner (System.in);
 
+	public static GeneraContraseña app=new GeneraContraseña();
+	
+	public static Random aleatorio=new Random();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		
-		GeneraContraseña app=new GeneraContraseña();
-		
 		//Peticion de datos
 		app.datosPersonales();
-				
+		//llamamos a la funcion para crear tres tipos de contraseñas diferentes con tres estilos posibles
+		app.tipoContraseña();
+		
 	}
 
 	//Pido los daros personales
 	public void datosPersonales(){
+		//Nombre
 		System.out.println("Introduce el nombre: ");
-		String nombre =sc.next();
-		
+		String nombre =sc.next().toLowerCase();
+		//apellido1
 		System.out.println("Introduce su 1º apellido: ");
-		String apellido1 =sc.next();
-		
+		String apellido1 =sc.next().toLowerCase();
+		//apellido2
 		System.out.println("Introduce su 2º apellido: ");
-		String apellido2 =sc.next();
-		
-		System.out.println("Introduce el DNI: ");
-		String DNI =sc.next();
-		
-		System.out.println("Introduce su fecha de nacimiento: ");
-		String fiechaNacimiento =sc.next();
+		String apellido2 =sc.next().toLowerCase();
+		//dni
+		String dni = ""; // dni introducido por el usuario
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        char letracorrecta = 0; // letra DNI calculada
+        
+        // bucle de validación del dni
+        do {
+            System.out.print("Introduce un DNI: ");
+            dni = sc.nextLine().toUpperCase();
+            if (dni.length() == 8 && dni.matches("\\d{8}")) {
+                int numerodni = Integer.parseInt(dni.substring(0, 8));
+                int resto = numerodni % 23;
+                letracorrecta = letras.charAt(resto);
+                System.out.println("DNI: " + dni + letracorrecta);
+            } else {
+                System.err.println("DNI no válido. Inténtalo de nuevo.");
+            }
+        } while (dni.length() != 8 || !dni.matches("\\d{8}"));
+
+      //fecha nacimiento
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fecha=null;
+      		do {
+      			System.out.println("Introduce su fecha de nacimiento: ");
+          		String fiechaNacimiento =sc.next();
+          		
+          		
+          	  try {
+                  // Comprobar si lo introducido coincide con lo pedido(con la plantilla)
+                   fecha = LocalDate.parse(fiechaNacimiento, format);
+
+                
+              } catch (DateTimeParseException e) {//Si introduce fecha incorrecta ERR
+                  System.err.println("Formato de fecha no válidotiene que ser dd/mm/yyyy");
+              }
+      		}while (fecha==null);
+      		
 		
 	}
 	
-	//Tiro de moneda para saver si es mayuscula o minuscula o si en un número o un simbolo
-	public String moneda (char caracter) {
-		
-		int moneda=(int)((2-0)* Math.random());
-		
-		if (moneda>=0 && moneda<1) //cara
-			if (caracter==[a-z])
-				String cambio= caracter.
-				return 0;
-		
-		
-		if (moneda>=1 && moneda<2) //cruz
-			return 0;
-		return null;
-		
-	}
 	
-	//Tipo de seguridad, es decir el tamaño 
-	public int tamanio() {
-		SecureRandom aleatorio=new SecureRandom();
-		int tamano=aleatorio.nextInt(4,8);
-		return tamano;
-	}
-	
-	//Generador de la contraseña aleatoria
-	public String dados (int tamanio) {
-		
-		for (int i=0; tamanio>i;i++) {
-			SecureRandom aleatorio=new SecureRandom();
-			
-			int dado1=aleatorio.nextInt(1-6);
-			int dado2=aleatorio.nextInt(1-6);
-			
-			String Contraseña="";
-			
-			if (dado1==1&&dado2==1) {
-				char equivale='a';
+	//Aletorio para escoger el tipo de "codificación"
+	public void tipoContraseña(){
+		Random aleatorio=new Random();
+		for(int i=1;i<=3;i++) {
+			int tipo=aleatorio.nextInt(1,3);
+
+			if (tipo==1) {
+				int tamanio=aleatorio.nextInt(4,8);
+				app.caso1(); //caso dados y moneda
+			}
+			else if (tipo==2) {
+				int tamanio=aleatorio.nextInt(4,8);
+				app.caso2(tamanio);//caso SecurityRamdom
+				}
 				
-				
+			else {
+				int tamanio=aleatorio.nextInt(4,8);
+				app.caso3();//Ultimo caso
 			}
 		}
+	}
+
+	//caso 1 dados y moneda
+	public void caso1(){
 		
+	}
+	
+	//caso 2 aleatorios
+	public String caso2(int tamanio) {
+		SecureRandom sr =new SecureRandom();
+		String contraseniaFinal="";
+		String caracteresValidos="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%/&()=";
 		
+		int longitudContraseniaTipo2=sr.nextInt(5)+4;
+		
+		for (int i =0;i<longitudContraseniaTipo2;i++) {
+			int posicionDelCararter=sr.nextInt(caracteresValidos.length());
+			contraseniaFinal=contraseniaFinal+caracteresValidos.charAt(posicionDelCararter);
+		}
+		return contraseniaFinal;
+	}
+	
+	//caso3 "Mi idea"
+	private void caso3() {
+		// TODO Auto-generated method stub
+
 		
 		
 	}

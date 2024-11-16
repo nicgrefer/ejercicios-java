@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Pruevas {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String dni = ""; // dni introducido por el usuario
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        char letracorrecta = 0; // letra DNI calculada
+
+        // bucle de validación del dni
+        do {
+            System.out.print("Introduce un DNI: ");
+            dni = sc.nextLine().toUpperCase();
+            if (dni.length() == 9 && dni.matches("\\d{8}[A-Z]")) {
+                int numerodni = Integer.parseInt(dni.substring(0, 8));
+                int resto = numerodni % 23;
+                letracorrecta = letras.charAt(resto);
+                System.out.println("DNI: " + dni + " Letra correcta: " + letracorrecta);
+            } else {
+                System.out.println("DNI no válido. Inténtalo de nuevo.");
+            }
+        } while (!dni.matches("\\d{8}[A-Z]"));
+
+        sc.close();
+    }
+}

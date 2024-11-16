@@ -1,51 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="java.time.YearMonth"/>
-    <fullyQualifiedTypeName name="java.time.Year"/>
-    <fullyQualifiedTypeName name="java.time.LocalTime"/>
-    <fullyQualifiedTypeName name="java.time.Period"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.time.ZoneId"/>
-    <fullyQualifiedTypeName name="java.time.ZonedDateTime"/>
-    <fullyQualifiedTypeName name="java.time.Month"/>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeParseException"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.time.format.FormatStyle"/>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-    <fullyQualifiedTypeName name="java.text.NumberFormat"/>
-    <fullyQualifiedTypeName name="java.util.Locale"/>
-    <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
-    <fullyQualifiedTypeName name="T5ejemplos.Operaciones"/>
-    <fullyQualifiedTypeName name="clasesextra.Persona"/>
-    <fullyQualifiedTypeName name="clasesextra.Asignatura"/>
-    <fullyQualifiedTypeName name="T5ejercicios.toFahrenheit"/>
-    <fullyQualifiedTypeName name="T5ejercicios.MCD"/>
-    <fullyQualifiedTypeName name="T5ejercicios.Coordenadas"/>
-    <fullyQualifiedTypeName name="T5ejercicios.Areas"/>
-    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="T5ejercicios.Primo"/>
-    <fullyQualifiedTypeName name="T5ejercicios.CuentaPalabras"/>
-    <fullyQualifiedTypeName name="T5ejercicios.Palindromo"/>
-    <fullyQualifiedTypeName name="javax.security.auth.callback.TextOutputCallback"/>
-    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
-    <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
-    <fullyQualifiedTypeName name="clasesextra.AplicaciónCalculadoradePuntos"/>
-<<<<<<< Updated upstream
-    <fullyQualifiedTypeName name="T5ejercicios.MCD_Recursividad"/>
-    <fullyQualifiedTypeName name="T5ejercicios.SerieGeometrica"/>
-    <fullyQualifiedTypeName name="Practica1_Contraseñas.GeneraContraseña"/>
-=======
-    <fullyQualifiedTypeName name="xxx_Ejercicios_repaso_casa.Ejercicios_casa_001_SumaNumeros"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="xxx_Ejercicios_repaso_casa.Ejercicios_casa_003_CalculoDeFactorial"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
->>>>>>> Stashed changes
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.lang.SecurityException"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.security.SecureRandom"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>
