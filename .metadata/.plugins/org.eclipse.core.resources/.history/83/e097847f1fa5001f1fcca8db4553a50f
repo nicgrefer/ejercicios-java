@@ -111,48 +111,7 @@ public class GeneraContraseña {
 
 	//caso 1 dados y moneda
 	public void caso1(int tamanio ){
-	
-		String contraseniaTimp3="";
-		Random aleatorio = new Random();
-		int moneda=aleatorio.nextInt(0,1)+1;
-		if (moneda==1) {//minusculas y numeros
-			String fila1="abcdef";
-			String fila2="ghijkl";
-			String fila3="mnopkr";
-			String fila4="stuvwx";
-			String fila5="yz0123";
-			String fila6="456789";
-			for (int i=1; i<=tamanio;i++) {
-				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
-		        switch (fila) {
-		            case 1 -> contraseniaTimp3 += fila1.charAt(aleatorio.nextInt(fila1.length()));
-		            case 2 -> contraseniaTimp3 += fila2.charAt(aleatorio.nextInt(fila2.length()));
-		            case 3 -> contraseniaTimp3 += fila3.charAt(aleatorio.nextInt(fila3.length()));
-		            case 4 -> contraseniaTimp3 += fila4.charAt(aleatorio.nextInt(fila4.length()));
-		            case 5 -> contraseniaTimp3 += fila5.charAt(aleatorio.nextInt(fila5.length()));
-		            case 6 -> contraseniaTimp3 += fila6.charAt(aleatorio.nextInt(fila6.length()));
-		        }
-				
-			}
-		} if (moneda==2){//mayusculas y sinbolos
-			String fila1="ABCDEF";
-			String fila2="GHIJKL";
-			String fila3="MNOPKR";
-			String fila4="STUVWX";
-			String fila5="YZ=!@#";
-			String fila6="$%&/()";
-			for (int i=1; i<=tamanio;i++) {
-				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
-		        switch (fila) {
-		            case 1 -> contraseniaTimp3 += fila1.charAt(aleatorio.nextInt(fila1.length()));
-		            case 2 -> contraseniaTimp3 += fila2.charAt(aleatorio.nextInt(fila2.length()));
-		            case 3 -> contraseniaTimp3 += fila3.charAt(aleatorio.nextInt(fila3.length()));
-		            case 4 -> contraseniaTimp3 += fila4.charAt(aleatorio.nextInt(fila4.length()));
-		            case 5 -> contraseniaTimp3 += fila5.charAt(aleatorio.nextInt(fila5.length()));
-		            case 6 -> contraseniaTimp3 += fila6.charAt(aleatorio.nextInt(fila6.length()));
-		        }
-			}
-		}
+		
 	}
 	
 	//caso 2 aleatorios
