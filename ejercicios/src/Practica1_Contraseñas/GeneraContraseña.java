@@ -27,10 +27,9 @@ public class GeneraContraseña {
 		
 		//Peticion de datos
 		app.datosPersonales();
-		//llamamos a la funcion para crear tres tipos de contraseñas diferentes con tres estilos posibles
-		//app.tipoContraseña();
-		 String contrasenia = app.caso3(8);
-		    System.out.println("Contraseña generada: " + contrasenia);
+		//comprbamos la contraseña
+		app.comprobadorTamanioCodico();
+		 
 	}
 
 	//Pido los daros personales
@@ -60,7 +59,7 @@ public class GeneraContraseña {
                 System.out.println("DNI completo: " + dni + letracorrecta);
                 dniCompleto=dni+letracorrecta;
             } else {
-                System.err.println("DNI no válido. Inténtalo de nuevo.");
+                System.out.println("DNI no válido. Inténtalo de nuevo.");
             }
         } while (dni.length() != 8 || !dni.matches("\\d{8}"));
 
@@ -86,33 +85,61 @@ public class GeneraContraseña {
 		
 	}
 	
+	public void comprobadorTamanioCodico() {
+	    String seguridadContrasena = "";
+
+	    for (int i = 1; i <= 3; i++) {
+	        String contraseña = app.TipoContraseña();
+	        int longCodigo = contraseña.length();
+
+	        if (longCodigo >= 4 && longCodigo <= 6) {
+	            seguridadContrasena = "Poco segura";
+	        } else if (longCodigo > 6) {
+	            // Verifica si contiene algún símbolo
+	            String simbolos = "=!@#$%&/()";
+	            boolean tieneSimbolo = false;
+
+	            for (int j = 0; j < longCodigo; j++) {
+	                if (simbolos.contains(String.valueOf(contraseña.charAt(j)))) {
+	                    tieneSimbolo = true;
+	                    break;
+	                }
+	            }
+
+	            seguridadContrasena = tieneSimbolo ? "Muy segura" : "Segura";
+	        }
+
+	        System.out.println("La contraseña es: " + contraseña + " con un nivel de seguridad: " + seguridadContrasena);
+	    }
+	}
 	
 	//Aletorio para escoger el tipo de "codificación"
-	public void tipoContraseña(){
+	public String TipoContraseña(){
 		Random aleatorio=new Random();
-		for(int i=1;i<=3;i++) {
-			int tipo=aleatorio.nextInt(1,3)+1;
+		String contraseña="";
+		int tipo=aleatorio.nextInt(3)+1;
 
 			if (tipo==1) {
 				int tamanio=aleatorio.nextInt(4,8);
-				app.caso1(tamanio); //caso dados y moneda
+				contraseña=app.caso1(tamanio); //caso dados y moneda
 			}
 			else if (tipo==2) {
 				int tamanio=aleatorio.nextInt(4,8);
-				app.caso2(tamanio);//caso SecurityRamdom
+				contraseña=app.caso2(tamanio);//caso SecurityRamdom
 				}
 				
 			else {
 				int tamanio=aleatorio.nextInt(4,8);
-				app.caso3(tamanio);//Ultimo caso
-			}
+				contraseña=app.caso3(tamanio);//Ultimo caso
+
 		}
+		return contraseña;
 	}
 
 	//caso 1 dados y moneda
-	public void caso1(int tamanio ){
+	public String caso1(int tamanio ){
 	
-		String contraseniaTimp3="";
+		String contraseniaTimp1="";
 		Random aleatorio = new Random();
 		int moneda=aleatorio.nextInt(0,1)+1;
 		if (moneda==1) {//minusculas y numeros
@@ -125,12 +152,12 @@ public class GeneraContraseña {
 			for (int i=1; i<=tamanio;i++) {
 				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
 		        switch (fila) {
-		            case 1 -> contraseniaTimp3 += fila1.charAt(aleatorio.nextInt(fila1.length()));
-		            case 2 -> contraseniaTimp3 += fila2.charAt(aleatorio.nextInt(fila2.length()));
-		            case 3 -> contraseniaTimp3 += fila3.charAt(aleatorio.nextInt(fila3.length()));
-		            case 4 -> contraseniaTimp3 += fila4.charAt(aleatorio.nextInt(fila4.length()));
-		            case 5 -> contraseniaTimp3 += fila5.charAt(aleatorio.nextInt(fila5.length()));
-		            case 6 -> contraseniaTimp3 += fila6.charAt(aleatorio.nextInt(fila6.length()));
+		            case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
+		            case 2 -> contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
+		            case 3 -> contraseniaTimp1 += fila3.charAt(aleatorio.nextInt(fila3.length()));
+		            case 4 -> contraseniaTimp1 += fila4.charAt(aleatorio.nextInt(fila4.length()));
+		            case 5 -> contraseniaTimp1 += fila5.charAt(aleatorio.nextInt(fila5.length()));
+		            case 6 -> contraseniaTimp1 += fila6.charAt(aleatorio.nextInt(fila6.length()));
 		        }
 				
 			}
@@ -144,15 +171,16 @@ public class GeneraContraseña {
 			for (int i=1; i<=tamanio;i++) {
 				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
 		        switch (fila) {
-		            case 1 -> contraseniaTimp3 += fila1.charAt(aleatorio.nextInt(fila1.length()));
-		            case 2 -> contraseniaTimp3 += fila2.charAt(aleatorio.nextInt(fila2.length()));
-		            case 3 -> contraseniaTimp3 += fila3.charAt(aleatorio.nextInt(fila3.length()));
-		            case 4 -> contraseniaTimp3 += fila4.charAt(aleatorio.nextInt(fila4.length()));
-		            case 5 -> contraseniaTimp3 += fila5.charAt(aleatorio.nextInt(fila5.length()));
-		            case 6 -> contraseniaTimp3 += fila6.charAt(aleatorio.nextInt(fila6.length()));
+		            case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
+		            case 2 -> contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
+		            case 3 -> contraseniaTimp1 += fila3.charAt(aleatorio.nextInt(fila3.length()));
+		            case 4 -> contraseniaTimp1 += fila4.charAt(aleatorio.nextInt(fila4.length()));
+		            case 5 -> contraseniaTimp1 += fila5.charAt(aleatorio.nextInt(fila5.length()));
+		            case 6 -> contraseniaTimp1 += fila6.charAt(aleatorio.nextInt(fila6.length()));
 		        }
 			}
 		}
+		return contraseniaTimp1;
 	}
 	
 	//caso 2 aleatorios
@@ -171,7 +199,7 @@ public class GeneraContraseña {
 	}
 	
 	//caso3 "Mi idea"
-	private String caso3(int tamanio) {
+	public String caso3(int tamanio) {
 		// TODO Auto-generated method stub
 
 		String contraseniaFinal ="";
@@ -217,4 +245,7 @@ public class GeneraContraseña {
 		}
 		return contraseniaFinal;
 	}
+	
+	
+	
 }
