@@ -6,10 +6,11 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class GeneraContraseña_Cubillo_Jové_Nicolás {
 
-	/**datos a utilizar*/
+	//datos a utilizar
 	public String nombre;
 	public String apellido1;
 	public String apellido2;
@@ -20,7 +21,6 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	public Scanner sc=new Scanner (System.in);
 	public static GeneraContraseña_Cubillo_Jové_Nicolás app=new GeneraContraseña_Cubillo_Jové_Nicolás();
 	
-	/**Inicio programa*/
 	
 	//Programa principal (inicio)
 	public static void main(String[] args) {
@@ -37,32 +37,37 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 
 	//Pido los daros personales
 	public void datosPersonales(){
-		//Nombre
-		do {
-			System.out.println("Introduce el nombre: ");
-			nombre =sc.next().toLowerCase().trim();
-			if (nombre.length()<3) {
-				System.err.println("Nombre no valido");
-			}
-		}while (nombre.length()<3);
+		 Scanner sc = new Scanner(System.in);
+	     Pattern validoString = Pattern.compile("[A-ZÁÉÍÓÚ][a-záéíóúñÁÉÍÓÚÑ]+"); // Al menos 2 caracteres, el primero mayúscula.
+
+	     //Nombre
+	        do {
+	            System.out.println("Introduce el nombre: ");
+	            nombre = sc.next().trim(); // Eliminamos espacios en blanco.
+
+	            // Validar longitud y patrón.
+	            if (nombre.length() < 3 || !validoString.matcher(nombre).matches()) {
+	                System.err.println("Nombre no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
+	            }
+	        } while (nombre.length() < 3 || !validoString.matcher(nombre).matches());
 		
 		//apellido1
 		do {
 			System.out.println("Introduce su 1º apellido: ");
-			apellido1 =sc.next().toLowerCase().trim();
-			if (apellido1.length()<3) {
-				System.err.println("Apellido no valido");
-			}
-		}while (apellido1.length()<3);
+			apellido1 =sc.next().trim();
+			if (apellido1.length() < 3 || !validoString.matcher(apellido1).matches()) {
+                System.err.println("Apellido no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
+            }
+        } while (apellido1.length() < 3 || !validoString.matcher(apellido1).matches());
 		
 		//apellido2
 		do {
 			System.out.println("Introduce su 2º apellido: ");
-			apellido2 =sc.next().toLowerCase().trim();
-			if (apellido2.length()<3) {
-				System.err.println("Apellido no valido");
-			}
-		}while (apellido2.length()<3);
+			apellido2 =sc.next().trim();
+			if (apellido2.length() < 3 || !validoString.matcher(apellido2).matches()) {
+                System.err.println("Apellido no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
+            }
+        } while (apellido2.length() < 3 || !validoString.matcher(apellido2).matches());
 		//dni
 		dni = ""; // dni introducido por el usuario
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
@@ -70,17 +75,18 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         
         // bucle de validación del dni
         do {
-            System.out.println("Introduce un DNI (sin letra): ");
-            dni = sc.nextLine().toUpperCase().trim();
-            if (dni.length() == 8 && dni.matches("\\d{8}")) {
-                int numerodni = Integer.parseInt(dni);
-                int resto = numerodni % 23;
-                letracorrecta = letras.charAt(resto);
-                System.out.println("DNI completo: " + dni + letracorrecta);
-                dniCompleto=dni+letracorrecta;
-            } else {
-                System.out.println("DNI no válido. Inténtalo de nuevo.");
-            }
+        	System.out.println("Introduce un DNI (sin letra): ");
+        	dni = sc.next().trim();
+        	if (dni.matches("\\d{8}")) {
+        	    int numerodni = Integer.parseInt(dni);
+        	    int resto = numerodni % 23;
+        	    letracorrecta = letras.charAt(resto);
+        	    System.out.println("DNI completo: " + dni + letracorrecta);
+        	    dniCompleto = dni + letracorrecta;
+        	} else {
+        	    System.err.println("DNI no válido. Inténtalo de nuevo.");
+        	}
+
         } while (dni.length() != 8 || !dni.matches("\\d{8}"));
 
 
@@ -162,7 +168,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	
 		String contraseniaTimp1="";
 		Random aleatorio = new Random();
-		int moneda=aleatorio.nextInt(0,1)+1;// Lanzamiento de la moneda para saber si va a salir mayusculas/minusculas/letras/simbolo
+		int moneda=aleatorio.nextInt(2)+1;// Lanzamiento de la moneda para saber si va a salir mayusculas/minusculas/letras/simbolo
 		if (moneda==1) {//minusculas y numeros
 			//generamos los estilos
 			String fila1="abcdef";
@@ -210,7 +216,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	public String caso2(int tamanio) {
 		SecureRandom sr =new SecureRandom();
 		String contraseniaFinal="";//guardamos contraseña
-		String caracteresValidos="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%/&()=";
+		String caracteresValidos="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáéíóú0123456789!@#$%/&()=";
 				
 		for (int i =0;i<tamanio;i++) {
 			int posicionDelCararter=sr.nextInt(caracteresValidos.length());//se crea un aleatorio que correspondera a un caracter del string "caracteresValidos"
@@ -228,36 +234,35 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 			Random random=new Random();
 			switch(i) {
 			
-				case 1 ->{
+				case 1 ->{//Primera letra del nombre en mayusculas (Ya esta introducido en mayusculas por el usuario)
 					String nombreMayus=nombre.toUpperCase();
-					contraseniaFinal=contraseniaFinal+nombreMayus.charAt(1);
+					contraseniaFinal=contraseniaFinal+nombreMayus.charAt(0);
 				}
-				case 2 ->{
+				case 2 ->{//Ultima letra del 1º apellido
 					int longapellido1=apellido1.length();
 					contraseniaFinal=contraseniaFinal+apellido1.charAt(longapellido1 -1);
 				}
 				case 3->{
+					int longDNI=dniCompleto.length();//Ultimo numero del DNI
+					contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-2);
+				}case 4 ->{//Penultimo numero del DNI
 					int longDNI=dniCompleto.length();
-					contraseniaFinal=contraseniaFinal+apellido2.charAt(longDNI-2);
+					contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-3);
 				}
-				case 4 ->{
+				case 5-> {//Letra del DNI
 					int longDNI=dniCompleto.length();
-					contraseniaFinal=contraseniaFinal+apellido2.charAt(longDNI-3);
+					contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-1);
 				}
-				case 5-> {
-					int longDNI=dniCompleto.length();
-					contraseniaFinal=contraseniaFinal+apellido2.charAt(longDNI-1);
-				}
-				case 6 ->{
+				case 6 ->{//Ultimo numero de fecha de nacimiento (siendo este ultimo digito el del año)
 					int longNacimiento=fechaNacimiento.length();
 					contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -1);
 				}
-				case 7 -> {
+				case 7 -> {// Penultimo numero de fecha de nacimiento (siendo este penultimo digito el del año)
 					int longNacimiento=fechaNacimiento.length();
 					contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -2);
 				}
-				default -> {
-					String simbolos="!@#$%&/()=";
+				default -> {//Un simbolo aleatorio
+					String simbolos="=!@#$%&/()";
 					contraseniaFinal=contraseniaFinal+simbolos.charAt(random.nextInt(simbolos.length()));
 				}
 							
@@ -266,7 +271,5 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 		}
 		return contraseniaFinal;
 	}
-	
-	
 	
 }

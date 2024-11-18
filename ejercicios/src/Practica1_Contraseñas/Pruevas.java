@@ -3,29 +3,50 @@ package Practica1_Contraseñas;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Pruevas {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        //fecha nacimiento
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate fecha=null;
-      		do {
-      			System.out.println("Introduce su fecha de nacimiento: ");
-          		String fiechaNacimiento =sc.next();
-          		
-          		
-          	  try {
-                  // Comprobar si lo introducido coincide con lo pedido(con la plantilla)
-                   fecha = LocalDate.parse(fiechaNacimiento, format);
 
-                
-              } catch (DateTimeParseException e) {//Si introduce fecha incorrecta ERR
-                  System.err.println("Formato de fecha no válidotiene que ser dd/mm/yyyy");
-              }
-      		}while (fecha==null);
-      		
+    	 String nombre="Nicolás";
+    	 String apellido1="Jové";
+    	 String apellido2="Cubillo";
+    	 String dni="12470934";
+    	 String dniCompleto="12470934N";
+    	 String fechaNacimiento="29/04/2006";
+    	String contraseniaFinal="";
+    	Random random=new Random();
+    	
+		String nombreMayus=nombre.toUpperCase();
+		contraseniaFinal=contraseniaFinal+nombreMayus.charAt(0);
+
+
+		int longapellido1=apellido1.length();
+		contraseniaFinal=contraseniaFinal+apellido1.charAt(longapellido1 -1);
+
+
+		int longDNI=dniCompleto.length();
+		contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-2);
+
+		
+		contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-3);
+
+
+		
+		contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-1);
+
+
+		int longNacimiento=fechaNacimiento.length();
+		contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -1);
+
+		longNacimiento=fechaNacimiento.length();
+		contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -2);
+
+
+		String simbolos="!@#$%&/()=";
+		contraseniaFinal=contraseniaFinal+simbolos.charAt(random.nextInt(simbolos.length()));
+
     }
 }

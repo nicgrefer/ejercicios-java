@@ -1,0 +1,52 @@
+package Practica1_Contraseñas;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Pruevas {
+
+    public static void main(String[] args) {
+
+    	 String nombre="Nicolás";
+    	 String apellido1="Jové";
+    	 String apellido2="Cubillo";
+    	 String dni="12470934";
+    	 String dniCompleto="12470934N";
+    	 String fechaNacimiento="29/04/2006";
+    	String contraseniaFinal="";
+    	Random random=new Random();
+    	
+		String nombreMayus=nombre.toUpperCase();
+		contraseniaFinal=contraseniaFinal+nombreMayus.charAt(0);
+
+
+		int longapellido1=apellido1.length();
+		contraseniaFinal=contraseniaFinal+apellido1.charAt(longapellido1 -1);
+
+
+		int longDNI=dniCompleto.length();
+		contraseniaFinal=contraseniaFinal+apellido2.charAt(longDNI-2);
+
+		int longDNI=dniCompleto.length();
+		contraseniaFinal=contraseniaFinal+apellido2.charAt(longDNI-3);
+
+
+		int longDNI=dniCompleto.length();
+		contraseniaFinal=contraseniaFinal+apellido2.charAt(longDNI-1);
+
+
+		int longNacimiento=fechaNacimiento.length();
+		contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -1);
+
+		int longNacimiento=fechaNacimiento.length();
+		contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -2);
+
+
+		String simbolos="!@#$%&/()=";
+		contraseniaFinal=contraseniaFinal+simbolos.charAt(random.nextInt(simbolos.length()));
+
+    }
+}
