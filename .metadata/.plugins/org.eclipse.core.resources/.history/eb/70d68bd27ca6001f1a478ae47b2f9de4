@@ -1,0 +1,22 @@
+package clasesextra;
+
+public class Aplicacion2_19_11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int numero=4;
+		Aplicacion2_19_11 app=new Aplicacion2_19_11();
+		System.out.println(app.factorial(numero));
+		
+	}
+	
+	public int factorial(int numero){
+        int resultado=1;
+        for(int i=1;i<=numero;i++){
+            resultado=resultado*i;
+        }
+        return resultado;
+    }
+	
+}

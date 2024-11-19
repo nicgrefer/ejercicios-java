@@ -1,0 +1,29 @@
+package clasesextra;
+
+public class Aplicacion2_19_11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int numero=4;
+		Aplicacion2_19_11 app=new Aplicacion2_19_11();
+		System.out.println(app.factorial(numero));
+		
+		String cadena="Hola";
+		System.out.println(app.imprimeCaracter(cadena));
+	}
+	
+	public int factorial(int numero){
+		if (numero==0)
+			return 1;
+        return numero*factorial(--numero);
+        
+    }
+
+	private String imprimeCaracter(String letra) {
+		if (letra.length()==1)
+			return letra;
+		return letra.charAt(0)+imprimeCaracter(letra.substring(1,letra.length()));
+	}
+	
+}

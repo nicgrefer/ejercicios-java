@@ -1,0 +1,22 @@
+package clasesextra;
+
+public class EsLetra_ejemplo19_11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char letra = 'A';
+
+		boolean esLetra=true;
+		
+		while(esLetra==true) {
+			if ((letra >= 64 && letra <= 90) || (letra >= 97 && letra <= 122)) {
+				
+				System.out.print(letra);
+			} else {
+				esLetra=false;
+			}
+			letra++;
+		}
+	}
+
+}
