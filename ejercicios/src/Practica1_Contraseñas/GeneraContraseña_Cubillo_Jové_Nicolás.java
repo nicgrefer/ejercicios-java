@@ -116,8 +116,8 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	    String seguridadContrasena = "";
 
 	    for (int i = 1; i <= 3; i++) {// Creamos bucle para realizar las 3 contraseñas
-	        String contraseña = app.TipoContraseña();//guardamos el valor de la contraseña
-	        int longCodigo = contraseña.length();//longitud del codigo
+	        String contrasena = app.TipoContrasena();//guardamos el valor de la contraseña
+	        int longCodigo = contrasena.length();//longitud del codigo
 
 	        if (longCodigo >= 4 && longCodigo <= 6) {
 	            seguridadContrasena = "Poco segura";
@@ -127,7 +127,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	            boolean tieneSimbolo = false;
 
 	            for (int j = 0; j < longCodigo; j++) {//bucle para comprobar si tiene simbolo
-	                if (simbolos.contains(String.valueOf(contraseña.charAt(j)))) {
+	                if (simbolos.contains(String.valueOf(contrasena.charAt(j)))) {
 	                    tieneSimbolo = true;
 	                    break;
 	                }
@@ -136,31 +136,31 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	            seguridadContrasena = tieneSimbolo ? "Muy segura" : "Segura";
 	        }
 
-	        System.out.println("La contraseña es: " + contraseña + " con un nivel de seguridad: " + seguridadContrasena);//Printeo contraseña
+	        System.out.println("La contraseña es: " + contrasena + " con un nivel de seguridad: " + seguridadContrasena);//Printeo contraseña
 	    }
 	}
 	
 	//Aletorio para escoger el tipo de "codificación"
-	public String TipoContraseña(){
+	public String TipoContrasena(){
 		Random aleatorio=new Random();
-		String contraseña="";//guardamos la contraseña que sale del cualquier tipo (aleatorio)
+		String contrasena="";//guardamos la contraseña que sale del cualquier tipo (aleatorio)
 		int tipo=aleatorio.nextInt(3)+1;
 
 			if (tipo==1) {
 				int tamanio=aleatorio.nextInt(4,8);
-				contraseña=app.caso1(tamanio); //caso dados y moneda
+				contrasena=app.caso1(tamanio); //caso dados y moneda
 			}
 			else if (tipo==2) {
 				int tamanio=aleatorio.nextInt(4,8);
-				contraseña=app.caso2(tamanio);//caso SecurityRamdom
+				contrasena=app.caso2(tamanio);//caso SecurityRamdom
 				}
 				
 			else {
 				int tamanio=aleatorio.nextInt(4,8);
-				contraseña=app.caso3(tamanio);//Ultimo caso
+				contrasena=app.caso3(tamanio);//Ultimo caso
 
 		}
-		return contraseña;
+		return contrasena;
 	}
 
 	//caso 1 dados y moneda
