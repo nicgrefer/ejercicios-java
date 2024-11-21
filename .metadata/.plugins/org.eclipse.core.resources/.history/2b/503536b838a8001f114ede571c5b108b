@@ -1,0 +1,30 @@
+package xxx_Ejercicios_repaso_casa;
+
+import java.util.Scanner;
+
+public class SumaRecursiva {
+	 
+	public int contador=0;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc =new Scanner(System.in);
+		SumaRecursiva app =new SumaRecursiva();
+		
+		System.out.print("Introduce un numero: ");
+		int numero=sc.nextInt();
+		app.multiRecursiva(numero);
+		
+	}
+
+	public void multiRecursiva(int num) {
+		
+		if (contador<=10) {
+			int multiplico= num*contador;
+			System.out.print(num + "*" + contador + " = "+ multiplico);
+			multiRecursiva(contador + 1);
+		}
+	}
+	
+}
