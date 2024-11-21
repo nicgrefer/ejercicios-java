@@ -1,8 +1,0 @@
-package clasesextra;
-
-public class Punto {
-
-	int x;
-	int i;
-	
-}

@@ -17,10 +17,6 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	public String dni;
 	public String dniCompleto;
 	public String fechaNacimiento;
-	public String RESET = "\u001B[0m";
-	public String ROJO = "\u001B[31m";
-	public String AMARILLO = "\u001B[33m";
-	public String VERDE = "\u001B[32m";
 	
 	public Scanner sc=new Scanner (System.in);
 	public static GeneraContraseña_Cubillo_Jové_Nicolás app=new GeneraContraseña_Cubillo_Jové_Nicolás();
@@ -107,8 +103,8 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
                   // Comprobar si lo introducido coincide con lo pedido(con la plantilla)
                    fecha = LocalDate.parse(fechaNacimiento, format);
                    
-                   if (fecha.isAfter(fechaHoy) || fecha.isEqual(fechaHoy)) {
-                	   System.out.println("La fecha de nacimiento no puede ser del futuro/hoy.");
+                   if (fecha.isAfter(fechaHoy)) {
+                	   System.err.println("La fecha de nacimiento no puede ser en el futuro.");
                        fecha = null;
                    }
                 
@@ -129,7 +125,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	        int longCodigo = contrasena.length();//longitud del codigo
 
 	        if (longCodigo >= 4 && longCodigo <= 6) {
-	            seguridadContrasena =ROJO + "Poco segura" + RESET;
+	            seguridadContrasena = "Poco segura";
 	        } else if (longCodigo > 6) {
 	            // Verifica si contiene algún símbolo
 	            String simbolos = "=!@#$%&/()"; 
@@ -142,7 +138,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	                }
 	            }
 
-	            seguridadContrasena = tieneSimbolo ? VERDE + "Muy segura" + RESET : AMARILLO + "Segura" + RESET;
+	            seguridadContrasena = tieneSimbolo ? "Muy segura" : "Segura";
 	        }
 
 	        System.out.println("La contraseña es: " + contrasena + " con un nivel de seguridad: " + seguridadContrasena);//Printeo contraseña
