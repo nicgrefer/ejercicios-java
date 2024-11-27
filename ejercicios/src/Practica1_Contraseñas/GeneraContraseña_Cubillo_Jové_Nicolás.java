@@ -10,274 +10,280 @@ import java.util.regex.Pattern;
 
 public class GeneraContraseña_Cubillo_Jové_Nicolás {
 
-	//datos a utilizar
-	public String nombre;
-	public String apellido1;
-	public String apellido2;
-	public String dni;
-	public String dniCompleto;
-	public String fechaNacimiento;
-	public String RESET = "\u001B[0m";
-	public String ROJO = "\u001B[31m";
-	public String AMARILLO = "\u001B[33m";
-	public String VERDE = "\u001B[32m";
-	
-	public Scanner sc=new Scanner (System.in);
-	public static GeneraContraseña_Cubillo_Jové_Nicolás app=new GeneraContraseña_Cubillo_Jové_Nicolás();
-	
-	
-	//Programa principal (inicio)
+	// Programa principal (inicio)
 	public static void main(String[] args) {
-		//Peticion de datos
-		app.datosPersonales();
-		//comprbamos la contraseña que se a generado para saver que tipò de seguridad proporciona
-		app.comprobadorTamanioCodico();
-/**  Funcionamiento del codigo:
- *  1º pido datos, 2º llamo a la variable comprobadorTamanioCodico que esta vinculado con la generadora de longitud estando está conectada a
- *  un aleatorio para escoger un tipo de conraseña a realizar devolviendo así la contraseña que sera presentada al usuario
- */
-		
-	}
+		// Peticion de datos
+		Scanner sc = new Scanner(System.in);
+		String nombre;
+		String apellido1;
+		String apellido2;
+		String dni;
+		String dniCompleto = "";
+		String fechaNacimiento;
+		Pattern validoString = Pattern.compile("[A-ZÁÉÍÓÚ][a-záéíóúñÁÉÍÓÚÑ]+"); // Al menos 2 caracteres, el primero
+																				// mayúscula.
 
-	//Pido los daros personales
-	public void datosPersonales(){
-		 Scanner sc = new Scanner(System.in);
-	     Pattern validoString = Pattern.compile("[A-ZÁÉÍÓÚ][a-záéíóúñÁÉÍÓÚÑ]+"); // Al menos 2 caracteres, el primero mayúscula.
+		// Validación del nombre
+		do {
+			System.out.println("Introduce el nombre: ");
+			nombre = sc.next().trim(); // Eliminamos espacios en blanco.
 
-	     //Nombre
-	        do {
-	            System.out.println("Introduce el nombre: ");
-	            nombre = sc.next().trim(); // Eliminamos espacios en blanco.
+			// Validar longitud y patrón.
+			if (nombre.length() < 3 || !validoString.matcher(nombre).matches()) {
+				System.err.println("Nombre no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
+			}
+		} while (nombre.length() < 3 || !validoString.matcher(nombre).matches());
 
-	            // Validar longitud y patrón.
-	            if (nombre.length() < 3 || !validoString.matcher(nombre).matches()) {
-	                System.err.println("Nombre no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
-	            }
-	        } while (nombre.length() < 3 || !validoString.matcher(nombre).matches());
-		
-		//apellido1
+		// Validación del primer apellido
 		do {
 			System.out.println("Introduce su 1º apellido: ");
-			apellido1 =sc.next().trim();
+			apellido1 = sc.next().trim();
 			if (apellido1.length() < 3 || !validoString.matcher(apellido1).matches()) {
-                System.err.println("Apellido no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
-            }
-        } while (apellido1.length() < 3 || !validoString.matcher(apellido1).matches());
-		
-		//apellido2
+				System.err.println("Apellido no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
+			}
+		} while (apellido1.length() < 3 || !validoString.matcher(apellido1).matches());
+
+		// Validación del segundo apellido
 		do {
 			System.out.println("Introduce su 2º apellido: ");
-			apellido2 =sc.next().trim();
+			apellido2 = sc.next().trim();
 			if (apellido2.length() < 3 || !validoString.matcher(apellido2).matches()) {
-                System.err.println("Apellido no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
-            }
-        } while (apellido2.length() < 3 || !validoString.matcher(apellido2).matches());
-		//dni
-		dni = ""; // dni introducido por el usuario
-        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-        char letracorrecta = 0; // letra DNI calculada
-        
-        // bucle de validación del dni
-        do {
-        	System.out.println("Introduce un DNI (sin letra): ");
-        	dni = sc.next().trim();
-        	if (dni.matches("\\d{8}")) {
-        	    int numerodni = Integer.parseInt(dni);
-        	    int resto = numerodni % 23;
-        	    letracorrecta = letras.charAt(resto);
-        	    System.out.println("DNI completo: " + dni + letracorrecta);
-        	    dniCompleto = dni + letracorrecta;
-        	} else {
-        	    System.err.println("DNI no válido. Inténtalo de nuevo.");
-        	}
+				System.err.println("Apellido no válido. Debe empezar con mayúscula y tener al menos 3 caracteres.");
+			}
+		} while (apellido2.length() < 3 || !validoString.matcher(apellido2).matches());
 
-        } while (dni.length() != 8 || !dni.matches("\\d{8}"));
+		// Validación del DNI
+		String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+		char letracorrecta = 0; // letra DNI calculada
+		do {
+			System.out.println("Introduce un DNI (sin letra): ");
+			dni = sc.next().trim();
+			if (dni.matches("\\d{8}")) {
+				int numerodni = Integer.parseInt(dni);
+				int resto = numerodni % 23;
+				letracorrecta = letras.charAt(resto);
+				dniCompleto = dni + letracorrecta;
+				System.out.println("DNI completo: " + dniCompleto);
+			} else {
+				System.err.println("DNI no válido. Inténtalo de nuevo.");
+			}
 
+		} while (dni.length() != 8 || !dni.matches("\\d{8}"));
 
-      //fecha nacimiento
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate fecha=null;
-        LocalDate fechaHoy=LocalDate.now();
-      		do {
-      			System.out.println("Introduce su fecha de nacimiento: ");
-          		fechaNacimiento =sc.next().trim();
-          		
-          		
-          	  try {
-                  // Comprobar si lo introducido coincide con lo pedido(con la plantilla)
-                   fecha = LocalDate.parse(fechaNacimiento, format);
-                   
-                   if (fecha.isAfter(fechaHoy) || fecha.isEqual(fechaHoy)) {
-                	   System.out.println("La fecha de nacimiento no puede ser del futuro/hoy.");
-                       fecha = null;
-                   }
-                
-              } catch (DateTimeParseException e) {//Si introduce fecha incorrecta ERR
-                  System.err.println("Formato de fecha no válido tiene que ser dd/mm/yyyy");
-              }
-      		}while (fecha==null );
-      		
-		
+		// Validación de fecha de nacimiento
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate fecha = null;
+		LocalDate fechaHoy = LocalDate.now();
+		do {
+			System.out.println("Introduce su fecha de nacimiento: ");
+			fechaNacimiento = sc.next().trim();
+
+			try {
+				fecha = LocalDate.parse(fechaNacimiento, format);
+				if (fecha.isAfter(fechaHoy) || fecha.isEqual(fechaHoy)) {
+					System.out.println("La fecha de nacimiento no puede ser del futuro/hoy.");
+					fecha = null;
+				}
+
+			} catch (DateTimeParseException e) {
+				System.err.println("Formato de fecha no válido. Debe ser dd/mm/yyyy.");
+			}
+		} while (fecha == null);
+
+		// Llamamos al generador de contraseñas
+		GeneraContraseña_Cubillo_Jové_Nicolás app = new GeneraContraseña_Cubillo_Jové_Nicolás();
+		app.comprobadorTamanioCodico(nombre, apellido1, apellido2, dniCompleto, fechaNacimiento);
 	}
-	
-	//Comprueba el nivel de seguridad de la contraseña y muestra por pantalla
-	public void comprobadorTamanioCodico() {
-	    String seguridadContrasena = "";
 
-	    for (int i = 1; i <= 3; i++) {// Creamos bucle para realizar las 3 contraseñas
-	        String contrasena = app.TipoContrasena();//guardamos el valor de la contraseña
-	        int longCodigo = contrasena.length();//longitud del codigo
+	// Método para comprobar la seguridad de las contraseñas
+	public void comprobadorTamanioCodico(String nombre, String apellido1, String apellido2, String dniCompleto,
+			String fechaNacimiento) {
+		String RESET = "\u001B[0m";
+		String ROJO = "\u001B[31m";
+		String AMARILLO = "\u001B[33m";
+		String VERDE = "\u001B[32m";
+		String seguridadContrasena = "";
+
+	    for (int i = 1; i <= 3; i++) { 
+	        String contrasena = TipoContrasena(nombre, apellido1, apellido2, dniCompleto, fechaNacimiento);
+	        int longCodigo = contrasena.length();
 
 	        if (longCodigo >= 4 && longCodigo < 6) {
-	            seguridadContrasena =ROJO + "Poco segura" + RESET;
+	            seguridadContrasena = ROJO + "Poco segura" + RESET;
 	        } else if (longCodigo >= 6) {
-	            // Verifica si contiene algún símbolo
-	            String simbolos = "=!@#$%&/()"; 
-	            boolean tieneSimbolo = false;
-
-	            for (int j = 0; j < longCodigo; j++) {//bucle para comprobar si tiene simbolo
-	                if (simbolos.contains(String.valueOf(contrasena.charAt(j)))) {
-	                    tieneSimbolo = true;
-	                    break;
-	                }
+	            if (contieneCaracteresEspeciales(contrasena) && contieneMayusculas(contrasena) && contieneDigitos(contrasena) && contieneMinusculas(contrasena)) {
+	                seguridadContrasena = VERDE + "Muy segura" + RESET;
+	            } else {
+	                seguridadContrasena = AMARILLO + "Segura" + RESET;
 	            }
-
-	            seguridadContrasena = tieneSimbolo ? VERDE + "Muy segura" + RESET : AMARILLO + "Segura" + RESET;
 	        }
 
-	        System.out.println("La contraseña es: " + contrasena + " con un nivel de seguridad: " + seguridadContrasena);//Printeo contraseña
+	        System.out.println("La contraseña es: " + contrasena + " con un nivel de seguridad: " + seguridadContrasena);
 	    }
 	}
+		
 	
-	//Aletorio para escoger el tipo de "codificación"
-	public String TipoContrasena(){
-		Random aleatorio=new Random();
-		String contrasena="";//guardamos la contraseña que sale del cualquier tipo (aleatorio)
-		int tipo=aleatorio.nextInt(3)+1;
 
-			if (tipo==1) {
-				int tamanio=aleatorio.nextInt(4,8);
-				contrasena=app.caso1(tamanio); //caso dados y moneda
+	// Comprobamos si la contraseña resultante tiene caracteres especiales.
+	public boolean contieneCaracteresEspeciales(String contrasena) {
+		String caracteresEspeciales = "!@#$%/&()=-_.*";
+		for (int i = 0; i < contrasena.length(); i++) {
+			if (caracteresEspeciales.contains(String.valueOf(contrasena.charAt(i)))) {
+				return true;
 			}
-			else if (tipo==2) {
-				int tamanio=aleatorio.nextInt(4,8);
-				contrasena=app.caso2(tamanio);//caso SecurityRamdom
-				}
-				
-			else {
-				int tamanio=aleatorio.nextInt(4,8);
-				contrasena=app.caso3(tamanio);//Ultimo caso
+		}
+		return false;
+	}
 
+	// Metodo para comprobar si la contrasena contiene mayusculas
+	public boolean contieneMayusculas(String contrasena) {
+		for (int i = 0; i < contrasena.length(); i++) {
+			if (Character.isUpperCase(contrasena.charAt(i))) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// Metodo para comprobar si la contrasena contiene minusculas
+	public boolean contieneMinusculas(String contrasena) {
+		for (int i = 0; i < contrasena.length(); i++) {
+			if (Character.isLowerCase(contrasena.charAt(i))) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// Metodo para comprobar si la contrasena contiene digitos
+	public boolean contieneDigitos(String contrasena) {
+		String digitos = "1234567890";
+		for (int i = 0; i < contrasena.length(); i++) {
+			if (digitos.contains(String.valueOf(contrasena.charAt(i)))) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// Método para escoger el tipo de contraseña
+	public String TipoContrasena(String nombre, String apellido1, String apellido2, String dniCompleto,
+			String fechaNacimiento) {
+		Random aleatorio = new Random();
+		String contrasena = ""; // Guardamos la contraseña que sale del cualquier tipo (aleatorio)
+		int tipo = aleatorio.nextInt(3) + 1;
+
+		if (tipo == 1) {
+			int tamanio = aleatorio.nextInt(4, 8);
+			contrasena = caso1(tamanio); // Caso dados y moneda
+		} else if (tipo == 2) {
+			int tamanio = aleatorio.nextInt(4, 8);
+			contrasena = caso2(tamanio); // Caso SecurityRandom
+		} else {
+			int tamanio = aleatorio.nextInt(4, 8);
+			contrasena = caso3(tamanio, nombre, apellido1, apellido2, dniCompleto, fechaNacimiento); // Último caso
 		}
 		return contrasena;
 	}
 
-	//caso 1 dados y moneda
-	public String caso1(int tamanio ){
-	
-		String contraseniaTimp1="";
+	// Caso 1: Dados y moneda
+	public String caso1(int tamanio) {
+		String contraseniaTimp1 = "";
 		Random aleatorio = new Random();
-		int moneda=aleatorio.nextInt(2)+1;// Lanzamiento de la moneda para saber si va a salir mayusculas/minusculas/letras/simbolo
-		if (moneda==1) {//minusculas y numeros
-			//generamos los estilos
-			String fila1="abcdef";
-			String fila2="ghijkl";
-			String fila3="mnopkr";
-			String fila4="stuvwx";
-			String fila5="yz0123";
-			String fila6="456789";
-			for (int i=1; i<=tamanio;i++) { //mientras que el tamaño definido de la contraseña no sea = a la longitud de la contraseña
-				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
-		        switch (fila) {
-		            case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
-		            case 2 -> contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
-		            case 3 -> contraseniaTimp1 += fila3.charAt(aleatorio.nextInt(fila3.length()));
-		            case 4 -> contraseniaTimp1 += fila4.charAt(aleatorio.nextInt(fila4.length()));
-		            case 5 -> contraseniaTimp1 += fila5.charAt(aleatorio.nextInt(fila5.length()));
-		            case 6 -> contraseniaTimp1 += fila6.charAt(aleatorio.nextInt(fila6.length()));
-		        }
-				
+		int moneda = aleatorio.nextInt(2) + 1; // Lanzamiento de la moneda para saber si va a salir
+												// mayúsculas/minúsculas/letras/símbolos
+
+		if (moneda == 1) { // Minúsculas y números
+			String fila1 = "abcdef";
+			String fila2 = "ghijkl";
+			String fila3 = "mnopkr";
+			String fila4 = "stuvwx";
+			String fila5 = "yz0123";
+			String fila6 = "456789";
+			for (int i = 1; i <= tamanio; i++) {
+				int fila = aleatorio.nextInt(6) + 1;
+				switch (fila) {
+				case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
+				case 2 -> contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
+				case 3 -> contraseniaTimp1 += fila3.charAt(aleatorio.nextInt(fila3.length()));
+				case 4 -> contraseniaTimp1 += fila4.charAt(aleatorio.nextInt(fila4.length()));
+				case 5 -> contraseniaTimp1 += fila5.charAt(aleatorio.nextInt(fila5.length()));
+				case 6 -> contraseniaTimp1 += fila6.charAt(aleatorio.nextInt(fila6.length()));
+				}
 			}
-		} if (moneda==2){//mayusculas y simbolos
-			//generamos los estilos
-			String fila1="ABCDEF";
-			String fila2="GHIJKL";
-			String fila3="MNOPKR";
-			String fila4="STUVWX";
-			String fila5="YZ=!@#";
-			String fila6="$%&/()";
-			for (int i=1; i<=tamanio;i++) {//mientras que el tamaño definido de la contraseña no sea = a la longitud de la contraseña
-				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
-		        switch (fila) {
-		            case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
-		            case 2 -> contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
-		            case 3 -> contraseniaTimp1 += fila3.charAt(aleatorio.nextInt(fila3.length()));
-		            case 4 -> contraseniaTimp1 += fila4.charAt(aleatorio.nextInt(fila4.length()));
-		            case 5 -> contraseniaTimp1 += fila5.charAt(aleatorio.nextInt(fila5.length()));
-		            case 6 -> contraseniaTimp1 += fila6.charAt(aleatorio.nextInt(fila6.length()));
-		        }
+		} else { // Mayúsculas y símbolos
+			String fila1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			String fila2 = "!@#$%^&*()";
+			for (int i = 1; i <= tamanio; i++) {
+				int fila = aleatorio.nextInt(2) + 1;
+				if (fila == 1) {
+					contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
+				} else {
+					contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
+				}
 			}
 		}
 		return contraseniaTimp1;
 	}
-	
-	//caso 2 aleatorios
+
+	// Caso 2: Generación aleatoria de contraseñas seguras
 	public String caso2(int tamanio) {
-		SecureRandom sr =new SecureRandom();
-		String contraseniaFinal="";//guardamos contraseña
-		String caracteresValidos="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáéíóú0123456789!@#$%/&()=";
-				
-		for (int i =0;i<tamanio;i++) {
-			int posicionDelCararter=sr.nextInt(caracteresValidos.length());//se crea un aleatorio que correspondera a un caracter del string "caracteresValidos"
-			contraseniaFinal=contraseniaFinal+caracteresValidos.charAt(posicionDelCararter);
+		String contrasena2 = "";
+		String caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+		SecureRandom random = new SecureRandom();
+		for (int i = 0; i < tamanio; i++) {
+			contrasena2 += caracteresPermitidos.charAt(random.nextInt(caracteresPermitidos.length()));
 		}
-		return contraseniaFinal;
+		return contrasena2;
 	}
-	
-	//caso3 "Mi idea"
-	public String caso3(int tamanio) {
-	
-		String contraseniaFinal ="";
-		for (int i=1; i<=tamanio;i++) {//bucle para ir realizando la contraseña en funcion de la longitud de dicho codigo
-			Random random=new Random();
-			switch(i) {
-			
-				case 1 ->{//Primera letra del nombre en mayusculas (Ya esta introducido en mayusculas por el usuario)
-					String nombreMayus=nombre.toUpperCase();
-					contraseniaFinal=contraseniaFinal+nombreMayus.charAt(0);
-				}
-				case 2 ->{//Ultima letra del 1º apellido
-					int longapellido1=apellido1.length();
-					contraseniaFinal=contraseniaFinal+apellido1.charAt(longapellido1 -1);
-				}
-				case 3->{
-					int longDNI=dniCompleto.length();//Ultimo numero del DNI
-					contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-2);
-				}case 4 ->{//Penultimo numero del DNI
-					int longDNI=dniCompleto.length();
-					contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-3);
-				}
-				case 5-> {//Letra del DNI
-					int longDNI=dniCompleto.length();
-					contraseniaFinal=contraseniaFinal+dniCompleto.charAt(longDNI-1);
-				}
-				case 6 ->{//Ultimo numero de fecha de nacimiento (siendo este ultimo digito el del año)
-					int longNacimiento=fechaNacimiento.length();
-					contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -1);
-				}
-				case 7 -> {// Penultimo numero de fecha de nacimiento (siendo este penultimo digito el del año)
-					int longNacimiento=fechaNacimiento.length();
-					contraseniaFinal=contraseniaFinal+fechaNacimiento.charAt(longNacimiento -2);
-				}
-				default -> {//Un simbolo aleatorio
-					String simbolos="=!@#$%&/()";
-					contraseniaFinal=contraseniaFinal+simbolos.charAt(random.nextInt(simbolos.length()));
-				}
-							
+
+	// Caso 3: Contraseña personalizada basada en los datos
+	public String caso3(int tamanio, String nombre, String apellido1, String apellido2, String dniCompleto,
+			String fechaNacimiento) {
+		String contrasenia3 = "";
+		for (int i = 1; i <= tamanio; i++) {// bucle para ir realizando la contraseña en funcion de la longitud de dicho
+											// codigo
+			Random random = new Random();
+			switch (i) {
+
+			case 1 -> {// Primera letra del nombre en mayusculas (Ya esta introducido en mayusculas por
+						// el usuario)
+				String nombreMayus = nombre.toUpperCase();
+				contrasenia3 = contrasenia3 + nombreMayus.charAt(0);
 			}
-				
+			case 2 -> {// Ultima letra del 1º apellido
+				int longapellido1 = apellido1.length();
+				contrasenia3 = contrasenia3 + apellido1.charAt(longapellido1 - 1);
+			}
+			case 3 -> {
+				int longDNI = dniCompleto.length();// Ultimo numero del DNI
+				contrasenia3 = contrasenia3 + dniCompleto.charAt(longDNI - 2);
+			}
+			case 4 -> {// Penultimo numero del DNI
+				int longDNI = dniCompleto.length();
+				contrasenia3 = contrasenia3 + dniCompleto.charAt(longDNI - 3);
+			}
+			case 5 -> {// Letra del DNI
+				int longDNI = dniCompleto.length();
+				contrasenia3 = contrasenia3 + dniCompleto.charAt(longDNI - 1);
+			}
+			case 6 -> {// Ultimo numero de fecha de nacimiento (siendo este ultimo digito el del año)
+				int longNacimiento = fechaNacimiento.length();
+				contrasenia3 = contrasenia3 + fechaNacimiento.charAt(longNacimiento - 1);
+			}
+			case 7 -> {// Penultimo numero de fecha de nacimiento (siendo este penultimo digito el del
+						// año)
+				int longNacimiento = fechaNacimiento.length();
+				contrasenia3 = contrasenia3 + fechaNacimiento.charAt(longNacimiento - 2);
+			}
+			default -> {// Un simbolo aleatorio
+				String simbolos = "=!@#$%&/()";
+				contrasenia3 = contrasenia3 + simbolos.charAt(random.nextInt(simbolos.length()));
+			}
+
+			}
+
 		}
-		return contraseniaFinal;
+		return contrasenia3;
 	}
-	
 }
