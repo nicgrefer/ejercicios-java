@@ -113,7 +113,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
                    }
                 
               } catch (DateTimeParseException e) {//Si introduce fecha incorrecta ERR
-                  System.err.println("Formato de fecha no válidotiene que ser dd/mm/yyyy");
+                  System.err.println("Formato de fecha no válido tiene que ser dd/mm/yyyy");
               }
       		}while (fecha==null );
       		
@@ -128,9 +128,9 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	        String contrasena = app.TipoContrasena();//guardamos el valor de la contraseña
 	        int longCodigo = contrasena.length();//longitud del codigo
 
-	        if (longCodigo >= 4 && longCodigo <= 6) {
+	        if (longCodigo >= 4 && longCodigo < 6) {
 	            seguridadContrasena =ROJO + "Poco segura" + RESET;
-	        } else if (longCodigo > 6) {
+	        } else if (longCodigo >= 6) {
 	            // Verifica si contiene algún símbolo
 	            String simbolos = "=!@#$%&/()"; 
 	            boolean tieneSimbolo = false;
@@ -186,7 +186,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 			String fila4="stuvwx";
 			String fila5="yz0123";
 			String fila6="456789";
-			for (int i=1; i<=tamanio;i++) { //mintras que el tamaño definido de la contraseña no sea = a la longitud de la contraseña
+			for (int i=1; i<=tamanio;i++) { //mientras que el tamaño definido de la contraseña no sea = a la longitud de la contraseña
 				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
 		        switch (fila) {
 		            case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
@@ -198,7 +198,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 		        }
 				
 			}
-		} if (moneda==2){//mayusculas y sinbolos
+		} if (moneda==2){//mayusculas y simbolos
 			//generamos los estilos
 			String fila1="ABCDEF";
 			String fila2="GHIJKL";
@@ -206,7 +206,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 			String fila4="STUVWX";
 			String fila5="YZ=!@#";
 			String fila6="$%&/()";
-			for (int i=1; i<=tamanio;i++) {//mintras que el tamaño definido de la contraseña no sea = a la longitud de la contraseña
+			for (int i=1; i<=tamanio;i++) {//mientras que el tamaño definido de la contraseña no sea = a la longitud de la contraseña
 				int fila = aleatorio.nextInt(6) + 1; // Genera entre 1 y 6 
 		        switch (fila) {
 		            case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
@@ -236,8 +236,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	
 	//caso3 "Mi idea"
 	public String caso3(int tamanio) {
-		// TODO Auto-generated method stub
-
+	
 		String contraseniaFinal ="";
 		for (int i=1; i<=tamanio;i++) {//bucle para ir realizando la contraseña en funcion de la longitud de dicho codigo
 			Random random=new Random();
