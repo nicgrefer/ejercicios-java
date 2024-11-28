@@ -241,12 +241,12 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 	public String caso3(int tamanio, String nombre, String apellido1, String apellido2, String dniCompleto,
 			String fechaNacimiento) {
 		String contrasenia3 = "";
-		for (int i = 1; i <= tamanio; i++) {// bucle para ir realizando la contraseña en funcion de la longitud de dicho
-											// codigo
+		for (int i = 1; i <= tamanio; i++) {// bucle para ir realizando la contraseña en función de la longitud de dicho
+											// código
 			Random random = new Random();
 			switch (i) {
 
-			case 1 -> {// Primera letra del nombre en mayusculas (Ya esta introducido en mayusculas por
+			case 1 -> {// Primera letra del nombre en mayuscula (Ya está introducido en mayusculas por
 						// el usuario)
 				String nombreMayus = nombre.toUpperCase();
 				contrasenia3 = contrasenia3 + nombreMayus.charAt(0);
