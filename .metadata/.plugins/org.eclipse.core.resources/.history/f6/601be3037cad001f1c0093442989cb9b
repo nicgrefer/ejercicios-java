@@ -93,7 +93,8 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE"; // Letras válidas para un DNI
         char letracorrecta;
         do {
-                        dni = sc.next().trim();
+            System.out.println("Introduce un DNI (sin letra): ");
+            dni = sc.next().trim();
             if (dni.matches("\\d{8}")) {
                 int numerodni = Integer.parseInt(dni);
                 int resto = numerodni % 23;
@@ -115,7 +116,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         LocalDate fecha = null;
         LocalDate fechaHoy = LocalDate.now();
         do {
-           
+            System.out.println("Introduce la fecha de nacimiento (dd/MM/yyyy): ");
             fechaNacimiento = sc.next().trim();
             try {
                 fecha = LocalDate.parse(fechaNacimiento, format);
@@ -245,12 +246,10 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
          nombre = app.compruebaTexto(nombre);
 
         System.out.println("Introduce tu primer apellido:");
-        String apellido1=sc.nextLine();
-        apellido1 = app.compruebaTexto(apellido1);
+        String apellido1 = app.compruebaTexto();
 
         System.out.println("Introduce tu segundo apellido:");
-        String apellido2=sc.nextLine();
-        apellido2 = app.compruebaTexto(apellido2);
+        String apellido2 = app.compruebaTexto();
 
         System.out.println("Introduce tu DNI (sin letra):");
         String dniCompleto = app.comprobarDNI();

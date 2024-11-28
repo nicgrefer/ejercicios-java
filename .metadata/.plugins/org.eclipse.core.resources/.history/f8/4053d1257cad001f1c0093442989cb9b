@@ -93,7 +93,8 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE"; // Letras válidas para un DNI
         char letracorrecta;
         do {
-                        dni = sc.next().trim();
+            System.out.println("Introduce un DNI (sin letra): ");
+            dni = sc.next().trim();
             if (dni.matches("\\d{8}")) {
                 int numerodni = Integer.parseInt(dni);
                 int resto = numerodni % 23;
@@ -115,7 +116,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         LocalDate fecha = null;
         LocalDate fechaHoy = LocalDate.now();
         do {
-           
+            System.out.println("Introduce la fecha de nacimiento (dd/MM/yyyy): ");
             fechaNacimiento = sc.next().trim();
             try {
                 fecha = LocalDate.parse(fechaNacimiento, format);

@@ -23,7 +23,7 @@ public class Ejer3_Recursividad {
         int numerosTiene=0;
         if (numerosTiene<=longNum ){
             numerosTiene++;//Se sima 1 a cuantos numeros tiene
-            return contadorNumeros(longNum/10);//repite pero con una longitud menor
+            return contadorNumeros(longNum-1);//repite pero con una longitud menor
         }
         return numerosTiene;
     }
