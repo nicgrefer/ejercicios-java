@@ -129,11 +129,12 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         return fechaNacimiento;
     }
     
- // Contraseña 1: Dados y moneda
+ // Caso 1: Dados y moneda
  		public String caso1(int tamanio) {
  			String contraseniaTipo1 = "";
  			Random aleatorio = new Random();
- 			int moneda = aleatorio.nextInt(2) + 1; // Lanzamiento de la moneda.
+ 			int moneda = aleatorio.nextInt(2) + 1; // Lanzamiento de la moneda para saber si va a salir
+ 													// mayúsculas/minúsculas/letras/símbolos
 
  			if (moneda == 1) { // Minúsculas y números
  				String fila1 = "abcdef";
@@ -168,7 +169,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  			return contraseniaTipo1;
  		}
 
- 		// Contraseña 2: Generación de contraseña segura utilizando SecureRandom.
+ 		// Caso 2: Generación de contraseñas seguras utilizando SecureRandom
  		public String caso2(int tamanio) {
  			String contrasena2 = "";
  			String caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -179,7 +180,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  			return contrasena2;
  		}
 
- 		// Contraseña 3: Contraseña aplicando la idea propuesta
+ 		// Caso 3: Contraseña aplicando la idea propuesta
  		public String caso3(int tamanio, String nombre, String apellido1, String apellido2, String dniCompleto,
  				String fechaNacimiento) {
  			String contrasenia3 = "";
@@ -211,7 +212,8 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  					int longNacimiento = fechaNacimiento.length();
  					contrasenia3 = contrasenia3 + fechaNacimiento.charAt(longNacimiento - 1);
  				}
- 				case 7 -> {// Penultimo numero de fecha de nacimiento
+ 				case 7 -> {// Penultimo numero de fecha de nacimiento (siendo este penultimo digito el del
+ 							// año)
  					int longNacimiento = fechaNacimiento.length();
  					contrasenia3 = contrasenia3 + fechaNacimiento.charAt(longNacimiento - 2);
  				}

@@ -23,7 +23,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         if (contrasena.length() < 6) {
             seguridad = ROJO + "poco segura" + RESET;
         } else if (contrasena.length() >= 6 && contieneCaracteresEspeciales(contrasena) 
-                && tieneMayusculas(contrasena) && tieneDigitos(contrasena) && tieneMinusculas(contrasena)) {
+                && contieneMayusculas(contrasena) && contieneDigitos(contrasena) && contieneMinusculas(contrasena)) {
             seguridad = VERDE + "muy segura" + RESET;
         } else {
             seguridad = AMARILLO + "segura" + RESET;
@@ -33,7 +33,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
 
     // Método para comprobar si la contraseña contiene caracteres especiales
     public boolean contieneCaracteresEspeciales(String contrasena) {
-        String caracteresEspeciales = "!@#$%/&()=-_.*´^+:ºª|<>?¿¨{}";
+        String caracteresEspeciales = "!@#$%/&()=-_.*";
         for (int i = 0; i < contrasena.length(); i++) {
             if (caracteresEspeciales.contains(String.valueOf(contrasena.charAt(i)))) {
                 return true;
@@ -43,7 +43,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
     }
 
     // Método para comprobar si la contraseña contiene letras mayúsculas
-    public boolean tieneMayusculas(String contrasena) {
+    public boolean contieneMayusculas(String contrasena) {
         for (int i = 0; i < contrasena.length(); i++) {
             if (Character.isUpperCase(contrasena.charAt(i))) {
                 return true;
@@ -53,7 +53,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
     }
 
     // Método para comprobar si la contraseña contiene letras minúsculas
-    public boolean tieneMinusculas(String contrasena) {
+    public boolean contieneMinusculas(String contrasena) {
         for (int i = 0; i < contrasena.length(); i++) {
             if (Character.isLowerCase(contrasena.charAt(i))) {
                 return true;
@@ -63,9 +63,10 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
     }
 
     // Método para comprobar si la contraseña contiene dígitos
-    public boolean tieneDigitos(String contrasena) {
+    public boolean contieneDigitos(String contrasena) {
+        String digitos = "1234567890";
         for (int i = 0; i < contrasena.length(); i++) {
-            if (Character.isDigit(contrasena.charAt(i))) {
+            if (digitos.contains(String.valueOf(contrasena.charAt(i)))) {
                 return true;
             }
         }
@@ -110,7 +111,7 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
     public String comprobarFecha() {
         String fechaNacimiento = "";
         Scanner sc = new Scanner(System.in);
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // El formato válido.
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // Formato esperado: dd/MM/yyyy
         LocalDate fecha = null;
         LocalDate fechaHoy = LocalDate.now();
         do {
@@ -129,11 +130,12 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
         return fechaNacimiento;
     }
     
- // Contraseña 1: Dados y moneda
+ // Caso 1: Dados y moneda
  		public String caso1(int tamanio) {
- 			String contraseniaTipo1 = "";
+ 			String contraseniaTimp1 = "";
  			Random aleatorio = new Random();
- 			int moneda = aleatorio.nextInt(2) + 1; // Lanzamiento de la moneda.
+ 			int moneda = aleatorio.nextInt(2) + 1; // Lanzamiento de la moneda para saber si va a salir
+ 													// mayúsculas/minúsculas/letras/símbolos
 
  			if (moneda == 1) { // Minúsculas y números
  				String fila1 = "abcdef";
@@ -145,12 +147,12 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  				for (int i = 1; i <= tamanio; i++) {
  					int fila = aleatorio.nextInt(6) + 1;
  					switch (fila) {
- 					case 1 -> contraseniaTipo1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
- 					case 2 -> contraseniaTipo1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
- 					case 3 -> contraseniaTipo1 += fila3.charAt(aleatorio.nextInt(fila3.length()));
- 					case 4 -> contraseniaTipo1 += fila4.charAt(aleatorio.nextInt(fila4.length()));
- 					case 5 -> contraseniaTipo1 += fila5.charAt(aleatorio.nextInt(fila5.length()));
- 					case 6 -> contraseniaTipo1 += fila6.charAt(aleatorio.nextInt(fila6.length()));
+ 					case 1 -> contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
+ 					case 2 -> contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
+ 					case 3 -> contraseniaTimp1 += fila3.charAt(aleatorio.nextInt(fila3.length()));
+ 					case 4 -> contraseniaTimp1 += fila4.charAt(aleatorio.nextInt(fila4.length()));
+ 					case 5 -> contraseniaTimp1 += fila5.charAt(aleatorio.nextInt(fila5.length()));
+ 					case 6 -> contraseniaTimp1 += fila6.charAt(aleatorio.nextInt(fila6.length()));
  					}
  				}
  			} else { // Mayúsculas y símbolos
@@ -159,16 +161,16 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  				for (int i = 1; i <= tamanio; i++) {
  					int fila = aleatorio.nextInt(2) + 1;
  					if (fila == 1) {
- 						contraseniaTipo1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
+ 						contraseniaTimp1 += fila1.charAt(aleatorio.nextInt(fila1.length()));
  					} else {
- 						contraseniaTipo1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
+ 						contraseniaTimp1 += fila2.charAt(aleatorio.nextInt(fila2.length()));
  					}
  				}
  			}
- 			return contraseniaTipo1;
+ 			return contraseniaTimp1;
  		}
 
- 		// Contraseña 2: Generación de contraseña segura utilizando SecureRandom.
+ 		// Caso 2: Generación aleatoria de contraseñas seguras
  		public String caso2(int tamanio) {
  			String contrasena2 = "";
  			String caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -179,15 +181,17 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  			return contrasena2;
  		}
 
- 		// Contraseña 3: Contraseña aplicando la idea propuesta
+ 		// Caso 3: Contraseña personalizada basada en los datos
  		public String caso3(int tamanio, String nombre, String apellido1, String apellido2, String dniCompleto,
  				String fechaNacimiento) {
  			String contrasenia3 = "";
- 			for (int i = 1; i <= tamanio; i++) {// Bucle que crea la contraseña hasta la longitud random que salga.
+ 			for (int i = 1; i <= tamanio; i++) {// bucle para ir realizando la contraseña en función de la longitud de dicho
+ 												// código
  				Random random = new Random();
  				switch (i) {
 
- 				case 1 -> {// Primera letra del nombre en mayuscula.
+ 				case 1 -> {// Primera letra del nombre en mayuscula (Ya está introducido en mayusculas por
+ 							// el usuario)
  					String nombreMayus = nombre.toUpperCase();
  					contrasenia3 = contrasenia3 + nombreMayus.charAt(0);
  				}
@@ -211,7 +215,8 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  					int longNacimiento = fechaNacimiento.length();
  					contrasenia3 = contrasenia3 + fechaNacimiento.charAt(longNacimiento - 1);
  				}
- 				case 7 -> {// Penultimo numero de fecha de nacimiento
+ 				case 7 -> {// Penultimo numero de fecha de nacimiento (siendo este penultimo digito el del
+ 							// año)
  					int longNacimiento = fechaNacimiento.length();
  					contrasenia3 = contrasenia3 + fechaNacimiento.charAt(longNacimiento - 2);
  				}
@@ -228,12 +233,13 @@ public class GeneraContraseña_Cubillo_Jové_Nicolás {
  		
  		
 
+    // Método principal
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         GeneraContraseña_Cubillo_Jové_Nicolás app = new GeneraContraseña_Cubillo_Jové_Nicolás();
 
-        // Obtención y validación de datos del usuario
+        // Recolección y validación de datos del usuario
         System.out.println("Introduce tu nombre:");
         String nombre=sc.nextLine();
          nombre = app.compruebaTexto(nombre);
