@@ -11,6 +11,23 @@ public class Persona {
 		private boolean fumador;
 		private double altura; //en metros
 		
+		//Constructor por defecto (El que no recibe parametros)
+		public Persona() {
+			this.dni="";
+			this.altura=0.0;
+			this.apellido="";
+			this.fumador=false;
+			this.edad=0;
+
+
+		}
+		
+		public Persona(String dni,String nombre, String apellido ) {
+			
+		}
+		
+		
+		//Metodos --> comportamientos
 		//Getter
 		
 		public String getDni(){

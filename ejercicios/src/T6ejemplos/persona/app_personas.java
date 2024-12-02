@@ -14,8 +14,12 @@ public class app_personas {
 		System.out.println("edad: "+ app.getEdad());
 		System.out.println("fumador: "+ app.getFumador());
 	*/	
-		Persona persona1=new Persona("12470934N","Felipe","Franco",47,true);
-		app.mostrar(persona1);
+	Persona persona1=new Persona("12470934N","Felipe","Franco",47,true);
+	//	app.mostrar(persona1);
+	
+		p
+		
+		
 		
 	}
 }

@@ -1,0 +1,10 @@
+package T6ejemplos.puntos;
+
+public class app_puntos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
