@@ -28,7 +28,7 @@ public class app_puntos {
                 p1.toString(), p2.toString(), distancia);
 	    
 	    p1.alCentro();
-	        System.out.println("El punto ahora esta en medio de la pantaya que es = " + p1);
+	        System.out.println(p1);
 	        
 	   	 	
 	    }

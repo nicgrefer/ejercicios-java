@@ -1,8 +1,5 @@
 package T6ejemplos.puntos;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
-
 public class Punto {
     private double x;
     private double y;
@@ -52,19 +49,11 @@ public class Punto {
 	}
     
     
-    public double distancia(Punto otro){
-        double calculo = Math.sqrt(Math.pow((otro.getX()-this.getX()),2)
-        + (Math.pow((otro.getY()-this.getY()), 2)));
-        return calculo;
-    }
+    public double distancia(Punto otro) {
+		double valor= Math.sqrt(Math.pow(y, x))q
+	}
     
-    public void alCentro(){
-    	Dimension dimVentana= Toolkit.getDefaultToolkit().getScreenSize();
-    	double alto= dimVentana.getHeight();
-    	double ancho= dimVentana.getWidth();
-    	this.x=ancho/2;
-    	this.y=alto/2;
-    }
+    
     
 }
 

@@ -22,14 +22,7 @@ public class app_puntos {
 	   	 	p1.desplazar(25, 360);
 	   	 	System.out.println("El punto p1 ahora esta en " + p1);
 	   	 	
-	   	 double distancia=p1.distancia(p2);
-
-	   	System.out.printf("Distancia entre %s y %s: %.2f %n", 
-                p1.toString(), p2.toString(), distancia);
-	    
-	    p1.alCentro();
-	        System.out.println("El punto ahora esta en medio de la pantaya que es = " + p1);
-	        
+	   	 	
 	   	 	
 	    }
 	
