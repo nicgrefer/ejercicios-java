@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;T6ejercicios.persona.app&apos; to &apos;App&apos;&#x0D;&#x0A;- Original project: &apos;ejercicios&apos;&#x0D;&#x0A;- Original element: &apos;T6ejercicios.persona.app&apos;&#x0D;&#x0A;- Renamed element: &apos;T6ejercicios.persona.App&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;app&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;T6ejercicios.persona{app.java[app" matchStrategy="1" name="App" qualified="false" references="true" similarDeclarations="false" stamp="1733389932108" textual="false" version="1.0"/>
+</session>

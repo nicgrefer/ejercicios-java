@@ -13,6 +13,7 @@ org.eclipse.jdt.junit.failurePaneFont=1|OpenDyslexic|9.0|0|WINDOWS|1|-12|0|0|0|4
 org.eclipse.jdt.ui.PropertiesFileEditor.textfont=1|OpenDyslexic|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|10|2|1|50|OpenDyslexic;
 org.eclipse.jdt.ui.editors.textfont=1|OpenDyslexic|9.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|OpenDyslexic;
 org.eclipse.jdt.ui.javadocfont=1|OpenDyslexic|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|0|10|2|1|50|OpenDyslexic;
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands/>
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=41,41,41
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=43,44,45
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_TEXT_COLOR=204,204,204
