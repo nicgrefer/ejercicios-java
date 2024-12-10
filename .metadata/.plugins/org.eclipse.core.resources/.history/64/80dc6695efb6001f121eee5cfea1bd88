@@ -1,0 +1,80 @@
+package T6ejercicios.tele;
+
+public class Tele {
+
+	private String nSerie;
+	private double tamanioPulgada;
+	private int nCabales;
+	private int nVolumen;
+	private boolean encendido;
+	
+	// Construcores 
+	
+		public Tele(String nSerie, double tamanioPulgada, int nCabales, int nVolumen, boolean encendido) {
+			if (nSerie == null || nSerie.isEmpty() || tamanioPulgada <= 0 || nCabales <= 0 ) {
+				System.err.print("Error");
+			}else {
+			this.nSerie = nSerie;
+			this.tamanioPulgada = tamanioPulgada;
+			this.nCabales = nCabales;
+			this.nVolumen = nVolumen;
+			this.encendido = encendido;
+			}
+		}
+		public Tele() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+
+	//
+		@Override
+		public String toString() {
+			return "La Tele tiene  [como numero de serie =" + nSerie + ", el tamaño de pulgadas=" + tamanioPulgada + ", nnumeros de cabales=" + nCabales
+					+ ", numero del volumen=" + nVolumen + " y esta encendido=?" + encendido + "]";
+		}
+		
+		
+	//
+	public String getnSerie() {
+		return nSerie;
+	}
+	public void setnSerie(String nSerie) {
+		this.nSerie = nSerie;
+	}
+	//
+	public double getTamanioPulgada() {
+		return tamanioPulgada;
+	}
+	public void setTamanioPulgada(double tamanioPulgada) {
+		this.tamanioPulgada = tamanioPulgada;
+	}
+	//
+	public int getnCabales() {
+		return nCabales;
+	}
+	public void setnCabales(int nCabales) {
+		this.nCabales = nCabales;
+	}
+	//
+	public int getnVolumen() {
+		return nVolumen;
+	}
+	public void setnVolumen(int nVolumen) {
+		this.nVolumen = nVolumen;
+	}
+	//
+	public boolean isEncendido() {
+		return encendido;
+	}
+	public void setEncendido(boolean encendido) {
+		this.encendido = encendido;
+	}
+	
+	
+	
+	
+	//
+	
+	
+
+}

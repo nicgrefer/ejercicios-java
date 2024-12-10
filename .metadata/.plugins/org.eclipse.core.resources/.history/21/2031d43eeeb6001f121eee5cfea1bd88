@@ -1,0 +1,11 @@
+package T6ejercicios.tele;
+
+public class AppTele {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Tele");
+		
+	}
+
+}
