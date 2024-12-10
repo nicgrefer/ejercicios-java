@@ -1,0 +1,12 @@
+package clasesextra;
+
+public class appNodo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		appNodo nodoRaiz = new appNodo();
+		
+	}
+
+}

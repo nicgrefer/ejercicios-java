@@ -1,0 +1,18 @@
+package clasesextra;
+
+public class appNodo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Nodo nodoRaiz=new Nodo("carpeta inicial","Carpeta");
+		Nodo nodo2=new Nodo("victor.txt","Fichero");
+		Nodo nodo3=new Nodo("victor.png","Fichero");
+		Nodo nodoCarpeta=new Nodo("papelera reciclaje","Carpeta");
+		Nodo nodoFichero = new Nodo("config.php", "Fichero");
+		
+		System.out.println(nodo2);
+		
+	}
+
+}
