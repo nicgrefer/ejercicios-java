@@ -5,6 +5,11 @@
 		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando"/>
+			<item value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejem02_HolaMundoMaven"/>
+			<item value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo01_CargandoLibreria"/>
+		</list>
 		<section name="SmartImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="286"/>
 			<item key="DIALOG_Y_ORIGIN" value="19"/>
@@ -33,6 +38,26 @@
 			<item key="DIALOG_WIDTH" value="600"/>
 			<item key="DIALOG_X_ORIGIN" value="668"/>
 			<item key="DIALOG_Y_ORIGIN" value="191"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="\\172.26.3.254\dam\Primero\Entornos\03-Maven"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+		<section name="ExternalProjectImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="466"/>
+			<item key="DIALOG_Y_ORIGIN" value="101"/>
+			<item key="DIALOG_WIDTH" value="885"/>
+			<item key="DIALOG_HEIGHT" value="710"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
 	</section>

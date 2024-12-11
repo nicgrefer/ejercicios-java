@@ -1,0 +1,54 @@
+@options
+@argfile
+--class-path
+'C:/Users/jovcubni/Desktop/java_github/ejercicios-java/ejercicios/src/Ejemplo03_Documentando/target/classes;C:/Users/jovcubni/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/jovcubni/Desktop/java_github/ejercicios-java/ejercicios/src/Ejemplo03_Documentando/src/main/java;C:/Users/jovcubni/Desktop/java_github/ejercicios-java/ejercicios/src/Ejemplo03_Documentando/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/jovcubni/Desktop/java_github/ejercicios-java/ejercicios/src/Ejemplo03_Documentando/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Ejemplo03_Documentando 0.0.1-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'Ejemplo03_Documentando 0.0.1-SNAPSHOT API'
+'C:/Users/jovcubni/Desktop/java_github/ejercicios-java/ejercicios/src/Ejemplo03_Documentando/src/main/java/Aplicacion.java'
+'C:/Users/jovcubni/Desktop/java_github/ejercicios-java/ejercicios/src/Ejemplo03_Documentando/src/main/java/Persona.java'
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\src\main\java\Aplicacion.java = 1733919893873
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\src\main\java\Persona.java = 1733920150576
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\src\main\java = 1733921171931
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\generated-sources\annotations = 1733921424080
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\allclasses-index.html = 1733921624155
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\allpackages-index.html = 1733921624159
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\Aplicacion.html = 1733921624086
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\copy.svg = 1733921624209
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\element-list = 1733921624097
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\help-doc.html = 1733921624200
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\index-all.html = 1733921624185
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\index.html = 1733921624192
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\link.svg = 1733921624211
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\member-search-index.js = 1733921624165
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\module-search-index.js = 1733921624160
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\overview-tree.html = 1733921624138
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\package-search-index.js = 1733921624162
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\package-summary.html = 1733921624105
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\package-tree.html = 1733921624112
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\package-use.html = 1733921624135
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\Persona.html = 1733921624095
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\script.js = 1733921624207
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\search-page.js = 1733921624218
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\search.html = 1733921624189
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\search.js = 1733921624216
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\stylesheet.css = 1733921624204
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\tag-search-index.js = 1733921624167
+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando\target\site\apidocs\type-search-index.js = 1733921624163

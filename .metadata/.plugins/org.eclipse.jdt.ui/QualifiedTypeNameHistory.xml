@@ -18,7 +18,10 @@
     <fullyQualifiedTypeName name="T6ejercicios.persona.Persona"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="T6ejercicios.persona.App"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="T6ejercicios.tele.Tele"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="clasesextra.appNodo"/>
+    <fullyQualifiedTypeName name="clasesextra.Nodo"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

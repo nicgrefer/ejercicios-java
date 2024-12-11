@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gregoriofer.local</groupId>
+  <artifactId>Ejemplo03_Documentando</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<!-- pluging de lombok-->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.34</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+  <!-- -->
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.5.0</version>
+				<!-- seleccionas que archibo se va a aplicar el pluging-->
+				<configuration>
+					<mainClass>Aplicacion</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+		
+	</build>
+  <!-- para incluir el java dok-->
+  <reporting>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-javadoc-plugin</artifactId>
+			<version>3.6.3</version>
+		</plugin>
+	</plugins>
+</reporting>
+
+  
+</project>
