@@ -2,67 +2,63 @@ package T6ejercicio.ascensor;
 
 public class Ascensor {
 
-	private int piso;
-	private final int pisos=10;
+	private int pisoEsta;
+	private final int pisosTiene;
 	private boolean puertaAbierta;
 	private boolean alarmaActivada;
-	private double capacidad=200.0;
-	private boolean ocupacionActual;
+	private double capacidad;
+	private int ocupacionActual;
 	
-	public  void Acensor(int pisos, double capacidad) {
-		
-		
+	public Ascensor(int pisosTiene,double capacidad) {
+            this.pisosTiene=pisosTiene;
+            this.capacidad=capacidad;
 	}
-
-	public int getPiso() {
-		return piso;
+	//Seters y geters
+	public int getPisoEsta() {
+		return pisoEsta;
 	}
-
-	public void setPiso(int piso) {
-		this.piso = piso;
+	public void setPisoEsta(int pisoEsta) {
+		this.pisoEsta = pisoEsta;
 	}
-
 	public boolean isPuertaAbierta() {
 		return puertaAbierta;
 	}
-
 	public void setPuertaAbierta(boolean puertaAbierta) {
 		this.puertaAbierta = puertaAbierta;
 	}
-
 	public boolean isAlarmaActivada() {
 		return alarmaActivada;
 	}
-
 	public void setAlarmaActivada(boolean alarmaActivada) {
 		this.alarmaActivada = alarmaActivada;
 	}
-
 	public double getCapacidad() {
 		return capacidad;
 	}
-
 	public void setCapacidad(double capacidad) {
 		this.capacidad = capacidad;
 	}
-
-	public boolean isOcupacionActual() {
+	public int getOcupacionActual() {
 		return ocupacionActual;
 	}
-
-	public void setOcupacionActual(boolean ocupacionActual) {
+	public void setOcupacionActual(int ocupacionActual) {
 		this.ocupacionActual = ocupacionActual;
 	}
-
-	public int getPisos() {
-		return pisos;
+	public int getPisosTiene() {
+		return pisosTiene;
+	}
+	@Override
+	public String toString() {
+		return "Ascensor [pisoEsta=" + pisoEsta + ", pisosTiene=" + pisosTiene + ", puertaAbierta=" + puertaAbierta
+				+ ", alarmaActivada=" + alarmaActivada + ", capacidad=" + capacidad + ", ocupacionActual="
+				+ ocupacionActual + "]";
 	}
 	
-	private void entrarPersona() {
-		ocupacionActual++;
+	public void abrirPuerta() {
+		puertaAbierta=true;
+		System.out.println("Puera abierta");
 	}
-	private void salirPersona() {
-		ocupacionActual--;
-	}
+	
+	
 	
 }
