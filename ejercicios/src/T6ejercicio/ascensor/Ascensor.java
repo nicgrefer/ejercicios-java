@@ -1,5 +1,7 @@
 package T6ejercicio.ascensor;
 
+import java.util.Scanner;
+
 public class Ascensor {
 
 	private int pisoEsta;
@@ -59,6 +61,86 @@ public class Ascensor {
 		System.out.println("Puera abierta");
 	}
 	
+	public void cerrarPuerta() {
+		puertaAbierta=false;
+		System.out.println("Pueta cerrada");
+	}
 	
+	public void subirPiso() {
+		if (puertaAbierta==false) {
+			pisoEsta++;
+			if (pisoEsta==pisosTiene) {
+				System.out.println("Ya esta arriba del todo");
+				pisoEsta=pisosTiene;
+			}else {	
+			System.out.println("Estas en el piso "+ pisoEsta + " de "+ pisosTiene);
+			}
+		}else {
+			System.out.println("La puerta sigue abriereta y no puede subir");
+		}
+	}
+	
+	public void bajarPiso() {
+		if (puertaAbierta==false) {
+			pisoEsta--;
+			if (pisoEsta<0) {
+				System.out.println("Ya esta abajo del todo");
+				pisoEsta=0;
+			}else {
+				System.out.println("Estas en el piso "+ pisoEsta + " de "+ pisosTiene);
+			}
+		}else {
+			System.out.println("La puerta sigue abriereta y no puede subir");
+		}
+		
+	}
+	
+	public void entraPersona() {
+		if(puertaAbierta==true) {
+			ocupacionActual+=45;
+			if(ocupacionActual<capacidad) {
+				
+				System.out.println("El peso actual es de " + ocupacionActual);
+			}else {
+				System.out.println("El ascensor llego a su limite de peso ("+ capacidad+")");
+				alarmaEncendida();
+			}
+		}else {
+			System.out.println("La puerta esta cerrada y no puedes entrar");
+		}
+		
+	}
+	public void alarmaEncendida() {
+		Scanner sc=new Scanner(System.in);
+		System.err.println("ALARMA, ALARMA..... peso maximo escedido");
+		System.err.println("Porfavor salga alguien del ascensor");
+		System.out.println("Desea salir?? pulsa s o n");
+		String peticion=sc.next();
+		if (peticion.equals("s")) {
+			ocupacionActual-=45;
+			System.out.println("Alarma desactivada, peso actual es de "+ ocupacionActual + "/"+ capacidad);
+		}else {
+			alarmaEncendida();
+		}
+		
+	}
+	
+	public void salePersona() {
+		if(puertaAbierta==true) {
+			ocupacionActual-=45;
+			if(ocupacionActual>0) {
+				
+				System.out.println("El peso actual es de " + ocupacionActual);
+			}else {
+				System.out.println("No hay nadie en el ascensor");
+				ocupacionActual+=45;
+				
+			}
+		}else {
+			System.out.println("La puerta esta cerrada y no puedes entrar");
+		}
+		
+	
+	}
 	
 }

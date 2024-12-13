@@ -547,3 +547,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration aplicacion referenc
 2024-12-12 11:46:50,350 [Worker-1: Launching Ejemplo03_Documentando] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo03_Documentando":
 2024-12-12 11:46:50,353 [Worker-1: Launching Ejemplo03_Documentando] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always site exec:java
 2024-12-12 11:46:50,355 [Worker-1: Launching Ejemplo03_Documentando] WARN  o.e.m.i.l.MavenLaunchExtensionsSupport - Unknown or unsupported source locator org.eclipse.jdt.internal.launching.sourcelookup.advanced.AdvancedSourceLookupDirector
+2024-12-13 08:15:24,107 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

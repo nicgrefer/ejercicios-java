@@ -4,10 +4,16 @@ public class app {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Ascensor ascensor= new Ascensor(99,1);
+		Ascensor ascensor= new Ascensor(99,50);
 		System.out.println(ascensor.toString());
+
+		System.out.println(ascensor.toString());
+		ascensor.cerrarPuerta();
+		ascensor.subirPiso();
+		ascensor.bajarPiso();
 		ascensor.abrirPuerta();
-		System.out.println(ascensor.toString());
+		ascensor.entraPersona();
+		ascensor.entraPersona();
 	}
 
 }
