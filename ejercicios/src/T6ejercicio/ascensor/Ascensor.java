@@ -15,7 +15,7 @@ public class Ascensor {
             this.pisosTiene=pisosTiene;
             this.capacidad=capacidad;
 	}
-	//Seters y geters
+	//Setters y getters
 	public int getPisoEsta() {
 		return pisoEsta;
 	}
@@ -76,7 +76,7 @@ public class Ascensor {
 			System.out.println("Estas en el piso "+ pisoEsta + " de "+ pisosTiene);
 			}
 		}else {
-			System.out.println("La puerta sigue abriereta y no puede subir");
+			System.out.println("La puerta sigue abierta y no puede subir. Porfavor cierre la puerte.");
 		}
 	}
 	
@@ -84,13 +84,13 @@ public class Ascensor {
 		if (puertaAbierta==false) {
 			pisoEsta--;
 			if (pisoEsta<0) {
-				System.out.println("Ya esta abajo del todo");
+				System.out.println("Ya esta en el ultimo piso");
 				pisoEsta=0;
 			}else {
 				System.out.println("Estas en el piso "+ pisoEsta + " de "+ pisosTiene);
 			}
 		}else {
-			System.out.println("La puerta sigue abriereta y no puede subir");
+			System.out.println("La puerta sigue abierta y no puede salir");
 		}
 		
 	}
@@ -112,9 +112,9 @@ public class Ascensor {
 	}
 	public void alarmaEncendida() {
 		Scanner sc=new Scanner(System.in);
-		System.err.println("ALARMA, ALARMA..... peso maximo escedido");
+		System.err.println("ALARMA, ALARMA..... peso maximo excedido");
 		System.err.println("Porfavor salga alguien del ascensor");
-		System.out.println("Desea salir?? pulsa s o n");
+		System.out.println("Desea salir? pulsa s o n");
 		String peticion=sc.next();
 		if (peticion.equals("s")) {
 			ocupacionActual-=45;
@@ -132,12 +132,12 @@ public class Ascensor {
 				
 				System.out.println("El peso actual es de " + ocupacionActual);
 			}else {
-				System.out.println("No hay nadie en el ascensor");
+				System.out.println("No hay nadie en el ascensor.");
 				ocupacionActual+=45;
 				
 			}
 		}else {
-			System.out.println("La puerta esta cerrada y no puedes entrar");
+			System.out.println("La puerta esta cerrada y no puedes entrar.");
 		}
 		
 	
