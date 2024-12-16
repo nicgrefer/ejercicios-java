@@ -51,9 +51,9 @@ public class Ascensor {
 	}
 	@Override
 	public String toString() {
-		return "Ascensor [pisoEsta=" + pisoEsta + ", pisosTiene=" + pisosTiene + ", puertaAbierta=" + puertaAbierta
-				+ ", alarmaActivada=" + alarmaActivada + ", capacidad=" + capacidad + ", ocupacionActual="
-				+ ocupacionActual + "]";
+		return "Ascensor esta en el piso " + pisoEsta + ", que consta de " + pisosTiene + " pisos, con la ¿puerta abierta? " + puertaAbierta
+				+ " ¿alarmaActivada? " + alarmaActivada + ", con capacidad de " + capacidad + "kg y una ocupacion de "
+				+ ocupacionActual ;
 	}
 	
 	public void abrirPuerta() {
@@ -119,7 +119,8 @@ public class Ascensor {
 		if (peticion.equals("s")) {
 			ocupacionActual-=45;
 			System.out.println("Alarma desactivada, peso actual es de "+ ocupacionActual + "/"+ capacidad);
-		}else {
+			sc.close();
+			}else {
 			alarmaEncendida();
 		}
 		
