@@ -32,49 +32,50 @@ public class Relaccional {
 	
 	//Funciones
 	
-	public void sumar(int denominadorR, int numeradorR) {
+	public void sumar(int numeradorR, int denominadorR) {
 		if (denominadorR==denomirador) {
 			int aux=numeradorR+numeroador;
-			System.out.println("Sol= " + aux +"/" + denominadorR);
+			System.out.println("Sol= " + aux +"/" + denomirador);
 		}else {
 			//Ponemos base comun
-			int numeroadorNuevo=numeroador*denominadorR;
-			denomirador=denomirador*denominadorR;
-			numeradorR=denominadorR*denomirador;
-			denominadorR=denominadorR*denomirador;
+			int nuevoNumeradorN1=numeroador*denominadorR;
+			int nuevoDenominadorN1=denomirador*denominadorR;
+			int nuevoNumeradorR= numeradorR*denomirador;
+			int nuevoDenominadorR= denominadorR*denomirador;
+			
 			//Realizamos la suma
-			int aux=numeradorR+numeroador;
-			System.out.println("Sol= " + aux +"/" + denominadorR);
+			int aux=nuevoNumeradorN1+nuevoNumeradorR;
+			System.out.println("Sol= " + aux +"/" + nuevoDenominadorN1);
 		}
 	}
 	
-	public void restar(int denominadorR, int numeradorR) {
+	public void restar(int numeradorR, int denominadorR) {
 		if (denominadorR==denomirador) {
 			int aux=numeradorR-numeroador;
-			System.out.println("Sol= " + aux +"/" + denominadorR);
+			System.out.println("Sol= " + aux +"/" + denomirador);
 		}else {
 			//Ponemos base comun
-			int denominadoraux=denomirador; //guardamos el dato del denominador n1
-			numeroador=numeroador*denominadorR;
-			denomirador=denomirador*denominadorR;
-			numeradorR=denominadorR*denominadoraux;
-			denominadorR=denominadorR*denominadoraux;
+			int nuevoNumeradorN1=numeroador*denominadorR;
+			int nuevoDenominadorN1=denomirador*denominadorR;
+			int nuevoNumeradorR= numeradorR*denomirador;
+			int nuevoDenominadorR= denominadorR*denomirador;
+			
 			//Realizamos la suma
-			int aux=numeradorR-numeroador;
-			System.out.println("Sol= " + aux +"/" + denominadorR);
-		}	
+			int aux=nuevoNumeradorN1-nuevoNumeradorR;
+			System.out.println("Sol= " + aux +"/" + nuevoDenominadorN1);
+		}
 	}
 	
 	
 	public void producto( int numeradorR, int denominadorR) {
-		int numeradorSol=numeradorR*numeroador;
-		int denominadorSol=denominadorR*denomirador;
+		int numeradorSol=numeroador*numeradorR;
+		int denominadorSol=denomirador*denominadorR;
 		System.out.println("Sol= " + numeradorSol +"/" + denominadorSol);
 	}
 	
-	public void dividir(int denominadorR, int numeradorR) {
-		int numeradorSol=denominadorR*numeroador;
-		int denominadorSol=numeradorR*denomirador;
+	public void dividir(int numeradorR, int denominadorR) {
+		int numeradorSol=numeroador * denominadorR;
+		int denominadorSol=denomirador * numeradorR;
 		System.out.println("Sol= " + numeradorSol +"/" + denominadorSol);
 	}
 	

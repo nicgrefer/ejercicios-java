@@ -7,7 +7,7 @@ public class app {
 		
 		Relaccional n1=new Relaccional(3,5);
 		System.out.println(n1.toString());
-		n1.sumar(2,3);
+		n1.dividir(2,3);
 	}
 
 }
