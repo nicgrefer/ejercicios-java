@@ -87,4 +87,25 @@ public class Relaccional {
 	}
 	
 	
+	public void equals(int numeradorR, int denominadorR ) {
+		if (numeradorR==numeroador && denominadorR==denomirador) {
+			System.out.println("Son los mismos relaccionales");
+		}else {
+			System.out.println("No son los mismos relaccionales");
+		}
+	}
+	
+	public void compareTo(double numeradorR, double denominadorR ) {
+		double numerador= (double) numeroador;
+		double denominador= (double) denomirador;
+		double resultado1= numerador/denominador;
+		double resultadoR=numeradorR/denominadorR;
+		if (resultado1>resultadoR) {
+			System.out.println("El relaccional actual es menor con respecto al anterior");
+		}else {
+			System.out.println("El relaccional actual es mayor con tespecto al anterior");
+		}
+	}
+	
+	
 }
