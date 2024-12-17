@@ -79,7 +79,12 @@ public class Relaccional {
 		System.out.println("Sol= " + numeradorSol +"/" + denominadorSol);
 	}
 	
-	
+	public  void toDecimal() {
+		double numerador= (double) numeroador;
+		double denominador= (double) denomirador;
+		double sol=numerador/denominador;
+		System.out.println("Sol="+ sol);
+	}
 	
 	
 }
