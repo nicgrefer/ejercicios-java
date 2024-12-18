@@ -1,3 +1,6 @@
+import Usando_Lomboq.Direccion;
+import Usando_Lomboq.Empresa;
+import Usando_Lomboq.Trabajador;
 
 public class Aplicacion {
 	public static void main(String... arg)
