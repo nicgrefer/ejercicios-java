@@ -4,6 +4,9 @@
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-21"/>
 	<item key="filters_last_used" value="filter_imports;"/>
 	<item key="delegateUpdating" value="false"/>
+	<list key="workingset_selection_history">
+		<item value="entornos"/>
+	</list>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>

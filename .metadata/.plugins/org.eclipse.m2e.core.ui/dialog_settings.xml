@@ -47,12 +47,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="gregoriofer.local"/>
+			<item value="queBajon"/>
 		</list>
 		<list key="name">
+			<item value="queBajon"/>
 		</list>
 		<list key="artifactId">
-			<item value="ejemplo03_Documentando"/>
+			<item value="queBajon"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
