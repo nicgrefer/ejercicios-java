@@ -2,7 +2,6 @@ INDEX VERSION 1.134+C:\Users\jovcubni\Desktop\java_github\ejercicios-java\.metad
 3136951763.index
 2214333823.index
 1643522378.index
-3850809296.index
 1541587640.index
 1865797976.index
 87057743.index
