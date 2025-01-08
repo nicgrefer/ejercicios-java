@@ -4,6 +4,8 @@
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-21"/>
 	<item key="filters_last_used" value="filter_imports;"/>
 	<item key="delegateUpdating" value="false"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<list key="workingset_selection_history">
 		<item value="entornos"/>
 	</list>
@@ -176,5 +178,69 @@
 			<item key="DIALOG_Y_ORIGIN" value="191"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
+	</section>
+	<section name="javadoc">
+		<item key="javadoc_command_history" value="C:\Program Files\Java\jdk-21\bin\javadoc.exe"/>
+		<item key="fromStandard" value="true"/>
+		<item key="docletname" value=""/>
+		<item key="docletpath" value=""/>
+		<item key="access" value="public"/>
+		<item key="use" value="true"/>
+		<item key="author" value="true"/>
+		<item key="version" value="true"/>
+		<item key="nodeprecated" value="false"/>
+		<item key="nodeprecatedlist" value="false"/>
+		<item key="splitindex" value="true"/>
+		<item key="noindex" value="false"/>
+		<item key="notree" value="false"/>
+		<item key="nonavbar" value="false"/>
+		<item key="openinbrowser" value="false"/>
+		<item key="source" value="21"/>
+		<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo05_SinJavadok\javadoc.xml"/>
+		<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo05_SinJavadok\doc"/>
+		<section name="projects">
+			<section name="ejemplo03_Documentando">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejemplo03_Documentando\doc"/>
+				<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejemplo03_Documentando\javadoc.xml"/>
+			</section>
+			<section name="que_bajon">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\que_bajon\doc"/>
+				<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\que_bajon\javadoc.xml"/>
+			</section>
+			<section name="ejercicios">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\doc"/>
+				<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\javadoc.xml"/>
+			</section>
+			<section name="Ejem02_HolaMundoMaven">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejem02_HolaMundoMaven\doc"/>
+				<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejem02_HolaMundoMaven\javadoc.xml"/>
+			</section>
+			<section name="queBajon">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\queBajon\doc"/>
+				<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\queBajon\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo01_CargandoLibreria">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo01_CargandoLibreria\doc"/>
+				<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejemplo01_CargandoLibreria\javadoc.xml"/>
+			</section>
+			<section name="Ejemplo05_SinJavadok">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo05_SinJavadok\doc"/>
+				<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo05_SinJavadok\javadoc.xml"/>
+			</section>
+		</section>
+	</section>
+	<section name="JavadocWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="466"/>
+		<item key="DIALOG_Y_ORIGIN" value="101"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="616"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

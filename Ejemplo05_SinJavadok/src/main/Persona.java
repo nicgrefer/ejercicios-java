@@ -4,10 +4,10 @@ public class Persona {
 
 	/**
 	 * Clase que define una persona con nombre y edad
-	 *  * <img src="https://gregoriofer.com/wp-content/uploads/2018/06/logoGF-colorNuevo.png" alt="Gregorio Fer" width="100" height="100">
+	 * <img src="https://gregoriofer.com/wp-content/uploads/2018/06/logoGF-colorNuevo.png" alt="Gregorio Fer" width="100" height="100">
 	 * @version 1.0
 	 * @since 07/06/2021
-	 * @autor <a href="https://www.linkedin.com/>Nombre</a>
+	 * @autor coni <a href="https://www.linkedin.com/>Nombre</a>
 	 */
 	
 	private String nombre;
