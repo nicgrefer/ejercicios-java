@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gregoriofer.local</groupId>
+  <artifactId>Ejemplo05_ConJavadokMeiben</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+	    	<groupId>org.projectlombok</groupId>
+	    	<artifactId>lombok</artifactId>
+	    	<version>1.18.18</version>
+	    	<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<!-- añadir plaguing para poer ejecutarlo-->
+	<build>
+	<!-- Pluguing javadoc maven-->
+		<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.11.2</version>
+			</plugin>
+		</plugins>
+	</reporting>
+	
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+				<mainClass>Aplicación</mainClass>
+				</configuration>
+   			</plugin>
+		</plugins>
+	
+	</build>
+  
+</project>
