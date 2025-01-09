@@ -4,6 +4,12 @@ public class Relaccional {
 
 	private int numeroador;
 	private int denomirador;
+	//Creaccion de Constructores
+	public Relaccional() {
+		this.numeroador=0;
+		this.denomirador=0;		
+	}
+	
 	
 	//Getters y setters
 	public int getNumeroador() {
