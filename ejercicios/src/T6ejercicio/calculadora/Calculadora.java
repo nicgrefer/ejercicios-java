@@ -1,4 +1,4 @@
-package T6ejercicios.Calculadora;
+package T6ejercicio.calculadora;
 
 
 
