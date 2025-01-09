@@ -117,8 +117,8 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="470"/>
-		<item key="DIALOG_Y_ORIGIN" value="8"/>
+		<item key="DIALOG_X_ORIGIN" value="840"/>
+		<item key="DIALOG_Y_ORIGIN" value="66"/>
 		<item key="DIALOG_WIDTH" value="517"/>
 		<item key="DIALOG_HEIGHT" value="678"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -128,8 +128,8 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="465"/>
-		<item key="DIALOG_Y_ORIGIN" value="8"/>
+		<item key="DIALOG_X_ORIGIN" value="528"/>
+		<item key="DIALOG_Y_ORIGIN" value="242"/>
 		<item key="DIALOG_WIDTH" value="526"/>
 		<item key="DIALOG_HEIGHT" value="696"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -196,9 +196,14 @@
 		<item key="nonavbar" value="false"/>
 		<item key="openinbrowser" value="false"/>
 		<item key="source" value="21"/>
-		<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo05_SinJavadok\javadoc.xml"/>
-		<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo05_SinJavadok\doc"/>
+		<item key="antpath" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\javadoc.xml"/>
+		<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\doc"/>
 		<section name="projects">
+			<section name="Ejemplo06_ConJavadokMeiben">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\Users\nicol\OneDrive\Escritorio\java_github\ejercicios-java\Ejemplo06_ConJavadokMeiben\doc"/>
+				<item key="antpath" value="C:\Users\nicol\OneDrive\Escritorio\java_github\ejercicios-java\Ejemplo06_ConJavadokMeiben\javadoc.xml"/>
+			</section>
 			<section name="ejemplo03_Documentando">
 				<item key="href" value=""/>
 				<item key="destdir" value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejemplo03_Documentando\doc"/>
@@ -237,8 +242,8 @@
 		</section>
 	</section>
 	<section name="JavadocWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="466"/>
-		<item key="DIALOG_Y_ORIGIN" value="101"/>
+		<item key="DIALOG_X_ORIGIN" value="706"/>
+		<item key="DIALOG_Y_ORIGIN" value="187"/>
 		<item key="DIALOG_WIDTH" value="525"/>
 		<item key="DIALOG_HEIGHT" value="616"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

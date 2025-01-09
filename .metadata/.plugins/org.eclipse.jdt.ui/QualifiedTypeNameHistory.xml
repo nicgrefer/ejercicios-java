@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.security.SecureRandom"/>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.security.PrivateKey"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
@@ -25,7 +24,11 @@
     <fullyQualifiedTypeName name="T6ejercicio.ascensor.Ascensor"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="main.Aplicación"/>
     <fullyQualifiedTypeName name="main.Persona"/>
+    <fullyQualifiedTypeName name="T6ejercicio.Banco.Clientes"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="T6ejercicio.Banco.Cuenta"/>
 </qualifiedTypeNameHistroy>

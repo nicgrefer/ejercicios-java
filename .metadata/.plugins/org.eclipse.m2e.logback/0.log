@@ -1732,3 +1732,5 @@ Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Ej
 2025-01-09 16:38:30,001 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nicol\OneDrive\Escritorio\java_github\ejercicios-java\queBajon\src\main\resources
 2025-01-09 16:38:30,022 [Worker-17: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2025-01-09 16:38:30,025 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nicol\OneDrive\Escritorio\java_github\ejercicios-java\queBajon\src\test\resources
+2025-01-09 17:36:23,437 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-01-09 17:48:26,150 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

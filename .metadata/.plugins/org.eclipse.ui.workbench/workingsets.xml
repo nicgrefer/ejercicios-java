@@ -10,15 +10,19 @@
 <item elementID="=ejercicios/src&lt;T5ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;xxx_Ejercicios_repaso_casa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.AtributosEstaticos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicios/src&lt;T6ejercicio.tele" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T3ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicios/src&lt;T6ejercicio.persona" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;ejerciciosT3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;examen1ª_evaluación" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T4ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.persona" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.ascensor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicios/src&lt;T6ejercicio.calculadora" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.puntos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.racional_V2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.racional" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicios/src&lt;T6ejercicio.Banco" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1734345250581_17" label="entornos" name="entornos"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1727947689086_2" label="Window Working Set" name="Aggregate for window 1727947689086"/>
