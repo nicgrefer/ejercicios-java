@@ -5,7 +5,8 @@ package T6ejercicio.Banco;
  * The Class Clientes.
  * Almacena todos los datos de los clientes y
  * proporciona un id a cada usuario
- * Como minimo DNI, Nombre y apellido. A mayores direccion y telefono 
+ * Como minimo DNI, Nombre y apellido. A mayores direccion y telefono
+ * @implNote Funciones:  Crar cliente, vincular cuenta con el cliente
  * @version 1.3 vinculado Clientes con cuentas
  */
 public class Clientes {

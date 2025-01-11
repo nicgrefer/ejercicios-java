@@ -8,7 +8,10 @@ import java.time.format.DateTimeFormatter;
 // TODO: Auto-generated Javadoc
 /**
  * The Class Cuenta.
- * @version 1.0 a añadir: forma de aumentar y disminuir el dinero del la cuenta
+ * @implNote Funciones que tiene:
+ * crear una cuemta con un ID determinada para diferenciarlas,
+ * reirar o añadir dinero y crear intereses (2% sobre el saldo) 
+ * @version 2.0 
  * 
  */
 public class Cuenta {
@@ -24,9 +27,7 @@ public class Cuenta {
 	
 	/** The contador. */
 	private static int contador;
-	
-	
-	
+		
 	/**
 	 * Constructor vacio.
 	 */
@@ -98,6 +99,52 @@ public class Cuenta {
 	}
 	
 	
+/**
+ * Introducir dinero a una cuenta ya esistente siempre que no ponga un numero negativo
+ * @param ingreso
+ */
+	public void ingresar( double ingreso) {
+		if (ingreso>0) {
+			this.saldo=saldo+ingreso;
+			System.out.println("Saldo actual " + saldo + "$");
+		}
+		else
+			System.out.println("No puedes insertar valores negativos o iguales a cero");
+	}
 	
+	/**
+	 * Funcion para retirar dinero siempre que tenga dineor y no retire mas de lo permitido.
+	 * No se puede introducir numeros negativos o iguales a cero
+	 * @param retirada
+	 */
+	public void reintegrar( double retirada) {
+		if (retirada>0) {
+				if (saldo!=0) {
+					if (saldo>=retirada) {
+						this.saldo=saldo-retirada;
+						System.out.println("Saldo actual " + saldo + "$");
+					}else{ 
+						System.out.println("No hay suficiente dinero en la cuenta");
+					}
+			
+			}else{
+				System.out.println("No puedes retirar dinero si la cuenta esta a cero");
+			}
+		
+		}else{
+			System.out.println("No puedes retirar valores negativos o iguales a cero");
+		}
+	}
 	
+	/**
+	 * Se aplica un interes del 2% cuando se pare el més
+	 */
+	public  void interes() {
+
+		double calculo = 2*saldo/100;
+		this.saldo=saldo+calculo;
+		 System.out.println("Interes del 2% -> a fin de mes el saldo sera de "+ saldo + "$");
+	}
+	
+			
 }
