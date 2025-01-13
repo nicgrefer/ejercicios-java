@@ -8,6 +8,7 @@ package T6ejercicio.Banco;
  * Como minimo DNI, Nombre y apellido. A mayores direccion y telefono
  * @implNote Funciones:  Crar cliente, vincular cuenta con el cliente
  * @version 1.3 vinculado Clientes con cuentas
+ * @version 2.0 añado {@link Exception}
  */
 public class Clientes {
 
@@ -29,33 +30,14 @@ public class Clientes {
 	/** The telefono. */
 	private int telefono;
 	
-	/** The contador. */
-	private static int  contador;
+	/** The contador static para crear el Id  */
+	public static int  contador;
 	
 	/** The cuenta.
 	 * Esta variavle es "Cuenta" porque depende de la class Cuenta de esta
 	 * forma se pueden relaccionar entre sí
 	 *  */
 	private Cuenta cuenta;
-	
-
-	/**
-	 * Instantiates a new clientes.
-	 * Constructor vacio
-	 *
-	 * @param dniCliente the dni cliente
-	 * @param nombre the nombre
-	 * @param apellido the apellido
-	 */
-	public Clientes(String dniCliente, String nombre, String apellido) {
-		// TODO Auto-generated constructor stub
-		contador++;
-		this.codigoCliente=contador;
-		this.dniCliente = dniCliente;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		
-	}
 	
 	/**
 	 * Instantiates a new clientes.
@@ -67,15 +49,21 @@ public class Clientes {
 	 * @param telefono the telefono
 	 */
 	public Clientes(String dniCliente, String nombre, String apellido, String direccion, int telefono) {
-		super();
-		contador++;
-		this.codigoCliente=contador;
-		this.dniCliente = dniCliente;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.direccion = direccion;
-		this.telefono = telefono;
-
+	    try {
+	        if (dniCliente.isBlank() || nombre.isBlank() || apellido.isBlank()) {
+	            throw new Exception ("Error al crear el cliente: DNI, nombre y apellido no pueden estar vacíos.");
+	        }
+	        contador++;
+	        this.codigoCliente = contador;
+	        this.dniCliente = dniCliente;
+	        this.nombre = nombre;
+	        this.apellido = apellido;
+	        this.direccion = direccion;
+	        this.telefono = telefono;
+	  	    } catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 

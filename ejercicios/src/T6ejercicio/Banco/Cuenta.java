@@ -35,7 +35,8 @@ public class Cuenta {
 	public Cuenta() {
 		contador++;
 		this.numCuenta=contador;		
-		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+		this.fechaApertura = LocalDateTime.now().format(formatter); // Fecha formateada
 	}
 
 	/**
@@ -102,29 +103,31 @@ public class Cuenta {
 /**
  * Introducir dinero a una cuenta ya esistente siempre que no ponga un numero negativo
  * @param ingreso
+ * @throws Exception 
  */
-	public void ingresar( double ingreso) {
-		if (ingreso>0) {
+	public void ingresar( double ingreso) throws Exception {
+		if (ingreso>=0) {
 			this.saldo=saldo+ingreso;
 			System.out.println("Saldo actual " + saldo + "$");
 		}
 		else
-			System.out.println("No puedes insertar valores negativos o iguales a cero");
+			throw new Exception("No puedes ingresar dinero negativo ");
 	}
 	
 	/**
 	 * Funcion para retirar dinero siempre que tenga dineor y no retire mas de lo permitido.
 	 * No se puede introducir numeros negativos o iguales a cero
 	 * @param retirada
+	 * @throws Exception 
 	 */
-	public void reintegrar( double retirada) {
+	public void reintegrar( double retirada) throws Exception {
 		if (retirada>0) {
 				if (saldo!=0) {
 					if (saldo>=retirada) {
 						this.saldo=saldo-retirada;
 						System.out.println("Saldo actual " + saldo + "$");
 					}else{ 
-						System.out.println("No hay suficiente dinero en la cuenta");
+						throw new Exception("No hay suficiente dinero en la cuenta");
 					}
 			
 			}else{
@@ -132,7 +135,7 @@ public class Cuenta {
 			}
 		
 		}else{
-			System.out.println("No puedes retirar valores negativos o iguales a cero");
+			throw new Exception("No puedes retirar valores negativos o iguales a cero");
 		}
 	}
 	

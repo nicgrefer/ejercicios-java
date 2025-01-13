@@ -7,8 +7,8 @@ public class Aplicación {
 
     public static void main(String[] args) {
         // Crear clientes
-        Clientes cl1 = new Clientes("12470934N", "Nicolás", "Jové");
-        Clientes cl2 = new Clientes("98765432X", "María", "López");
+        Clientes cl1 = new Clientes("98765432X", "Nicolás", "Jové",null,0 );
+        Clientes cl2 = new Clientes("98765432X", "María", "López", null, 0);
 //
 //        System.out.println(cl1);
 //        System.out.println(cl2);
@@ -20,16 +20,51 @@ public class Aplicación {
         cl1.asignarCuenta(cuenta1);
         cl2.asignarCuenta(cuenta2);
 
-        // Mostrar información de los clientes con sus cuentas
-//        System.out.println("Información actualizada de los clientes:");
-//        System.out.println(cl1);
-//        System.out.println(cl2);
-//        
-        cuenta1.ingresar(25.7);
-        cuenta1.ingresar(-5);
-        cuenta2.reintegrar(600);
-        cuenta2.reintegrar(-10);
-        cuenta2.reintegrar(10);
-        cuenta2.interes();
+
+        try {
+			cuenta1.ingresar(25.7);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		}
+        try {
+			cuenta1.ingresar(-5);
+			} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		}
+        try {
+			cuenta2.reintegrar(600);
+	       
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		}
+        try {
+	        cuenta2.reintegrar(-10);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		}
+        try {
+	        cuenta2.reintegrar(10);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		}
+        
+        try {
+	        cuenta2.interes();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		
+		}
     }
 }

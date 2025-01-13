@@ -31,4 +31,6 @@
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="T6ejercicio.Banco.Cuenta"/>
+    <fullyQualifiedTypeName name="java.security.KeyStore.TrustedCertificateEntry"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
 </qualifiedTypeNameHistroy>
