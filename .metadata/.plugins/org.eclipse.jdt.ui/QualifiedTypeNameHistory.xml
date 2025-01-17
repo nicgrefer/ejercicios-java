@@ -29,11 +29,14 @@
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="T6ejercicio.Banco.Cuenta"/>
-    <fullyQualifiedTypeName name="java.security.KeyStore.TrustedCertificateEntry"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.w3c.dom.css.CSSImportRule"/>
     <fullyQualifiedTypeName name="org.apache.commons.lang3.StringUtils"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="T6.ejercicio.ExcepcionesContraseña.MisExcepciones.MinusExcep"/>
+    <fullyQualifiedTypeName name="java.security.KeyStore.TrustedCertificateEntry"/>
+    <fullyQualifiedTypeName name="T6.ejercicio.ExcepcionesContraseña.Comprobador"/>
 </qualifiedTypeNameHistroy>
