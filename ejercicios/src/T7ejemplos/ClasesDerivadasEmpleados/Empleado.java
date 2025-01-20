@@ -9,7 +9,7 @@ public class Empleado {
 	protected String nombre;
 	protected String apellidos;
 	protected double salariobase;
-	
+	protected final double retencion=0.10;
 	
 	//Metodos
 	
@@ -37,9 +37,29 @@ public class Empleado {
 	    }
 	 
 		public double calcularSalarioMes() {
-			return salariobase;
+			return salariobase-(this.retencion*salariobase);
 		}
-	 
 		
+		@Override
+		public String toString() {
+			return "Empleado [nombre=" + nombre + ", apellidos=" + apellidos + ", salariobase=" + salariobase + "]";
+	
+		}
+		// Constructor por defecto
+		public Empleado() {
+			System.out.println("Se ha creado un empleado");
+			this.nombre = "";
+			this.apellidos = "";
+			this.salariobase = 1134;
+		}
+			
+	// Constructor
+		
+		public Empleado(String nombre, String apellidos) {
+			super();
+			System.out.println("Se ha creado un empleado");
+			this.nombre = nombre;
+			this.apellidos = apellidos;
+		}
 		
 }

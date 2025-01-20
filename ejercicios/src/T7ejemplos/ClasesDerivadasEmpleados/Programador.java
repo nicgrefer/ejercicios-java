@@ -29,9 +29,32 @@ public class Programador extends Empleado {
 		this.precioHora = precioHora;
 	}
 
-	@Override
+	/**
+	 * Calcula el salario mensual de un programador en funcion de las horas trabajadas y el precio por hora.
+	 * @Override
+	 */
 	public double calcularSalarioMes() {
-		return this.salariobase+(this.horas*this.precioHora);
+		return super.calcularSalarioMes() +(this.horas*this.precioHora);
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() +"Programador  [horas=" + horas + ", precioHora=" + precioHora + "]";
+	}
+	
+	// Constructor pro defecto
+	public Programador() {
+		super();
+		System.out.println("Se ha creado un programador");
+	}
+	
+	
+	public Programador(String nombre, String apellidos, double salariobase , double horas, double precioHora) {
+		super( nombre, apellidos);
+		System.out.println("Se ha creado un programador");
+		this.horas = 0;
+		this.precioHora = 0;
+	}
+	
 	
 }

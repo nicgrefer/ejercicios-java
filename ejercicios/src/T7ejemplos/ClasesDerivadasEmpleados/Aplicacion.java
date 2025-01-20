@@ -10,7 +10,11 @@ public class Aplicacion {
         emp.setApellidos("Gomez");
         emp.setSalariobase(1200);
         System.out.println(emp.datosPersonales());
-
+        System.out.println(emp.toString());
+        System.out.println("Salario mensual: " + emp.calcularSalarioMes());
+        
+        System.out.println("--------------------------------------------------");
+        
         Programador prog = new Programador();
         prog.setNombre("Marta");
         prog.setApellidos("Martinez");
@@ -18,6 +22,13 @@ public class Aplicacion {
         prog.setHoras(100);
         prog.setPrecioHora(10);
         System.out.println(prog.datosPersonales());
+        System.out.println(prog.toString());
+        System.out.println("Salario mensual: " + prog.calcularSalarioMes());
+        
+        Programador prog2 = new Programador("Luis", "Gomez", 1500, 150, 10);
+
+        
 	}
 
+	
 }
