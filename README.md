@@ -1,4 +1,7 @@
-# ejercicios-java
+# Teoria-java
+
+🔹T6_ Programación Orientada a Objetos Avanzada en Java
+
 >[!CAUTION]
 >
 >es Metodo polimorfico --> Depends del objeto que se pase llamara a un metodo u otro
