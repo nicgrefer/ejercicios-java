@@ -361,19 +361,16 @@ public class Calculadora {
 💡 **Mismo nombre, distintos parámetros** = Sobrecarga.
 
 ---
-¡Genial! Vamos a profundizar en los puntos **6 al 9** con más explicaciones y ejemplos prácticos.
 
----
-
-# 🔄 **6. Conversión entre Objetos Derivados y Objetos Base (Casting de Objetos)**
+## 🔄 **6. Conversión entre Objetos Derivados y Objetos Base (Casting de Objetos)**
 En Java, las clases derivadas son **una especialización** de la clase base. Como resultado, podemos tratar un objeto de una clase hija como si fuera de la clase padre. Esto se conoce como **upcasting** y **downcasting**.
 
 ---
 
-## 🔼 **Upcasting (Conversión de Hija a Base)**
+### 🔼 **Upcasting (Conversión de Hija a Base)**
 Es cuando asignamos un objeto de una clase hija a una variable de la clase base. **Se hace automáticamente porque una clase hija "es un" tipo de su clase base.**
 
-### 📌 **Ejemplo:**
+#### 📌 **Ejemplo:**
 ```java
 class Empleado {
     public void trabajar() {
@@ -396,16 +393,16 @@ public class Main {
 }
 ```
 
-### 🔍 **¿Qué pasó aquí?**
+#### 🔍 **¿Qué pasó aquí?**
 1. Creamos un objeto `Programador`, pero lo guardamos en una variable de tipo `Empleado`.
 2. `emp` puede usar solo los métodos de `Empleado`, aunque realmente es un `Programador`.
 
 ---
 
-## 🔽 **Downcasting (Conversión de Base a Hija)**
+### 🔽 **Downcasting (Conversión de Base a Hija)**
 Es cuando convertimos una referencia de la clase base a una referencia de una clase hija. **Java no permite hacerlo automáticamente** porque podría generar errores en tiempo de ejecución.
 
-### 📌 **Ejemplo:**
+#### 📌 **Ejemplo:**
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -416,7 +413,7 @@ public class Main {
 }
 ```
 
-### 🚨 **Peligro del Downcasting**
+#### 🚨 **Peligro del Downcasting**
 Si intentamos hacer `downcasting` de un objeto que **NO** es realmente de la clase hija, Java lanzará una **ClassCastException**.
 
 ```java
@@ -439,10 +436,10 @@ if (emp instanceof Programador) {
 
 ---
 
-# 🔗 **7. Ligadura Dinámica**
+## 🔗 **7. Ligadura Dinámica**
 La **ligadura** es el proceso de conectar una llamada a un método con su implementación real.
 
-## 🏗 **Tipos de Ligadura en Java**
+### 🏗 **Tipos de Ligadura en Java**
 | Tipo | Cuándo se resuelve | Ejemplo |
 |------|-------------------|---------|
 | **Ligadura Estática** | En tiempo de compilación | Métodos `final`, `static` o `private`. |
@@ -450,7 +447,7 @@ La **ligadura** es el proceso de conectar una llamada a un método con su implem
 
 ---
 
-## 🔥 **Ejemplo de Ligadura Estática**
+### 🔥 **Ejemplo de Ligadura Estática**
 Si un método es `static`, `final` o `private`, la decisión de qué método ejecutar se hace **en tiempo de compilación**.
 
 ```java
@@ -477,7 +474,7 @@ public class Main {
 
 ---
 
-## 🔥 **Ejemplo de Ligadura Dinámica**
+### 🔥 **Ejemplo de Ligadura Dinámica**
 Si sobrescribimos un método en una clase hija, **la versión que se ejecuta depende del objeto en tiempo de ejecución**.
 
 ```java
@@ -506,10 +503,10 @@ public class Main {
 
 ---
 
-# 🏛 **8. Clases y Métodos Abstractos**
+## 🏛 **8. Clases y Métodos Abstractos**
 Una **clase abstracta** es aquella que no se puede instanciar directamente. Se usa como una **plantilla** para otras clases.
 
-## 📌 **Ejemplo de Clase Abstracta**
+### 📌 **Ejemplo de Clase Abstracta**
 ```java
 abstract class Figura {
     abstract double calcularArea();  // Método abstracto, no tiene implementación
@@ -534,7 +531,7 @@ public class Main {
 }
 ```
 
-### 🛠 **Reglas de las Clases Abstractas**
+#### 🛠 **Reglas de las Clases Abstractas**
 1. No se pueden instanciar (`new Figura();` da error).
 2. Pueden contener métodos **abstractos** (sin cuerpo).
 3. Pueden contener métodos normales con implementación.
@@ -542,10 +539,10 @@ public class Main {
 
 ---
 
-# 🎭 **9. Polimorfismo**
+## 🎭 **9. Polimorfismo**
 El **polimorfismo** permite tratar diferentes objetos de manera uniforme, usando una referencia común.
 
-## 📌 **Ejemplo sin Polimorfismo (Mal Diseño)**
+### 📌 **Ejemplo sin Polimorfismo (Mal Diseño)**
 ```java
 class Circulo {
     double calcularArea() {
