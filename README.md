@@ -420,7 +420,7 @@ if (emp instanceof Programador) {
     prog.programar();
 }
 ```
-
+> Si esta interesado en ver un ejemplo aplicado pinche [aquí](https://github.com/nicgrefer/ejercicios-java/tree/main/ejercicios/src/T7ejemplos/Barco_Herencia_casting_polimorfico)
 ---
 
 ## 🔗 **7. Ligadura Dinámica**
