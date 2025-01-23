@@ -1,5 +1,7 @@
 package T7ejemplos.Barco_Herencia_casting_polimorfico;
 
+import T7ejercicios.Empleado_herencia.Empleado;
+
 public class Aplicacion {
 
 	public static void naufragio(Barco barco) {
@@ -39,5 +41,7 @@ public class Aplicacion {
 		naufragio(yate);
 		
 	}
+	
+	
 
 }

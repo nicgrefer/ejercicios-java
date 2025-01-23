@@ -29,6 +29,7 @@ public class EmpleadoPorHoras extends Empleado {
 		return precioHora;
 	}
 	
+	@Override
 	public double calcularSueldo() {
 		sueldo = this.horasTrabajadas * this.precioHora;
 		return sueldo;

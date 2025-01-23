@@ -76,6 +76,7 @@ public class EmpleadoFijo extends Empleado {
 	 * @return
 	 */
 
+	@Override
 	public double calcularSueldo() {
 	    double salario = this.sueldoBase + 
 	        (this.complemento * ChronoUnit.YEARS.between(fechaIngreso, LocalDate.now()));

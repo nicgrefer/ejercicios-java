@@ -39,7 +39,7 @@ public class Temporal extends Empleado {
 		this.fechaFin = fechaFin;
 	}
 	
-	
+	@Override
 	public double calcularSueldo() {
 	   return this.sueldoBase;
 	}
