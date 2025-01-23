@@ -1,6 +1,8 @@
 # Teoria-java
 
-🔹T6_ Programación Orientada a Objetos Avanzada en Java
+🔹T4 [Utilización de Objetos](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)
+🔹T5 [Introducción a la Programación Orientada a Objetos (POO)](https://github.com/nicgrefer/ejercicios-java#-tema-5-introducci%C3%B3n-a-la-programaci%C3%B3n-orientada-a-objetos-poo)
+🔹T6 [Programación Orientada a Objetos Avanzada en Java](https://github.com/nicgrefer/ejercicios-java?tab=readme-ov-file#tema-6---programaci%C3%B3n-orientada-a-objetos-avanzada-en-java)
 
 >[!CAUTION]
 >
