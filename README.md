@@ -4,23 +4,6 @@
 🔹T5 [Introducción a la Programación Orientada a Objetos (POO)](https://github.com/nicgrefer/ejercicios-java#-tema-5-introducci%C3%B3n-a-la-programaci%C3%B3n-orientada-a-objetos-poo)
 🔹T6 [Programación Orientada a Objetos Avanzada en Java](https://github.com/nicgrefer/ejercicios-java?tab=readme-ov-file#tema-6---programaci%C3%B3n-orientada-a-objetos-avanzada-en-java)
 
->[!CAUTION]
->
->es Metodo polimorfico --> Depends del objeto que se pase llamara a un metodo u otro
->
-		barco.alarma();// Metodo polimorfico --> Depends del objeto que se pase llamara a un metodo u otro
-				if (barco instanceof Velero) {
-					//casting
-					((Velero)barco).arriar();
-				}
-				if (barco instanceof Yate) {
-					//casting
-					((Yate)barco).lanzarBengala();
-				}
->[!CAUTION]
->  **IMPORTANTE** mirar para exame teoria
-
-
 
 >[!NOTE]
 > La siguiente informacion ha sido redactada por CHat
