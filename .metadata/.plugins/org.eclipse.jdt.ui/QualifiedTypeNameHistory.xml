@@ -17,7 +17,6 @@
     <fullyQualifiedTypeName name="T6ejercicios.tele.Tele"/>
     <fullyQualifiedTypeName name="clasesextra.appNodo"/>
     <fullyQualifiedTypeName name="clasesextra.Nodo"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="clasesextra.a"/>
     <fullyQualifiedTypeName name="T6ejercicio.ascensor.Ascensor"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -43,4 +42,8 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.Month"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="T7ejercicios.Empleado_herencia.Empleado"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="T7ejercicios.Amarres_herencia.Barco"/>
 </qualifiedTypeNameHistroy>

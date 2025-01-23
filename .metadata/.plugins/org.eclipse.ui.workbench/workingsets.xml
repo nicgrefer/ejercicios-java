@@ -12,6 +12,7 @@
 <item elementID="=ejercicios/src&lt;ejerciciosT3" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6.ejemplos.Excepcion" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T7ejercicios.Empleado_herencia" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicios/src&lt;T7ejercicios.Amarres_herencia" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.racional_V2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.racional" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6.ejercicio.ExcepcionesContraseña" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -19,12 +20,12 @@
 <item elementID="=ejercicios/src&lt;T5ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;xxx_Ejercicios_repaso_casa" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T3ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicios/src&lt;T7ejemplos.Barco_Herencia_casting_polimorfico" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.persona" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;examen1ª_evaluación" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T4ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.persona" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T7ejemplos.ClasesDerivadasEmpleados" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=ejercicios/src&lt;T7ejemplos.Barco_Herencia_casting_polimorfico" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.ascensor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.calculadora" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.puntos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
