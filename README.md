@@ -16,8 +16,8 @@
 >  **IMPORTANTE** mirar para exame teoria
 
 
-# T6 
 
+>[!NOTE]
 > La siguiente informacion ha sido redactada por CHat
 
 
