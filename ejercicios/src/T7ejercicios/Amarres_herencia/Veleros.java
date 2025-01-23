@@ -23,6 +23,12 @@ public class Veleros extends Barco {
 		this.nMastiles = nMastiles;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString()+ " es un Velero con " + nMastiles + " mastiles";
+	}
+
+	
 	
 
 }

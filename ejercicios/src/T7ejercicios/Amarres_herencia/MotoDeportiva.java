@@ -22,5 +22,12 @@ public class MotoDeportiva extends Barco {
 		super(matricula, esloraEnMetros, anoFabricacion);
 		this.potrenciaEnCV = potrenciaEnCV;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " es una Moto deportiva con una potrencia de " + potrenciaEnCV + "cv";
+	}
+	
+	
 	
 }

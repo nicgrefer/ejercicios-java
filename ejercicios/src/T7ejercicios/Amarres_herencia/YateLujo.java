@@ -29,5 +29,11 @@ public class YateLujo extends Barco {
 		this.potenciaEnCV = potenciaEnCV;
 		this.camarotes = camarotes;
 	}
+	@Override
+	public String toString() {
+		return super.toString() + " es un Yate de lujo con una potencia de" + potenciaEnCV + "cv y tiene " + camarotes + " camarotes";
+	}
+	
+	
 	
 }

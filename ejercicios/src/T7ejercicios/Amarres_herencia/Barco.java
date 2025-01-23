@@ -33,5 +33,12 @@ public class Barco {
 		this.esloraEnMetros = esloraEnMetros;
 		this.anoFabricacion = anoFabricacion;
 	}
+	@Override
+	public String toString() {
+		return "Barco con matricula " + matricula + ", eslora de " + esloraEnMetros + " metros y ano de fabricacion "
+				+ anoFabricacion ;
+	}
+	
+	
 	
 }
