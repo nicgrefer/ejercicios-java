@@ -26,7 +26,6 @@
 
 
 # 🎯 **Tema 4: Utilización de Objetos**
-En este tema, trabajamos con **clases y objetos** en Java, enfocándonos en el uso de clases predefinidas como **String**, **Random** y **Date**. ¡Vamos a verlo con ejemplos prácticos! 😃
 
 ---
 
