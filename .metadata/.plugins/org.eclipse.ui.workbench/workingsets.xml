@@ -24,6 +24,7 @@
 <item elementID="=ejercicios/src&lt;T4ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.persona" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T7ejemplos.ClasesDerivadasEmpleados" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicios/src&lt;T7ejemplos.Barco_Herencia_casting_polimorfico" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.ascensor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.calculadora" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.puntos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>

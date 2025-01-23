@@ -3486,3 +3486,26 @@ type: chat_enabled,
 
 !ENTRY com.genuitec.copilot4eclipse 2 0 2025-01-23 09:39:33.893
 !MESSAGE Timeout while checking Copilot status
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-01-23 09:50:11.689
+!MESSAGE [C4E] Conversation persistence: C:/Users/jovcubni/Desktop/java_github/ejercicios-java/.metadata/.plugins/com.genuitec.copilot4eclipse/chatdata
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-01-23 09:50:12.069
+!MESSAGE [C4E] Internal server started: true uri: http://localhost:57692/chat
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-01-23 09:50:16.747
+!MESSAGE [C4E] Workspace labels: java,maven,javascript
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-01-23 10:12:33.343
+!MESSAGE [C4E] App Path: http://localhost:57692/chat/chat.html?chatSessionId=1737623552448
+
+!ENTRY com.genuitec.copilot4eclipse.chat 1 0 2025-01-23 10:12:34.367
+!MESSAGE [C4E] Theme: {"--background2":"#343434","--border":"#3f3f3f","--foreground":"#aaaaaa","--image":"#bbbbbb","--background1":"#2f2f2f","--code-font":"Consolas","--code-font-size":"12px","--disabled":"gray","--code-background":"#3f3f3f","--font":"\"Segoe UI Variable\",\"Segeo UI\"","--font-size":"12px","--code":"#D7BA7D"}
+
+!ENTRY com.genuitec.copilot4eclipse 1 0 2025-01-23 10:16:52.793
+!MESSAGE [C4E] Preconditions Checks(status: ok, results: [Result(
+type: chat_enabled,
+ status: ok,
+ details: [
+
+])])
