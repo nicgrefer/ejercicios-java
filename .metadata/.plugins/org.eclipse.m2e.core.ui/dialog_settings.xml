@@ -49,6 +49,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="gf.local"/>
 			<item value="Ejemplo07_String_adom"/>
 			<item value="gregorio.local"/>
 			<item value="Ejercicio06_String_extension"/>
@@ -62,6 +63,8 @@
 			<item value="queBajon"/>
 		</list>
 		<list key="artifactId">
+			<item value="Ejemplo09_Calculadora"/>
+			<item value="Ejemplo07_Commons_Math"/>
 			<item value="Ejemplo07_String_adom"/>
 			<item value="gregorio.local"/>
 			<item value="Ejercicio06_String_extension"/>
