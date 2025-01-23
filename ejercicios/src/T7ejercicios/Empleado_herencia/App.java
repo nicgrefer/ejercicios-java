@@ -18,6 +18,13 @@ public class App {
 		Temporal et = new Temporal("Maria", "Gomez", "87654321M", LocalDate.of(2024, Month.MARCH, 21), LocalDate.of(2024, Month.MARCH, 21));
 		System.out.println(et);
 		
+		System.out.println("-------------------------------------------------");
+		
+		EmpleadoPorHoras eh = new EmpleadoPorHoras("Ana", "Lopez", "12345678N", 10);
+		System.out.println(eh);
+		System.out.println("Sueldo: "+eh.calcularSueldo());
+		
+		
 	}
 
 }
