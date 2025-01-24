@@ -430,7 +430,7 @@ La **ligadura** es el proceso de conectar una llamada a un método con su implem
 | Tipo | Cuándo se resuelve | Ejemplo |
 |------|-------------------|---------|
 | **Ligadura Estática** | En tiempo de compilación | Métodos `final`, `static` o `private`. |
-| **Ligadura Dinámica** | En tiempo de ejecución | Métodos sobrescritos en clases hijas. |
+| **Ligadura Dinámica** | En tiempo de ejecución | Métodos sobrescritos en clases hijas (como con los [metodos abstractos](https://github.com/nicgrefer/ejercicios-java?tab=readme-ov-file#-8-clases-y-m%C3%A9todos-abstractos) |
 
 ---
 
