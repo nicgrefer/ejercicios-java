@@ -518,7 +518,7 @@ public class Main {
 }
 
 ```
-[Aquí esta resuelto](https://github.com/nicgrefer/ejercicios-java/tree/main/ejercicios/src/T7ejemplos/Areas_Metosos_abstractos)
+> [Aquí esta resuelto](https://github.com/nicgrefer/ejercicios-java/tree/main/ejercicios/src/T7ejemplos/Areas_Metosos_abstractos)
 
 
 #### 🛠 **Reglas de las Clases Abstractas**
