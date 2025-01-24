@@ -587,4 +587,34 @@ public class Main {
 💡 **Ventaja:** Ahora todas las figuras usan `Figura` como referencia, sin importar el tipo real.
 
 ---
+## 📡 **10. Interfaces (Simulan Herencia Múltiple)**
+- **Diferencia con clases abstractas:** Todos los métodos de una interfaz son **abstractos** por defecto.
+- **Se usa `implements` en vez de `extends`.**
 
+### 📌 **Ejemplo:**
+```java
+interface Barco {
+    void alarma();
+}
+
+class Velero implements Barco {
+    public void alarma() {
+        System.out.println("Alerta en el Velero");
+    }
+}
+```
+💡 **Permite que varias clases compartan métodos sin heredar una clase base.**
+
+---
+
+## 🎯 **Resumen Final**
+| Concepto | Descripción |
+|----------|-------------|
+| **Herencia** | Reutiliza código entre clases. |
+| **Sobrescritura** | Modifica métodos heredados (`@Override`). |
+| **Sobrecarga** | Métodos con el mismo nombre pero diferentes parámetros. |
+| **Ligadura dinámica** | Decide qué método llamar en tiempo de ejecución. |
+| **Clases abstractas** | No pueden instanciarse, definen métodos comunes. |
+| **Interfaces** | Definen métodos sin implementación. |
+
+---
