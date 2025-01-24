@@ -516,7 +516,10 @@ public class Main {
         System.out.println("Área del círculo: " + c.calcularArea());
     }
 }
+
 ```
+[Aquí esta resuelto](https://github.com/nicgrefer/ejercicios-java/tree/main/ejercicios/src/T7ejemplos/Areas_Metosos_abstractos)
+
 
 #### 🛠 **Reglas de las Clases Abstractas**
 1. No se pueden instanciar (`new Figura();` da error).
