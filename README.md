@@ -1,5 +1,11 @@
 # Teoria-java
 
+**🔹T1 [Identificación de los elementos de un programa informático. Lenguaje Java](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
+
+**🔹T2 [Elementos Básicos del Lenguaje Java](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
+
+**🔹T3 [Estructuras de Control](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
+
 **🔹T4 [Utilización de Objetos](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
 
 **🔹T5 [Introducción a la Programación Orientada a Objetos (POO)](https://github.com/nicgrefer/ejercicios-java#-tema-5-introducci%C3%B3n-a-la-programaci%C3%B3n-orientada-a-objetos-poo)**
@@ -10,6 +16,182 @@
 >[!NOTE]
 > La siguiente informacion ha sido redactada por CHat
 
+# 🎯 **Tema 1: Identificación de los elementos de un programa informático. Lenguaje Java**
+
+Este tema nos introduce a la programación y la historia de los lenguajes de programación. ¡Vamos a verlo con ejemplos! 😊
+
+---
+
+## 💻 **1. Programas y Aplicaciones**
+
+- Un **programa** es un conjunto de instrucciones ejecutables por un ordenador.
+- Una **aplicación** es un software formado por uno o más programas + documentación + archivos necesarios.
+
+📌 **Ejemplo:** Un editor de texto como Microsoft Word es una **aplicación**, ya que no solo contiene el código del programa, sino también configuraciones, plantillas y recursos adicionales.
+
+---
+
+## 🔄 **2. Ciclo de Vida de una Aplicación**
+
+El desarrollo de software sigue varias fases:
+1️⃣ **Análisis** 🧐 → Se identifican los requisitos.
+2️⃣ **Diseño** 🎨 → Se planea la estructura del programa.
+3️⃣ **Codificación** 💻 → Se escribe el código en un lenguaje de programación.
+4️⃣ **Pruebas** 🧪 → Se verifica que funciona correctamente.
+5️⃣ **Mantenimiento** 🔧 → Se actualiza y mejora.
+
+---
+
+## ❌ **3. Errores en la Programación**
+
+Al programar, podemos encontrar varios tipos de errores:
+
+- **Errores de usuario**: Datos mal introducidos.
+- **Errores de programador**: Fallos en la lógica del código.
+- **Errores de documentación**: Instrucciones incorrectas o incompletas.
+- **Errores de interfaz**: Problemas en la interacción con el usuario.
+- **Errores de E/S o comunicaciones**: Fallos en la entrada/salida de datos.
+- **Errores fatales**: Provocan que el programa se cierre abruptamente.
+- **Errores de ejecución**: Ocurren mientras el programa se está ejecutando.
+
+---
+
+## 🏗 **4. Historia de los Lenguajes de Programación**
+
+🔹 **1ª generación**: Lenguaje máquina (0s y 1s) 🏴‍☠️.
+🔹 **2ª generación**: Lenguaje ensamblador (SUM, MOV) ⚙️.
+🔹 **3ª generación**: Lenguajes de alto nivel (FORTRAN, COBOL, BASIC, Pascal) 🚀.
+🔹 **4ª generación**: Lenguajes más cercanos al usuario (SQL, lenguajes visuales) 📊.
+🔹 **5ª generación**: Lenguajes de inteligencia artificial y programación declarativa (Prolog, LISP) 🤖.
+
+---
+
+# 🎯 **Tema 2: Elementos Básicos del Lenguaje Java**
+
+Aquí aprendemos sobre **identificadores, variables, operadores y estructuras básicas** en Java. ¡Vamos allá! 🚀
+
+---
+
+## 🏷 **1. Identificadores en Java**
+
+Los identificadores son los nombres de variables, métodos y clases. Deben seguir estas reglas:
+✅ Pueden contener letras, dígitos, `_` o `$`.
+❌ No pueden comenzar con un número.
+❌ No pueden ser palabras reservadas (`class`, `int`, `public`, etc.).
+✅ Java distingue entre mayúsculas y minúsculas: `HolaMundo` ≠ `holamundo`.
+
+---
+
+## 🎭 **2. Tipos de Datos en Java**
+
+| Tipo      | Tamaño  | Rango                          |
+| --------- | ------- | ------------------------------ |
+| `byte`    | 1 byte  | -128 a 127                     |
+| `short`   | 2 bytes | -32,768 a 32,767               |
+| `int`     | 4 bytes | -2,147,483,648 a 2,147,483,647 |
+| `long`    | 8 bytes | -9 \* 10¹⁸ a 9 \* 10¹⁸         |
+| `float`   | 4 bytes | Precisión simple               |
+| `double`  | 8 bytes | Precisión doble                |
+| `boolean` | 1 bit   | `true` o `false`               |
+| `char`    | 2 bytes | Caracteres Unicode             |
+
+---
+
+## 🔢 **3. Variables y Operadores**
+
+📌 **Ejemplo de declaración de variables:**
+
+```java
+int edad = 25;
+float precio = 9.99F;
+boolean activo = true;
+char letra = 'A';
+```
+
+✏️ **Operadores básicos:**
+
+- Aritméticos: `+`, `-`, `*`, `/`, `%`
+- Comparación: `==`, `!=`, `>`, `<`, `>=`, `<=`
+- Lógicos: `&&`, `||`, `!`
+
+🔢 **Ejemplo:**
+
+```java
+int suma = 5 + 3;
+boolean mayor = (suma > 7) && (suma < 10);
+System.out.println(mayor); // true
+```
+
+---
+
+# 🎯 **Tema 3: Estructuras de Control**
+
+Este tema trata sobre **decisiones y bucles** en Java. ¡Vamos con ejemplos! 💡
+
+---
+
+## 🔍 **1. Estructuras de Selección (if-else, switch)**
+
+### ✅ **Ejemplo de \*\*\*\*\*\*\*\*\*\*\*\*****`if-else`**:
+
+```java
+int edad = 18;
+if (edad >= 18) {
+    System.out.println("Eres mayor de edad");
+} else {
+    System.out.println("Eres menor de edad");
+}
+```
+
+### 🔄 **Ejemplo de \*\*\*\*\*\*\*\*\*\*\*\*****`switch`**:
+
+```java
+int opcion = 2;
+switch (opcion) {
+    case 1:
+        System.out.println("Opción 1 seleccionada");
+        break;
+    case 2:
+        System.out.println("Opción 2 seleccionada");
+        break;
+    default:
+        System.out.println("Opción no válida");
+}
+```
+
+---
+
+## 🔁 **2. Estructuras de Iteración (Bucles)**
+
+### 🔄 **Ejemplo de \*\*\*\*\*\*\*\*\*\*\*\*****`while`**:
+
+```java
+int i = 1;
+while (i <= 5) {
+    System.out.println("Número: " + i);
+    i++;
+}
+```
+
+### 🔄 **Ejemplo de \*\*\*\*\*\*\*\*\*\*\*\*****`for`**:
+
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Número: " + i);
+}
+```
+
+### 🔄 **Ejemplo de \*\*\*\*\*\*\*\*\*\*\*\*****`do-while`**:
+
+```java
+int i = 1;
+do {
+    System.out.println("Número: " + i);
+    i++;
+} while (i <= 5);
+```
+
+---
 
 
 # 🎯 **Tema 4: Utilización de Objetos**
