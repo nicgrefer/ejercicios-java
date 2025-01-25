@@ -1,10 +1,10 @@
 # Teoria-java
 
-**🔹T1 [Identificación de los elementos de un programa informático. Lenguaje Java](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
+**🔹T1 [Identificación de los elementos de un programa informático. Lenguaje Java](https://github.com/nicgrefer/ejercicios-java#-tema-1-identificaci%C3%B3n-de-los-elementos-de-un-programa-inform%C3%A1tico-lenguaje-java)**
 
-**🔹T2 [Elementos Básicos del Lenguaje Java](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
+**🔹T2 [Elementos Básicos del Lenguaje Java](https://github.com/nicgrefer/ejercicios-java?tab=readme-ov-file#-tema-2-elementos-b%C3%A1sicos-del-lenguaje-java)**
 
-**🔹T3 [Estructuras de Control](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
+**🔹T3 [Estructuras de Control](https://github.com/nicgrefer/ejercicios-java?tab=readme-ov-file#-tema-3-estructuras-de-control)**
 
 **🔹T4 [Utilización de Objetos](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
 
