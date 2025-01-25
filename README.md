@@ -2,15 +2,15 @@
 
 **🔹T1 [Identificación de los elementos de un programa informático. Lenguaje Java](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-1-identificaci%C3%B3n-de-los-elementos-de-un-programa-inform%C3%A1tico-lenguaje-java)**
 
-**🔹T2 [Elementos Básicos del Lenguaje Java]([https://github.com/nicgrefer/ejercicios-java?tab=readme-ov-file#-tema-2-elementos-b%C3%A1sicos-del-lenguaje-java](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-2-elementos-b%C3%A1sicos-del-lenguaje-java))**
+**🔹T2 [Elementos Básicos del Lenguaje Java](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-2-elementos-b%C3%A1sicos-del-lenguaje-java)**
 
 **🔹T3 [Estructuras de Control](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-3-estructuras-de-control)**
 
-**🔹T4 [Utilización de Objetos](https://github.com/nicgrefer/ejercicios-java#-tema-4-utilizaci%C3%B3n-de-objetos)**
+**🔹T4 [Utilización de Objetos](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-4-utilizaci%C3%B3n-de-objetos)**
 
-**🔹T5 [Introducción a la Programación Orientada a Objetos (POO)](https://github.com/nicgrefer/ejercicios-java#-tema-5-introducci%C3%B3n-a-la-programaci%C3%B3n-orientada-a-objetos-poo)**
+**🔹T5 [Introducción a la Programación Orientada a Objetos (POO)](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-5-introducci%C3%B3n-a-la-programaci%C3%B3n-orientada-a-objetos-poo)**
 
-**🔹T6 [Programación Orientada a Objetos Avanzada en Java](https://github.com/nicgrefer/ejercicios-java?tab=readme-ov-file#tema-6---programaci%C3%B3n-orientada-a-objetos-avanzada-en-java)**
+**🔹T6 [Programación Orientada a Objetos Avanzada en Java](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#tema-6---programaci%C3%B3n-orientada-a-objetos-avanzada-en-java)**
 
 
 >[!NOTE]
@@ -18,9 +18,6 @@
 
 # 🎯 **Tema 1: Identificación de los elementos de un programa informático. Lenguaje Java**
 
-Este tema nos introduce a la programación y la historia de los lenguajes de programación. ¡Vamos a verlo con ejemplos! 😊
-
----
 
 ## 💻 **1. Programas y Aplicaciones**
 
@@ -68,9 +65,6 @@ Al programar, podemos encontrar varios tipos de errores:
 
 # 🎯 **Tema 2: Elementos Básicos del Lenguaje Java**
 
-Aquí aprendemos sobre **identificadores, variables, operadores y estructuras básicas** en Java. ¡Vamos allá! 🚀
-
----
 
 ## 🏷 **1. Identificadores en Java**
 
@@ -126,9 +120,6 @@ System.out.println(mayor); // true
 
 # 🎯 **Tema 3: Estructuras de Control**
 
-Este tema trata sobre **decisiones y bucles** en Java. ¡Vamos con ejemplos! 💡
-
----
 
 ## 🔍 **1. Estructuras de Selección (if-else, switch)**
 
@@ -369,16 +360,6 @@ try {
 🧐 **¿Qué pasa aquí?**
 - `10 / 0` genera una `ArithmeticException`.
 - El bloque `catch` la captura y muestra un mensaje amigable.
-
----
-
-# 🎯 **Conclusión**
-✅ **Tema 4**: Trabajamos con `String`, `Random` y `Date`.
-✅ **Tema 5**: Aprendimos sobre **POO**, constructores y excepciones.
-
-🚀 ¡Espero que esta explicación con emojis y ejemplos te ayude a entender mejor los conceptos! ¿Tienes dudas? ¡Pregúntame! 😊
-
-
 
 
 ---
