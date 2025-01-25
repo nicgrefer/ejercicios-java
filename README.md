@@ -754,22 +754,174 @@ public class Main {
 
 ---
 ## 📡 **10. Interfaces (Simulan Herencia Múltiple)**
-- **Diferencia con clases abstractas:** Todos los métodos de una interfaz son **abstractos** por defecto.
-- **Se usa `implements` en vez de `extends`.**
+#### 🎯 **1. ¿Qué es una interfaz en Java?**
 
-### 📌 **Ejemplo:**
+Una **interfaz** en Java es un **contrato** que define qué métodos debe tener una clase, pero **sin implementar** su comportamiento.
+
+👉 Es como un **manual de instrucciones** 📖: establece qué métodos deben existir, pero no dice cómo deben funcionar.
+
+📌 **Ejemplo en la vida real**:\
+Imagina que tienes un **enchufe** en la pared. Sabes que tiene **dos agujeros** y una **toma de tierra**, pero **no te importa cómo la electricidad fluye por dentro**. Lo importante es que cualquier **dispositivo compatible** con ese enchufe podrá usarse.
+
+De la misma manera, una **interfaz** define los métodos que deben estar en una clase, pero **no su implementación**.
+
+---
+
+#### 🏗 **2. Sintaxis de una Interfaz en Java**
+
+📌 Una interfaz se declara con la palabra clave `interface`.
+
 ```java
-interface Barco {
-    void alarma();
+// Definimos una interfaz
+interface Vehiculo {
+    void acelerar(int velocidad); // Método sin implementación
+    void frenar(); // Método sin implementación
 }
+```
 
-class Velero implements Barco {
-    public void alarma() {
-        System.out.println("Alerta en el Velero");
+💡 **Claves importantes:**\
+✅ Los métodos de una interfaz son **abstractos por defecto** (no necesitan `abstract`).\
+✅ Una interfaz **no puede tener atributos normales**, solo constantes (`final`).\
+✅ Las clases que la usen **deben implementar todos sus métodos**.
+
+---
+
+#### 🚗 **3. Implementación de una Interfaz**
+
+Una clase usa la palabra clave `implements` para **implementar** una interfaz:
+
+```java
+// Clase que implementa la interfaz
+class Coche implements Vehiculo {
+    
+    private int velocidad;
+
+    @Override
+    public void acelerar(int velocidad) {
+        this.velocidad += velocidad;
+        System.out.println("El coche acelera a " + this.velocidad + " km/h");
+    }
+
+    @Override
+    public void frenar() {
+        this.velocidad = 0;
+        System.out.println("El coche se ha detenido.");
     }
 }
 ```
-💡 **Permite que varias clases compartan métodos sin heredar una clase base.**
+
+📌 **Explicación:**\
+1️⃣ `Coche` usa `implements Vehiculo` para indicar que **implementa la interfaz**.\
+2️⃣ Implementa **todos los métodos** (`acelerar()` y `frenar()`).\
+3️⃣ Se puede crear un objeto `Coche` y usarlo:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Coche miCoche = new Coche();
+        miCoche.acelerar(50);
+        miCoche.frenar();
+    }
+}
+```
+
+🛠 **Salida esperada:**
+
+```
+El coche acelera a 50 km/h
+El coche se ha detenido.
+```
+
+---
+
+#### 🏆 **4. ¿Para qué se usan las Interfaces?**
+
+Las interfaces se usan cuando queremos que **diferentes clases compartan un conjunto de métodos**, sin importar cómo los implementen.
+
+Ejemplo: Una **bicicleta y un coche** pueden acelerar y frenar, pero lo hacen de manera diferente.
+
+```java
+class Bicicleta implements Vehiculo {
+    private int velocidad;
+
+    @Override
+    public void acelerar(int velocidad) {
+        this.velocidad += velocidad;
+        System.out.println("La bicicleta acelera a " + this.velocidad + " km/h");
+    }
+
+    @Override
+    public void frenar() {
+        this.velocidad = 0;
+        System.out.println("La bicicleta se ha detenido.");
+    }
+}
+```
+
+Ahora, tanto `Coche` como `Bicicleta` pueden ser tratados como `Vehiculo`:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Vehiculo v1 = new Coche();
+        Vehiculo v2 = new Bicicleta();
+
+        v1.acelerar(100);  // El coche acelera a 100 km/h
+        v2.acelerar(20);   // La bicicleta acelera a 20 km/h
+
+        v1.frenar();  // El coche se ha detenido.
+        v2.frenar();  // La bicicleta se ha detenido.
+    }
+}
+```
+
+🔹 **Polimorfismo en acción**: `v1` y `v2` son del tipo `Vehiculo`, pero pueden ser un `Coche` o una `Bicicleta` sin importar la implementación interna.
+
+---
+
+#### 🏛 **5. Diferencia entre una Interfaz y una Clase Abstracta**
+
+📊 **Tabla comparativa**:
+
+| Característica             | Interfaz                                        | Clase Abstracta                           |
+| -------------------------- | ----------------------------------------------- | ----------------------------------------- |
+| Métodos                    | Solo abstractos (hasta Java 7)                  | Puede tener métodos abstractos y normales |
+| Atributos                  | Solo constantes (`final`)                       | Puede tener atributos normales            |
+| Constructores              | ❌ No tiene                                      | ✅ Puede tener                             |
+| Herencia                   | Se implementa con `implements`                  | Se hereda con `extends`                   |
+| Múltiples implementaciones | ✅ Una clase puede implementar varias interfaces | ❌ Solo puede extender una clase abstracta |
+
+📌 **¿Cuándo usar una interfaz y cuándo una clase abstracta?**
+
+- Usa una **interfaz** cuando varias clases **comparten comportamiento** pero no relación jerárquica.
+- Usa una **clase abstracta** cuando tienes una estructura común entre clases que comparten atributos y métodos.
+
+---
+
+#### 🔄 **6. Interfaces con Métodos por Defecto (Java 8+)**
+
+Desde Java 8, las interfaces pueden tener **métodos por defecto (**\`\`**)** que incluyen implementación.
+
+```java
+interface Animal {
+    default void respirar() {
+        System.out.println("Este animal respira.");
+    }
+}
+```
+
+📌 **Beneficio:** Ahora las clases que implementan `Animal` no tienen que sobrescribir `respirar()`, pero pueden hacerlo si quieren.
+
+---
+
+#### 🎯 **Resumen Final interfaz**
+
+✅ Una **interfaz** es un conjunto de métodos sin implementación.\
+✅ Se usa `implements` para que una clase la implemente.\
+✅ Se pueden crear objetos de una clase que implemente la interfaz.\
+✅ Permiten el **polimorfismo**, haciendo que distintas clases sean tratadas por igual.\
+✅ Desde Java 8, pueden tener métodos `default`.\
+✅ Son diferentes a las **clases abstractas**, ya que **no tienen atributos ni constructores**.
 
 ---
 
