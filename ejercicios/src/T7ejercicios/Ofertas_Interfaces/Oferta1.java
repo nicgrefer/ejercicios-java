@@ -10,6 +10,8 @@ public class Oferta1 extends Cliente {
     public void conexion(int s) {
         if (s > 180) {
             super.conexion(s - 180);
+        } else {
+            super.conexion(s);
         }
     }
 }

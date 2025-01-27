@@ -8,7 +8,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         // Solicitar al usuario que elija una oferta
-        System.out.println("Seleccione una oferta (1 o 2 y di es VIP pulsa 3): ");
+        System.out.println("Seleccione una oferta (1, 2 o 3 para combinada): ");
         int seleccion = scanner.nextInt();
 
         // Crear la instancia correspondiente de Cliente basada en la selección del usuario
@@ -18,9 +18,9 @@ public class App {
         } else if (seleccion == 2) {
             double descuento = 0.50;
             cliente = new Oferta2("John Doe", "john@example.com", 0.10, descuento);
-         } else if (seleccion == 3) {
+        } else if (seleccion == 3) {
             double descuento = 0.50;
-            cliente = new Oferta2("John Doe", "john@example.com", 0.10, descuento);
+            cliente = new OfertaCombinada("John Doe", "john@example.com", 0.10, descuento);
         } else {
             System.out.println("Selección inválida. Usando Oferta1 por defecto.");
             cliente = new Oferta1("John Doe", "john@example.com", 0.10);
@@ -34,6 +34,6 @@ public class App {
         // Mostrar el importe calculado
         System.out.println("Importe: " + cliente.importe());
 
-        scanner.close();
+
     }
 }
