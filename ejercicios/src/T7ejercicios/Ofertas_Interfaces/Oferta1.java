@@ -1,9 +1,9 @@
 package T7ejercicios.Ofertas_Interfaces;
 
 public class Oferta1 extends Cliente {
-	
-	public Oferta1(double tarifaPorSegundo) {
-        super(tarifaPorSegundo);
+
+    public Oferta1(String nombre, String email, double tarifaPorSegundo) {
+        super(nombre, email, tarifaPorSegundo);
     }
 
     @Override
@@ -12,5 +12,4 @@ public class Oferta1 extends Cliente {
             super.conexion(s - 180);
         }
     }
-	
 }
