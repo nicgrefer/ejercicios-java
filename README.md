@@ -653,6 +653,13 @@ public class Main {
 
 ---
 
+
+Por lo tanto una **`ESTATICA`** a parte de tener como método `estatico`  como se ve en el ejemplo para que muestre el cambio a de llamar a la clase, es decir `Coche c = new Coche()` por eso es *estática*, porque *No va a cambiar*. 
+
+Sin embargo la **`DINÁMICA`** baria dependiendo del *`tipo`* que sea.
+
+---
+
 ## 🏛 **8. Clases y Métodos Abstractos**
 Una **clase abstracta** es aquella que no se puede instanciar directamente. Se usa como una **plantilla** para otras clases.
 
