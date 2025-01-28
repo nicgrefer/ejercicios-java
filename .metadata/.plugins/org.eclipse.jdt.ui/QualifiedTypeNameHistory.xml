@@ -51,6 +51,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.Operaciones"/>
     <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.UsuarioBase"/>
-    <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.Usuario"/>
     <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.Cliente"/>
+    <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.Usuario"/>
 </qualifiedTypeNameHistroy>

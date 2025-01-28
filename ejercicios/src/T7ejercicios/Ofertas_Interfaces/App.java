@@ -12,7 +12,7 @@ public class App {
         int seleccion = scanner.nextInt();
 
         // Crear la instancia correspondiente de Cliente basada en la selección del usuario
-        Cliente cliente;
+        Cliente1 cliente;
         if (seleccion == 1) {
             cliente = new Oferta1("John Doe", "john@example.com", 0.10);
         } else if (seleccion == 2) {

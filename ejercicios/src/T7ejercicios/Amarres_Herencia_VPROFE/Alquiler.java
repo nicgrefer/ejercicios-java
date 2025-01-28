@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class Alquiler {
 
-    private Cliente cli;
+    private Cliente1 cli;
     private LocalDate fechaIni;
     private LocalDate fechaFin;
     private Amarre amarre;
     private Barco barco;
 
-    public Alquiler(Cliente cli, LocalDate fechaIni, LocalDate fechaFin, Amarre amarre, Barco b) { //b=v   b=y
+    public Alquiler(Cliente1 cli, LocalDate fechaIni, LocalDate fechaFin, Amarre amarre, Barco b) { //b=v   b=y
         this.cli = cli;
         this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
@@ -18,7 +18,7 @@ public class Alquiler {
         this.barco = b;
     }
 
-    public Cliente getCli() {
+    public Cliente1 getCli() {
         return cli;
     }
 
@@ -38,7 +38,7 @@ public class Alquiler {
        return fechaIni;
     }
 
-    public void setCli(Cliente cli) {
+    public void setCli(Cliente1 cli) {
         this.cli = cli;
     }
 

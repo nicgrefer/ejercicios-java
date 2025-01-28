@@ -1,6 +1,6 @@
 package T7ejercicios.Ofertas_Interfaces;
 
-public class Oferta1 extends Cliente {
+public class Oferta1 extends Cliente1 {
 
     public Oferta1(String nombre, String email, double tarifaPorSegundo) {
         super(nombre, email, tarifaPorSegundo);

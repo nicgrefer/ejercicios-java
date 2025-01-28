@@ -1,6 +1,6 @@
 package T7ejercicios.Ofertas_Interfaces;
 
-public class Oferta2 extends Cliente {
+public class Oferta2 extends Cliente1 {
 
     private double descuento;
 
