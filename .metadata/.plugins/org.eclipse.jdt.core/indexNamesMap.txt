@@ -1,1 +1,3 @@
 INDEX VERSION 1.134
+file:/C:/Users/jovcubni/Desktop/java_github/ejercicios-java/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
+meta_index

@@ -26,7 +26,18 @@
 <item elementID="=ejercicios/src&lt;T7ejemplos.SobreCarga" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T7ejemplos.Interfaces" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
-<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1734345250581_17" label="entornos" name="entornos"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1734345250581_17" label="entornos" name="entornos">
+<item elementID="=Ejemplo06_ConJavadokMeiben" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejemplo03_Documentando" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejemplo08_Commons_Math" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=que_bajon" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejemplo07_String_adom" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejem02_HolaMundoMaven" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=queBajon" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejemplo01_CargandoLibreria" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejemplo05_SinJavadok" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejemplo09_Calculadora" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1727947689086_2" label="Window Working Set" name="Aggregate for window 1727947689086"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1727947759351_3" label="Window Working Set" name="Aggregate for window 1727947759351"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1727948094850_4" label="Window Working Set" name="Aggregate for window 1727948094850"/>
