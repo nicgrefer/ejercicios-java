@@ -4,6 +4,7 @@ public class Calculadora {
 
 	public int sumar(int num1,int num2) {
 		int resultadoSuma = num1 + num2;
+		resultadoSuma = resultadoSuma+0;
 		return resultadoSuma;
 	}
 	

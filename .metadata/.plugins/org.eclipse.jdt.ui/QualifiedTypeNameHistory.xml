@@ -53,4 +53,7 @@
     <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.UsuarioBase"/>
     <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.Cliente"/>
     <fullyQualifiedTypeName name="T7ejercicios.Ofertas_Interfaces.Usuario"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.AfterAll"/>
+    <fullyQualifiedTypeName name="CalculadoraTest"/>
 </qualifiedTypeNameHistroy>
