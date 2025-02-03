@@ -12,15 +12,16 @@ import java.util.Random;
  * @author jovcubni
  */
 public class ejemplo1 extends javax.swing.JFrame {
-    
-    private int [] alturas; // declaracion de aray para almacenar las alturas
 
+   private int[] alturas; // asi es como se declara un array para, en este caso, almacenar alturas.
+    
     /**
-     * Creates new form ArraysInterfad
+     * Creates new form Ejemplo1
      */
     public ejemplo1() {
         initComponents();
-        this.setTitle("Primer ejemplo de arays");
+        
+        this.setTitle("Primer ejemplo de arrays");
         this.setLocationRelativeTo(null);
     }
 
@@ -115,42 +116,79 @@ public class ejemplo1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCrearActionPerformed
-        // Creamos el aray de alturas
-        int tamanio = Integer.parseInt(this.BotonCrear.getText());
-        alturas= new int[tamanio];
-        System.out.println("Aray creado de tamanio " + tamanio);
-        Arrays.fill(alturas,-1 );
-        mostrarArray();
+        // creamos el array de alturas
+        int tamanio=Integer.parseInt( this.textFieldNumElementos.getText());
+        alturas= new int[tamanio]; //llamamos al array, como se de un objeto se tratase
+        System.out.println("Array creado de tamanio "+alturas.length);
+//        mostrarArray();
+//        Arrays.fill(alturas, -1);
+//        mostrarArray();
+        
         rellenarArray();
+        mostrarArray();
     }//GEN-LAST:event_BotonCrearActionPerformed
 
-   public void rellenarArray(){
-       Random r= new Random();
-       for (int i = 0; i<alturas.length;i++){
-           alturas[i]=r.nextInt(10,30);
-       }
-   }
+    private void BotonAlturaMediaActionPerformed(java.awt.event.ActionEvent evt) {                                                 
+        // TODO add your handling code here:
+        int total=0; //acumula las alturas
+        int contador=0; //contabiliza las alturas
+        for(int i=0; i<alturas.length; i++){
+            if(alturas[i] !=0){
+                contador++;
+                total+= alturas.length;
+            }
+        }
+        double media= total/contador;
+        System.out.println("La media es: "+media);
+    }                                                
+
+    private void BotonMinMaxActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+        int min = 0;
+        int max = 0;
+        int actual=alturas.length;
+        
+        hacerMin();
+        hacerMax();
+        
+    }                                           
+
+    private void hacerMin(){
+        
+    }
     
+    private void hacerMax(){
+        
+    }
+    
+     //Llena el array con alturas entre 10 y 300.
+    private void rellenarArray(){
+        Random r = new Random();
+        for(int i=0; i<alturas.length; i++){
+            alturas[i]=r.nextInt(10,301);
+        }
+    }
+
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void alturaMediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alturaMediaActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_alturaMediaActionPerformed
 
     private void alturaMaxMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alturaMaxMinActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_alturaMaxMinActionPerformed
 
-    public void mostrarArray(){
-        // Muestra el contenido del array
-        for (int i= 0; i < alturas.length; i++){
-            System.out.println("Posicion " + i  + " : " + alturas[i]);
+  //Muestra el contenido del Array 
+    private void mostrarArray(){
+        for(int i=0; i<alturas.length; i++){
+            System.out.println("Posicion " +i+ ":" +alturas[i]);
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
