@@ -1,0 +1,4 @@
+Ejercicio 1. 
+Pedimos al usuario tamaño de un array a crear, una vez recogido el dato pedimos tantos números como posiciones tenga el array. 
+Generamos un método dentro de la clase Aplicacion, para meterle el array y que nos lo devuelva ordenado (método podéis usar la IA).
+Elaborar una bateria de pruebas con JUnit (Juniper) para testear que ese método de ordenación es correcto.
