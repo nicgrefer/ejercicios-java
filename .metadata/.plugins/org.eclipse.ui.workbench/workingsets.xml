@@ -32,6 +32,7 @@
 <item elementID="=ejemplo03_Documentando" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejemplo08_Commons_Math" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=que_bajon" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejercicio  1_JUNIT" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejemplo07_String_adom" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejem02_HolaMundoMaven" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=queBajon" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>

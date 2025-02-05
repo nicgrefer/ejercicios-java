@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="clasesextra.Nodo"/>
     <fullyQualifiedTypeName name="clasesextra.a"/>
     <fullyQualifiedTypeName name="T6ejercicio.ascensor.Ascensor"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="main.Aplicación"/>
     <fullyQualifiedTypeName name="main.Persona"/>
@@ -56,4 +55,6 @@
     <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.AfterAll"/>
     <fullyQualifiedTypeName name="CalculadoraTest"/>
+    <fullyQualifiedTypeName name="java.lang.ScopedValue"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
