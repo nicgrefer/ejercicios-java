@@ -4,15 +4,15 @@
  */
 package Eejercicios;
 
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author jovcubni
+ * @author nicol
  */
 public class Capicua extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Capicua
-     */
+    public int num=0;
     public Capicua() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -27,29 +27,31 @@ public class Capicua extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-
-        jTextField1.setText("jTextField1");
+        Titulo = new javax.swing.JLabel();
+        Descripcion = new javax.swing.JLabel();
+        Boton = new javax.swing.JButton();
+        Completar = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 51, 204));
-        jLabel1.setText("ES CAPICUA??");
+        Titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(153, 0, 255));
+        Titulo.setText("Es capicua???");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Eejercicios/emblemok_103757 (1).png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Descripcion.setText("Introduce valor");
+
+        Boton.setText("🤷??");
+        Boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotonActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setText("Introduce numero");
+        Completar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CompletarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,37 +60,75 @@ public class Capicua extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(jLabel2)
-                        .addGap(30, 30, 30)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(jButton1))
+                        .addGap(76, 76, 76)
+                        .addComponent(Titulo))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(118, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)
+                        .addComponent(Descripcion)
+                        .addGap(42, 42, 42)
+                        .addComponent(Completar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(Boton)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addContainerGap()
+                .addComponent(Titulo)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton1))
-                .addContainerGap(56, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Completar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Descripcion)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(Boton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+        
+           try {
+        num = Integer.parseInt(Completar.getText());
+
+        if (esCapicua(num)) {
+            JOptionPane.showMessageDialog(this, num + " es capicúa.");
+        } else {
+            JOptionPane.showMessageDialog(this, num + " no es capicúa.");
+        }
+
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Por favor, introduce un número válido.");
+    }
+
+        
+    }//GEN-LAST:event_BotonActionPerformed
+
+    public boolean esCapicua(int num){
+        int original = num;
+        int invertido = 0;
+    
+        while (num > 0) {
+        int digito = num % 10;
+        invertido = invertido * 10 + digito;
+        num /= 10;
+        }
+    
+        return original == invertido;
+    }
+    
+    private void CompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompletarActionPerformed
+        // TODO add your handling code here:
+       
+
+    }//GEN-LAST:event_CompletarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,30 +164,11 @@ public class Capicua extends javax.swing.JFrame {
             }
         });
     }
-    
-    
-public static boolean esCapicua(int numero) {
-        int original = numero;
-        int reverso = 0;
-        
-        while (numero != 0) {
-            int digito = numero % 10;
-            reverso = reverso * 10 + digito;
-            numero /= 10;
-        }
-        
-        return original == reverso;
-    }
-
-
-        
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton Boton;
+    private javax.swing.JTextField Completar;
+    private javax.swing.JLabel Descripcion;
+    private javax.swing.JLabel Titulo;
     // End of variables declaration//GEN-END:variables
 }
