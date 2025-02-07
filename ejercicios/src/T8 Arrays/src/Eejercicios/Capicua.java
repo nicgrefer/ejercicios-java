@@ -40,6 +40,7 @@ public class Capicua extends javax.swing.JFrame {
 
         Descripcion.setText("Introduce valor");
 
+        Boton.setForeground(new java.awt.Color(0, 0, 204));
         Boton.setText("🤷??");
         Boton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +101,7 @@ public class Capicua extends javax.swing.JFrame {
 
         if (esCapicua(num)) {
             JOptionPane.showMessageDialog(this, num + " es capicúa.");
+
         } else {
             JOptionPane.showMessageDialog(this, num + " no es capicúa.");
         }
