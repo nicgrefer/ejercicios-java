@@ -102,16 +102,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="\ud83d\udd8bRellenar Array" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonRellenarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonMostrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="\ud83d\udc41Mostrar" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonMostrarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonBuscar">
       <Properties>
         <Property name="text" type="java.lang.String" value="\ud83d\udd0e Buscar" containsInvalidXMLChars="true"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BotonCrear">
       <Properties>

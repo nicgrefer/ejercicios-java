@@ -4,13 +4,18 @@
  */
 package Eejercicios;
 
+import javax.swing.JOptionPane;
+
 /**
- *
+ *Programa que almacene en un array una lista de palabras introducida por el usuario de tamaño del array sera determinado por el usuario (Usa JSpiner)
+ * 
+ *El programa permitira buscar el nº de palabras que hay en el array  que empiezan por un caracter que eliga el usuario
  * @author jovcubni
  */
 
 public class BuscarArrayTexto extends javax.swing.JFrame {
 private int TAM=0;
+public String [] array;
     /**
      * Creates new form OrdenarArrayTexto
      */
@@ -46,10 +51,25 @@ private int TAM=0;
         jSeparator1.setForeground(new java.awt.Color(0, 0, 204));
 
         BotonRellenar.setText("🖋Rellenar Array");
+        BotonRellenar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRellenarActionPerformed(evt);
+            }
+        });
 
         BotonMostrar.setText("👁Mostrar");
+        BotonMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonMostrarActionPerformed(evt);
+            }
+        });
 
         BotonBuscar.setText("🔎 Buscar");
+        BotonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBuscarActionPerformed(evt);
+            }
+        });
 
         BotonCrear.setText("Crear");
         BotonCrear.addActionListener(new java.awt.event.ActionListener() {
@@ -110,9 +130,50 @@ private int TAM=0;
         // TODO add your handling code here:
         TAM = (int) this.SpinLongArray.getValue();
         //System.out.println(TAM);
+        array= new String[TAM];
+        JOptionPane.showMessageDialog(null, "Array creado correctamente","Con exito",1);
 
 
     }//GEN-LAST:event_BotonCrearActionPerformed
+
+    private void BotonRellenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRellenarActionPerformed
+        // TODO add your handling code here:
+        for (int i=0;i<TAM;i++){
+            array[i]=JOptionPane.showInputDialog(null, i+" dato");
+        }
+    }//GEN-LAST:event_BotonRellenarActionPerformed
+
+    private void BotonMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMostrarActionPerformed
+        // TODO add your handling code here:
+        for (int i=0; i<TAM;i++){
+            System.out.println(array[i]);
+            
+        }
+        JOptionPane.showMessageDialog(null, array);
+    }//GEN-LAST:event_BotonMostrarActionPerformed
+
+    private void BotonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarActionPerformed
+        // TODO add your handling code here:
+        int sumaPalabreas = 0;
+        char caracterEncontrado;
+        char caracterReferencia;
+        String caracter=JOptionPane.showInputDialog(null,"Introduce la letra que buscas (primer caracter de la frase)");
+        
+        if (caracter == null || caracter.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No ingresaste ningún carácter.");
+            return; // Salimos del programa si la entrada es inválida
+        }
+        
+        caracterReferencia = caracter.charAt(0); // Tomamos el primer carácter ingresado
+        
+        for (int i=0;i<TAM;i++){
+            caracterEncontrado = array[i].charAt(0);
+            if (caracterEncontrado==caracterReferencia){
+                sumaPalabreas++;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Hay "+ sumaPalabreas+" fraes que inicien con "+ caracterReferencia);
+    }//GEN-LAST:event_BotonBuscarActionPerformed
 
     /**
      * @param args the command line arguments
