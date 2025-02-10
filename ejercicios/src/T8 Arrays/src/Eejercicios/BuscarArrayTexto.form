@@ -43,10 +43,13 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="BotonBuscar" min="-2" max="-2" attributes="0"/>
-                          <Component id="BotonMostrar" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="BotonBuscar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                      <Component id="BotonMostrar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                      <Component id="BotonOrdenar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="27" max="32767" attributes="0"/>
@@ -67,7 +70,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="BotonRellenar" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="BotonMostrar" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BotonMostrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BotonOrdenar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="BotonBuscar" min="-2" pref="23" max="-2" attributes="0"/>
               <EmptySpace pref="18" max="32767" attributes="0"/>
@@ -128,6 +134,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonCrearActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonOrdenar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x2714; Ordenar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonOrdenarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

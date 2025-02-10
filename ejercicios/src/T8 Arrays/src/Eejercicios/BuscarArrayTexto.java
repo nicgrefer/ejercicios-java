@@ -22,6 +22,8 @@ public String [] array;
     public BuscarArrayTexto() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Busqueda en array");
+        this.BotonCrear.requestFocus(true);
     }
 
     /**
@@ -40,6 +42,7 @@ public String [] array;
         BotonMostrar = new javax.swing.JButton();
         BotonBuscar = new javax.swing.JButton();
         BotonCrear = new javax.swing.JButton();
+        BotonOrdenar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +81,13 @@ public String [] array;
             }
         });
 
+        BotonOrdenar.setText("✔ Ordenar");
+        BotonOrdenar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonOrdenarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -99,9 +109,12 @@ public String [] array;
                         .addComponent(BotonRellenar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BotonBuscar)
-                            .addComponent(BotonMostrar))))
+                        .addComponent(BotonBuscar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(BotonMostrar)
+                        .addGap(94, 94, 94)
+                        .addComponent(BotonOrdenar)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -117,7 +130,9 @@ public String [] array;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BotonRellenar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotonMostrar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BotonMostrar)
+                    .addComponent(BotonOrdenar))
                 .addGap(18, 18, 18)
                 .addComponent(BotonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
@@ -175,6 +190,22 @@ public String [] array;
         JOptionPane.showMessageDialog(null, "Hay "+ sumaPalabreas+" fraes que inicien con "+ caracterReferencia);
     }//GEN-LAST:event_BotonBuscarActionPerformed
 
+    private void burbuja (String[]array){
+        int n = array.length;
+        for (int i = 0;i<n-1;i++){
+            for (int j =0;i<n-i;j++){
+                if (array[j-1].compareTo(array[j])){
+                    
+                }
+            }
+        }
+    }
+    
+    
+    private void BotonOrdenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonOrdenarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonOrdenarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -215,6 +246,7 @@ public String [] array;
     private javax.swing.JButton BotonBuscar;
     private javax.swing.JButton BotonCrear;
     private javax.swing.JButton BotonMostrar;
+    private javax.swing.JButton BotonOrdenar;
     private javax.swing.JButton BotonRellenar;
     private javax.swing.JLabel Pregunta;
     private javax.swing.JSpinner SpinLongArray;
