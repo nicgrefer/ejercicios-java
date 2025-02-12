@@ -160,13 +160,17 @@ public String [] array;
 
     private void BotonMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonMostrarActionPerformed
         // TODO add your handling code here:
+        mostrar();
+    }//GEN-LAST:event_BotonMostrarActionPerformed
+
+    public void mostrar(){
         for (int i=0; i<TAM;i++){
             System.out.println(array[i]);
             
         }
         JOptionPane.showMessageDialog(null, array);
-    }//GEN-LAST:event_BotonMostrarActionPerformed
-
+    }
+   
     private void BotonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarActionPerformed
         // TODO add your handling code here:
         int sumaPalabreas = 0;
@@ -190,20 +194,37 @@ public String [] array;
         JOptionPane.showMessageDialog(null, "Hay "+ sumaPalabreas+" fraes que inicien con "+ caracterReferencia);
     }//GEN-LAST:event_BotonBuscarActionPerformed
 
-    private void burbuja (String[]array){
-        int n = array.length;
-        for (int i = 0;i<n-1;i++){
-            for (int j =0;i<n-i;j++){
-                if (array[j-1].compareTo(array[j])){
-                    
-                }
+   private void burbuja(String[] array) {
+    int n = array.length;
+    for (int i = 0; i < n - 1; i++) {  // Pasadas
+        for (int j = 0; j < n - i - 1; j++) {  // Comparación entre parejas
+            if (array[j].compareTo(array[j + 1]) > 0) { // Si la palabra actual es mayor que la siguiente
+                // Intercambio
+                String temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
             }
         }
     }
+}
+
     
     
     private void BotonOrdenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonOrdenarActionPerformed
         // TODO add your handling code here:
+    if (array == null || array.length == 0) {
+        JOptionPane.showMessageDialog(null, "El array está vacío o no ha sido creado.");
+        return;
+    }
+    
+    burbuja(array); // Llamamos al método de ordenación
+    JOptionPane.showMessageDialog(null, "Array ordenado correctamente.");
+
+    // Mostramos el array ordenado en la consola
+    System.out.println("Array ordenado");
+    mostrar();
+
+
     }//GEN-LAST:event_BotonOrdenarActionPerformed
 
     /**
