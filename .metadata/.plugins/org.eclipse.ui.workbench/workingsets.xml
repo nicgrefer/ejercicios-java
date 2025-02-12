@@ -13,7 +13,6 @@
 <item elementID="=ejercicios/src&lt;T6.ejemplos.Excepcion" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejemplos.persona" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T7ejercicios.Empleado_herencia" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=GUI" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T7ejemplos.ClasesDerivadasEmpleados" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T7ejemplos.Areas_Metosos_abstractos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicios/src&lt;T6ejercicio.ascensor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -36,6 +35,7 @@
 <item elementID="=Ejemplo07_String_adom" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejem02_HolaMundoMaven" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=queBajon" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Ejercicio1_JUnit_OrdenacionArray" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejemplo01_CargandoLibreria" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejemplo05_SinJavadok" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejemplo09_Calculadora" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
