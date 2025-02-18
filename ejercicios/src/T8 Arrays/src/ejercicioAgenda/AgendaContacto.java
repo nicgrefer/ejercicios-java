@@ -124,6 +124,11 @@ public class AgendaContacto extends javax.swing.JFrame {
         });
 
         BotonModificarContacto.setText("Modificar contacto");
+        BotonModificarContacto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonModificarContactoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -230,7 +235,7 @@ public class AgendaContacto extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Primero tienes que añadir contactos", "Error", JOptionPane.ERROR_MESSAGE);
         }else  {
            String input = JOptionPane.showInputDialog(this, "Pon el Id que desa borrar");
-           if (input==null){
+           if (!input.isEmpty()){
                int aBorrar = Integer.parseInt(input);
                 if (aBorrar>=1 || aBorrar<=Agenda.length ){
                      for (int i=0;i<Agenda.length;i++){
@@ -325,6 +330,39 @@ public class AgendaContacto extends javax.swing.JFrame {
         }             
                 
     }//GEN-LAST:event_BotonElimianrTodoActionPerformed
+
+    private void BotonModificarContactoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonModificarContactoActionPerformed
+        // TODO add your handling code here:
+        boolean hayContactos = false;
+        boolean seEdito=false;
+        for (Contacto contacto : Agenda) {
+            if (contacto != null) {
+                hayContactos = true;
+                
+            }
+        }if (!hayContactos) {
+            JOptionPane.showMessageDialog(this, "Primero tienes que añadir contactos", "Error", JOptionPane.ERROR_MESSAGE);
+        }else  {
+           String input = JOptionPane.showInputDialog(this, "Pon el Id que desas editar");
+           if (!input.isEmpty()){
+               int aEditar = Integer.parseInt(input);
+                if (aEditar>=1 || aEditar<=Agenda.length ){
+                     for (int i=0;i<Agenda.length;i++){
+                         if (cont.getId()==aEditar && seEdito==false){
+                            Agenda[i].setNombre(JOptionPane.showInputDialog(this, "Nuevo nombre ("+Agenda[i].getNombre()+")"));
+                            String telef =(JOptionPane.showInputDialog(this, "Nuevo telefono ("+Agenda[i].getTelefono()+")"));
+                            Agenda[i].setTelefono(Integer.parseInt(telef));
+                            seEdito= true;
+                         }
+                     }
+                }else
+                JOptionPane.showMessageDialog(this, "Fuera de rango","Advertencia",JOptionPane.INFORMATION_MESSAGE);
+           } else
+           JOptionPane.showMessageDialog(this, "No puede ser nulo","Advertencia",JOptionPane.INFORMATION_MESSAGE);
+           
+          //  System.out.println(Arrays.toString(Agenda[aBorrar]));
+        }        
+    }//GEN-LAST:event_BotonModificarContactoActionPerformed
 
     /**
      * @param args the command line arguments
