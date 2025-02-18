@@ -349,8 +349,8 @@ public class AgendaContacto extends javax.swing.JFrame {
                 if (aEditar>=1 || aEditar<=Agenda.length ){
                      for (int i=0;i<Agenda.length;i++){
                          if (cont.getId()==aEditar && seEdito==false){
-                            Agenda[i].setNombre(JOptionPane.showInputDialog(this, "Nuevo nombre ("+Agenda[i].getNombre()+")"));
-                            String telef =(JOptionPane.showInputDialog(this, "Nuevo telefono ("+Agenda[i].getTelefono()+")"));
+                            Agenda[i].setNombre(JOptionPane.showInputDialog(this, "Nuevo nombre (antes "+Agenda[i].getNombre()+")"));
+                            String telef =(JOptionPane.showInputDialog(this, "Nuevo telefono (antes "+Agenda[i].getTelefono()+")"));
                             Agenda[i].setTelefono(Integer.parseInt(telef));
                             seEdito= true;
                          }
