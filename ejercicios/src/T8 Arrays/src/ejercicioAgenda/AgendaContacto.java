@@ -203,13 +203,40 @@ public class AgendaContacto extends javax.swing.JFrame {
     private void BotonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarActionPerformed
         // TODO add your handling code here:
         boolean hayContactos = false;
+        boolean seBorro=false;
         for (Contacto contacto : Agenda) {
             if (contacto != null) {
                 hayContactos = true;
-                int aBorrar = Integer.parseInt(JOptionPane.showInputDialog(this, "Pon el Id que desa borrar"));
+                
             }
         }if (!hayContactos) {
             JOptionPane.showMessageDialog(this, "Primero tienes que añadir contactos", "Error", JOptionPane.ERROR_MESSAGE);
+        }else  {
+           String input = JOptionPane.showInputDialog(this, "Pon el Id que desa borrar");
+           if (input==null){
+               int aBorrar = Integer.parseInt(input);
+                if (aBorrar>=1 || aBorrar<=Agenda.length ){
+                     for (int i=0;i<Agenda.length;i++){
+                         if (cont.getId()==aBorrar && seBorro==false){
+                             int confirmacion = JOptionPane.showConfirmDialog(this, "Estas seguro que quieres eliminar a "+ Agenda[i]);
+
+                             if (confirmacion==0){
+                                 Agenda[i]=null;
+                                 JOptionPane.showMessageDialog(this, "Contacto eliminado correctamente.");
+                                 seBorro=true;
+
+                             }
+                             else
+                                 JOptionPane.showMessageDialog(this, "Operación cancelada.");
+                          break;
+                         }
+                     }
+                }else
+                JOptionPane.showMessageDialog(this, "Fuera de rango","Advertencia",JOptionPane.INFORMATION_MESSAGE);
+           } else
+           JOptionPane.showMessageDialog(this, "No puede ser nulo","Advertencia",JOptionPane.INFORMATION_MESSAGE);
+           
+          //  System.out.println(Arrays.toString(Agenda[aBorrar]));
         }
     }//GEN-LAST:event_BotonBorrarActionPerformed
 
