@@ -28,10 +28,10 @@
               <Component id="jPanel1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -42,7 +42,7 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="42" max="32767" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -128,7 +128,6 @@
                       <Component id="BotonBorrar" alignment="0" max="32767" attributes="0"/>
                       <Component id="BotonVerContactos" alignment="0" max="32767" attributes="0"/>
                       <Component id="BotonElimianrTodo" alignment="0" pref="159" max="32767" attributes="0"/>
-                      <Component id="BotonDatosContacto" alignment="0" max="32767" attributes="0"/>
                       <Component id="BotonModificarContacto" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
@@ -147,10 +146,8 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="BotonElimianrTodo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="BotonDatosContacto" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="BotonModificarContacto" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -184,11 +181,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x274c; Vaciar agenda"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="BotonDatosContacto">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Datos del contacto"/>
-          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonElimianrTodoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BotonModificarContacto">
           <Properties>

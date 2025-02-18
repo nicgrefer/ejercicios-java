@@ -47,7 +47,6 @@ public class AgendaContacto extends javax.swing.JFrame {
         BotonBorrar = new javax.swing.JButton();
         BotonVerContactos = new javax.swing.JButton();
         BotonElimianrTodo = new javax.swing.JButton();
-        BotonDatosContacto = new javax.swing.JButton();
         BotonModificarContacto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -118,8 +117,11 @@ public class AgendaContacto extends javax.swing.JFrame {
         });
 
         BotonElimianrTodo.setText("❌ Vaciar agenda");
-
-        BotonDatosContacto.setText("Datos del contacto");
+        BotonElimianrTodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonElimianrTodoActionPerformed(evt);
+            }
+        });
 
         BotonModificarContacto.setText("Modificar contacto");
 
@@ -134,7 +136,6 @@ public class AgendaContacto extends javax.swing.JFrame {
                     .addComponent(BotonBorrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BotonVerContactos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BotonElimianrTodo, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(BotonDatosContacto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BotonModificarContacto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -150,10 +151,8 @@ public class AgendaContacto extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(BotonElimianrTodo)
                 .addGap(18, 18, 18)
-                .addComponent(BotonDatosContacto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BotonModificarContacto)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -164,10 +163,10 @@ public class AgendaContacto extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,7 +175,7 @@ public class AgendaContacto extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -262,9 +261,11 @@ public class AgendaContacto extends javax.swing.JFrame {
         // TODO add your handling code here:
         String nombreABuscar= TextoBusqueda.getText();
         boolean encontrado = false;
-        if (nombreABuscar== null){
-           JOptionPane.showMessageDialog(this, "No puede ser nulo","Advertencia",JOptionPane.INFORMATION_MESSAGE); 
+        if (nombreABuscar.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo de búsqueda no puede estar vacío", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return;
         }
+
         for (int i=0;i<Agenda.length;i++){
         
                 if (Agenda[i].getNombre().equalsIgnoreCase(nombreABuscar)) {
@@ -283,8 +284,9 @@ public class AgendaContacto extends javax.swing.JFrame {
         // TODO add your handling code here:
          String numeroBusca= TextoBusqueda.getText();
         boolean encontrado = false;
-        if (numeroBusca == null){
-           JOptionPane.showMessageDialog(this, "No puede ser nulo","Advertencia",JOptionPane.INFORMATION_MESSAGE); 
+        if (numeroBusca.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo de búsqueda no puede estar vacío", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         int numeroABuscar = Integer.parseInt(numeroBusca);
         for (int i=0;i<Agenda.length;i++){
@@ -299,6 +301,30 @@ public class AgendaContacto extends javax.swing.JFrame {
         }if (!encontrado)
         JOptionPane.showMessageDialog(this, "No encontrado", "Error busqueda",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_BotonBuscarXNumeroActionPerformed
+
+    private void BotonElimianrTodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonElimianrTodoActionPerformed
+        // TODO add your handling code here:
+        boolean hayContactos = false;
+        boolean seBorro=false;
+        for (Contacto contacto : Agenda) {
+            if (contacto != null) 
+                hayContactos = true;
+        }        
+            
+        if (!hayContactos){ 
+            JOptionPane.showMessageDialog(this, "Ya esta bacia", "Info", JOptionPane.INFORMATION_MESSAGE);
+        }else{ 
+          int confirmacion = JOptionPane.showConfirmDialog(this, "Estas seguro que quieres elimir todos los contactos");
+            if (confirmacion==0){
+                Agenda=null;
+                JOptionPane.showMessageDialog(this, "Contacto eliminado correctamente.");
+                seBorro=true;
+            }else{
+            JOptionPane.showMessageDialog(this, "Operación cancelada.");
+            }
+        }             
+                
+    }//GEN-LAST:event_BotonElimianrTodoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -342,7 +368,6 @@ public class AgendaContacto extends javax.swing.JFrame {
     private javax.swing.JButton BotonBorrar;
     private javax.swing.JButton BotonBuscarXNombre;
     private javax.swing.JButton BotonBuscarXNumero;
-    private javax.swing.JButton BotonDatosContacto;
     private javax.swing.JButton BotonElimianrTodo;
     private javax.swing.JButton BotonModificarContacto;
     private javax.swing.JButton BotonVerContactos;
