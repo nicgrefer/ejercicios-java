@@ -9,16 +9,18 @@ package ejercicioAgenda;
  * @author jovcubni
  */
 public class Contacto {
-    private int Id =0;
+    private int Id;
     private String nombre;
     private int telefono;
     protected static int aux = 1;
     
-    // Getter y setter
+    // Constructor sin parámetros
+    public Contacto() {
+        this.Id = aux++;
+    }
 
+    // Getter y setter
     public int getId() {
-        Id= Id+aux;
-        aux++;
         return Id;
     }
 
@@ -41,19 +43,18 @@ public class Contacto {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    // Constructor
 
+    // Constructor con parámetros
     public Contacto(int Id, String nombre, int telefono) {
         this.Id = Id;
         this.nombre = nombre;
         this.telefono = telefono;
     }
-    // To string
 
+    // To string
     @Override
     public String toString() {
         return "Contacto con Id=" + Id + ", nombre=" + nombre + " y telefono=" + telefono + ' ';
     }
-    
-    
 }
+    

@@ -123,6 +123,7 @@
                       <Component id="BotonVerContactos" alignment="0" max="32767" attributes="0"/>
                       <Component id="BotonElimianrTodo" alignment="0" pref="159" max="32767" attributes="0"/>
                       <Component id="BotonDatosContacto" alignment="0" max="32767" attributes="0"/>
+                      <Component id="BotonModificarContacto" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
@@ -141,7 +142,9 @@
                   <Component id="BotonElimianrTodo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="BotonDatosContacto" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="BotonModificarContacto" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -159,20 +162,31 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="\ud83d\uddd1 Borrar contacto" containsInvalidXMLChars="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBorrarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BotonVerContactos">
           <Properties>
             <Property name="text" type="java.lang.String" value="\ud83d\udc41 Ver Contactos" containsInvalidXMLChars="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonVerContactosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BotonElimianrTodo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="&#x274c; Vaciar contactos"/>
+            <Property name="text" type="java.lang.String" value="&#x274c; Vaciar agenda"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="BotonDatosContacto">
           <Properties>
             <Property name="text" type="java.lang.String" value="Datos del contacto"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="BotonModificarContacto">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modificar contacto"/>
           </Properties>
         </Component>
       </SubComponents>
