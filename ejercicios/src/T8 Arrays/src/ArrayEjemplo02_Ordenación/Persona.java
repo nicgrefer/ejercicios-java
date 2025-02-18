@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ArrayEjemplo_Objetos;
+package ArrayEjemplo02_Ordenación;
 
 /**
  *
  * @author jovcubni
  */
-public class Persona {
+public class Persona implements Comparable<Persona>{
     
     private String nombre;
     private String apellidos;
@@ -60,6 +60,11 @@ public class Persona {
        @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + ", edad=" + edad + '}';
+    }
+// Criterio de comparacion por apellidos ascendente  (a->z)
+    @Override
+    public int compareTo(Persona otra) {
+       return this.getApellidos().compareTo(otra.apellidos);
     }
     
 }

@@ -1,4 +1,4 @@
-package ArrayEjemplo_Objetos;
+package ArrayEjemplo01_Objetos;
 
 import java.util.Arrays;
 
