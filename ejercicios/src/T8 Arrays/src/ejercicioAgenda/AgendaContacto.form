@@ -95,11 +95,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="\ud83d\udd0e Nombre" containsInvalidXMLChars="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarXNombreActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BotonBuscarXNumero">
           <Properties>
             <Property name="text" type="java.lang.String" value="\ud83d\udd0e Numero" containsInvalidXMLChars="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonBuscarXNumeroActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

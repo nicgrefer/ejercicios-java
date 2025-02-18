@@ -55,8 +55,18 @@ public class AgendaContacto extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         BotonBuscarXNombre.setText("🔎 Nombre");
+        BotonBuscarXNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBuscarXNombreActionPerformed(evt);
+            }
+        });
 
         BotonBuscarXNumero.setText("🔎 Numero");
+        BotonBuscarXNumero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonBuscarXNumeroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -247,6 +257,48 @@ public class AgendaContacto extends javax.swing.JFrame {
           //  System.out.println(Arrays.toString(Agenda[aBorrar]));
         }
     }//GEN-LAST:event_BotonBorrarActionPerformed
+
+    private void BotonBuscarXNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarXNombreActionPerformed
+        // TODO add your handling code here:
+        String nombreABuscar= TextoBusqueda.getText();
+        boolean encontrado = false;
+        if (nombreABuscar== null){
+           JOptionPane.showMessageDialog(this, "No puede ser nulo","Advertencia",JOptionPane.INFORMATION_MESSAGE); 
+        }
+        for (int i=0;i<Agenda.length;i++){
+        
+                if (Agenda[i].getNombre().equalsIgnoreCase(nombreABuscar)) {
+                JOptionPane.showMessageDialog(this, Agenda[i].toString());
+                encontrado=true;
+                
+                break;
+            }
+            break;
+        }if (!encontrado)
+        JOptionPane.showMessageDialog(this, "No encontrado", "Error busqueda",JOptionPane.INFORMATION_MESSAGE);
+        
+    }//GEN-LAST:event_BotonBuscarXNombreActionPerformed
+
+    private void BotonBuscarXNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarXNumeroActionPerformed
+        // TODO add your handling code here:
+         String numeroBusca= TextoBusqueda.getText();
+        boolean encontrado = false;
+        if (numeroBusca == null){
+           JOptionPane.showMessageDialog(this, "No puede ser nulo","Advertencia",JOptionPane.INFORMATION_MESSAGE); 
+        }
+        int numeroABuscar = Integer.parseInt(numeroBusca);
+        for (int i=0;i<Agenda.length;i++){
+        
+                if (Agenda[i].getTelefono()== numeroABuscar) {
+                JOptionPane.showMessageDialog(this, Agenda[i].toString());
+                encontrado=true;
+                
+                break;
+            }
+            break;
+        }if (!encontrado)
+        JOptionPane.showMessageDialog(this, "No encontrado", "Error busqueda",JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_BotonBuscarXNumeroActionPerformed
 
     /**
      * @param args the command line arguments
