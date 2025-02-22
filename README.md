@@ -1,4 +1,6 @@
 # Teoria-java
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white)
+
 
 **🔹T1 [Identificación de los elementos de un programa informático. Lenguaje Java](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-1-identificaci%C3%B3n-de-los-elementos-de-un-programa-inform%C3%A1tico-lenguaje-java)**
 
