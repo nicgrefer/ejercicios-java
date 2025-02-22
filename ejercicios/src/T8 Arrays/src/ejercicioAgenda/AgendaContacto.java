@@ -317,7 +317,7 @@ public class AgendaContacto extends javax.swing.JFrame {
         }        
             
         if (!hayContactos){ 
-            JOptionPane.showMessageDialog(this, "Ya esta bacia", "Info", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Ya esta vacia", "Info", JOptionPane.INFORMATION_MESSAGE);
         }else{ 
           int confirmacion = JOptionPane.showConfirmDialog(this, "Estas seguro que quieres elimir todos los contactos");
             if (confirmacion==0){
