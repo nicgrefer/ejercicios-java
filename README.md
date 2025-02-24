@@ -948,6 +948,20 @@ interface Animal {
 ---
 # 🎯 **Tema 7: Arrays y Ventanas**
 
+## 1 arrays
+
+### Arrays
+
+### Matrices
+
+### Estructuras dinamicas
+
+
+## 2 ventanas
+
+
+
+
 
 
 
