@@ -14,6 +14,7 @@
 
 **🔹T6 [Programación Orientada a Objetos Avanzada en Java](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#tema-6---programaci%C3%B3n-orientada-a-objetos-avanzada-en-java)**
 
+**🔹T7 [Arrays y Ventanas](https://github.com/nicgrefer/ejercicios-java/edit/main/README.md#-tema-7-arrays-y-ventanas)**
 
 >[!NOTE]
 > La siguiente informacion ha sido redactada por CHat
@@ -945,3 +946,10 @@ interface Animal {
 | **Interfaces** | Definen métodos sin implementación. |
 
 ---
+# 🎯 **Tema 7: Arrays y Ventanas**
+
+
+
+
+
+
