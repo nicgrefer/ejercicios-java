@@ -5,6 +5,8 @@
 package ejemplosArrayList;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  *
@@ -45,6 +47,29 @@ public class ejemplo1 {
         //System.out.println(lista);
         
         
+        // Borrado de elementos
+        
+        // 2 tipos -> remove o 
+        System.out.println("Eliminado e elemento nueve "+lista.remove( "nueve"));
+        //String objBorrado=lista.remove(0);
+        
+        // Busqueda 
+        
+        System.out.println("Esta la cadena 99 " + lista.indexOf("99")); // --> 1 o -1
+        System.out.println("Esta la cadena 1 "+ lista.contains("uno"));// --> true o false
+        
+        // Ordenación 
+        
+        Collections.sort(lista);
+        System.out.println(lista);
+            // Busqueda 
+            String key = "nueva";
+            System.out.println(Collections.binarySearch(lista, key));
+            key = "dos";
+            System.out.println(Collections.binarySearch(lista, key));
+            
+        Collections.reverse(lista);
+        System.out.println(lista);
         
     }
    
