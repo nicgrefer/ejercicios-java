@@ -10949,3 +10949,314 @@ Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Ej
 	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3188)
 	... 120 common frames omitted
 2025-02-14 12:59:38,374 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-02-26 12:26:16,909 [Worker-18: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-02-26 12:26:31,598 [Worker-25: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: queBajon:queBajon:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\queBajon\pom.xml.
+2025-02-26 12:26:31,902 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregroriofernandez.local:Ejem02_HolaMundoMaven:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejem02_HolaMundoMaven\pom.xml.
+2025-02-26 12:26:32,592 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,593 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejem02_HolaMundoMaven\src\main\resources
+2025-02-26 12:26:32,596 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,596 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\Ejem02_HolaMundoMaven\src\test\resources
+2025-02-26 12:26:32,758 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregoriofer.local:Ejemplo05_ConJavadokMeiben:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo06_ConJavadokMeiben\pom.xml.
+2025-02-26 12:26:32,777 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,778 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo06_ConJavadokMeiben\src\main\resources
+2025-02-26 12:26:32,780 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,781 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo06_ConJavadokMeiben\src\test\resources
+2025-02-26 12:26:32,844 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Ejemplo07_String_adom:Ejemplo07_String_adom:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo07_String_adom\pom.xml.
+2025-02-26 12:26:32,879 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,880 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo07_String_adom\src\main\resources
+2025-02-26 12:26:32,882 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,883 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo07_String_adom\src\test\resources
+2025-02-26 12:26:32,946 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gf.local:Ejemplo07_Commons_Math:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo08_Commons_Math\pom.xml.
+2025-02-26 12:26:32,974 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,974 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo08_Commons_Math\src\main\resources
+2025-02-26 12:26:32,976 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:32,977 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo08_Commons_Math\src\test\resources
+2025-02-26 12:26:33,048 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregoriofer.local:Ejemplo09_Calculadora:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo09_Calculadora\pom.xml.
+2025-02-26 12:26:33,209 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,210 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo09_Calculadora\src\main\resources
+2025-02-26 12:26:33,211 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,217 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 12:26:33,297 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gr:Ejemplo10_UsuariosFin:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejemplo10_UsuariosFin\pom.xml.
+2025-02-26 12:26:33,432 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,433 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 12:26:33,436 [Worker-5: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,437 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 12:26:33,686 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Ejercicio1JUNIT:Ejercicio1JUNIT:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio  1_JUNIT\pom.xml.
+2025-02-26 12:26:33,794 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,795 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio  1_JUNIT\src\main\resources
+2025-02-26 12:26:33,797 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,798 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio  1_JUNIT\src\test\resources
+2025-02-26 12:26:33,877 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ejercicio:Ejercicio02_Calculadora:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio02_Calculadora\pom.xml.
+2025-02-26 12:26:33,910 [Worker-7: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Ejemplo09_Calculadora: gregoriofer.local:Ejemplo09_Calculadora:0.0.1-SNAPSHOT with classifier  to /Ejemplo09_Calculadora/target/classes
+2025-02-26 12:26:33,910 [Worker-7: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/Ejercicio  1_JUNIT: Ejercicio1JUNIT:Ejercicio1JUNIT:0.0.1-SNAPSHOT with classifier  to /Ejercicio  1_JUNIT/target/classes
+2025-02-26 12:26:33,954 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,955 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 12:26:33,957 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:33,958 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 12:26:34,062 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregoriofer.loca:Ejercicio1_JUnit_OrdenacionArray:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio1_JUnit_OrdenacionArray\pom.xml.
+2025-02-26 12:26:34,113 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:34,113 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio1_JUnit_OrdenacionArray\src\main\resources
+2025-02-26 12:26:34,115 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:34,116 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio1_JUnit_OrdenacionArray\src\test\resources
+2025-02-26 12:26:34,332 [Worker-7: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregoriofer.local:ejemplo03_Documentando:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejemplo03_Documentando\pom.xml.
+2025-02-26 12:26:34,353 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:34,353 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejemplo03_Documentando\src\main\resources
+2025-02-26 12:26:34,355 [Worker-7: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:34,355 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejemplo03_Documentando\src\test\resources
+2025-02-26 12:26:35,018 [Worker-21: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Ejercicio1JUNIT:Ejercicio1JUNIT:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\Ejercicio  1_JUNIT\pom.xml.
+2025-02-26 12:26:36,508 [Worker-6: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:36,509 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\queBajon\src\main\resources
+2025-02-26 12:26:36,511 [Worker-6: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:26:36,511 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jovcubni\Desktop\java_github\ejercicios-java\queBajon\src\test\resources
+2025-02-26 12:33:09,936 [Worker-35: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregoriofer.local:EjercicioUnionCadenas:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\EjercicioUnionCadenas\pom.xml.
+2025-02-26 12:33:09,955 [Worker-35: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:33:09,956 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 12:33:09,957 [Worker-35: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:33:09,958 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 12:33:10,627 [Worker-25: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregoriofer.local:EjercicioUnionCadenas:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\EjercicioUnionCadenas\pom.xml.
+2025-02-26 12:55:21,194 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2025-02-26 12:55:28,341 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [297])
+2025-02-26 12:55:28,343 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-02-26 12:55:28,343 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-02-26 12:55:28,344 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-02-26 12:55:28,345 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-02-26 12:55:28,346 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-02-26 12:55:28,347 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-02-26 12:55:28,348 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-02-26 12:55:28,349 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-02-26 12:55:28,351 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [10])
+2025-02-26 12:55:28,352 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\com.google.guava_33.3.0.jre.jar
+2025-02-26 12:55:28,352 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [519])
+2025-02-26 12:55:28,353 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\slf4j.api_2.0.16.jar
+2025-02-26 12:55:28,353 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [22])
+2025-02-26 12:55:28,353 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2025-02-26 12:55:28,353 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [20])
+2025-02-26 12:55:28,354 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\jakarta.annotation-api_1.3.5.jar
+2025-02-26 12:55:28,354 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [47])
+2025-02-26 12:55:28,354 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.apache.commons.cli_1.9.0.jar
+2025-02-26 12:55:28,355 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [50])
+2025-02-26 12:55:28,355 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-02-26 12:55:28,355 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [11])
+2025-02-26 12:55:28,355 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-02-26 12:55:28,359 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\jovcubni\Desktop\java_github\ejercicios-java\EjercicioUnionCadenas":
+2025-02-26 12:55:28,359 [Worker-48: Launching EjercicioUnionCadenas] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always exe:java
+2025-02-26 12:55:28,439 [Worker-49: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:245)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:591)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:491)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:370)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:322)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: end tag name </configuration> must match start tag name <plugin> from line 15 (position: TEXT seen ...</version>\n        </configuration>... @19:25) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:96)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:74)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:243)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag name </configuration> must match start tag name <plugin> from line 15 (position: TEXT seen ...</version>\n        </configuration>... @19:25) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.parseEndTag(MXParser.java:2151)
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl(MXParser.java:1418)
+	at org.codehaus.plexus.util.xml.pull.MXParser.next(MXParser.java:1375)
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1360)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parsePlugin(MavenXpp3Reader.java:2806)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseBuild(MavenXpp3Reader.java:1054)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2364)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:623)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:654)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:93)
+	... 26 common frames omitted
+2025-02-26 12:56:16,356 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [297])
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-02-26 12:56:16,357 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-02-26 12:56:16,358 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-02-26 12:56:16,359 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-02-26 12:56:16,360 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-02-26 12:56:16,360 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-02-26 12:56:16,360 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-02-26 12:56:16,360 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-02-26 12:56:16,360 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-02-26 12:56:16,360 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-02-26 12:56:16,361 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-02-26 12:56:16,361 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-02-26 12:56:16,361 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-02-26 12:56:16,361 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-02-26 12:56:16,361 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-02-26 12:56:16,361 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-02-26 12:56:16,362 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-02-26 12:56:16,362 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-02-26 12:56:16,362 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-02-26 12:56:16,362 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-02-26 12:56:16,362 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-02-26 12:56:16,362 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-02-26 12:56:16,362 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-02-26 12:56:16,363 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [10])
+2025-02-26 12:56:16,363 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\com.google.guava_33.3.0.jre.jar
+2025-02-26 12:56:16,363 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [519])
+2025-02-26 12:56:16,363 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\slf4j.api_2.0.16.jar
+2025-02-26 12:56:16,364 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [22])
+2025-02-26 12:56:16,364 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2025-02-26 12:56:16,364 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [20])
+2025-02-26 12:56:16,364 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\jakarta.annotation-api_1.3.5.jar
+2025-02-26 12:56:16,364 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [47])
+2025-02-26 12:56:16,365 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.apache.commons.cli_1.9.0.jar
+2025-02-26 12:56:16,365 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [50])
+2025-02-26 12:56:16,365 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-02-26 12:56:16,365 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [11])
+2025-02-26 12:56:16,366 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\jovcubni\.p2\pool\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-02-26 12:56:16,367 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\jovcubni\Desktop\java_github\ejercicios-java\EjercicioUnionCadenas":
+2025-02-26 12:56:16,367 [Worker-49: Launching EjercicioUnionCadenas] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always exe:java
+2025-02-26 12:56:16,525 [Worker-47: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregoriofer.local:EjercicioUnionCadenas:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\EjercicioUnionCadenas\pom.xml.
+2025-02-26 12:56:16,591 [Worker-47: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:56:16,592 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 12:56:16,594 [Worker-47: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:56:16,595 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 12:56:17,716 [Worker-43: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:56:17,717 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 12:56:17,718 [Worker-43: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:56:17,718 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 12:56:35,625 [Worker-47: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:56:35,627 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 12:56:35,628 [Worker-47: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 12:56:35,629 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 13:13:21,381 [Worker-56: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:13:21,382 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:13:21,384 [Worker-56: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:13:21,385 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 13:14:14,721 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-02-26 13:16:26,640 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-02-26 13:16:45,327 [Worker-16: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregorio.local:EjercicioMavenJUnit:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\EjercicioMavenJUnit\pom.xml.
+2025-02-26 13:16:45,486 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.9.0/junit-jupiter-params-5.9.0.pom
+2025-02-26 13:16:45,496 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.9.0/junit-jupiter-params-5.9.0.pom
+2025-02-26 13:16:45,511 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.9.0/junit-jupiter-api-5.9.0.pom
+2025-02-26 13:16:45,516 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.9.0/junit-jupiter-api-5.9.0.pom
+2025-02-26 13:16:45,528 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.pom
+2025-02-26 13:16:45,532 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.pom
+2025-02-26 13:16:45,543 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.0/junit-platform-commons-1.9.0.pom
+2025-02-26 13:16:45,547 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.0/junit-platform-commons-1.9.0.pom
+2025-02-26 13:16:45,572 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.9.0/junit-jupiter-params-5.9.0.jar
+2025-02-26 13:16:45,605 [Worker-16: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.9.0/junit-jupiter-params-5.9.0.jar
+2025-02-26 13:16:46,028 [Worker-16: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:16:46,032 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:16:46,036 [Worker-16: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:16:46,037 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:16:46,273 [Worker-28: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:16:46,274 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:16:46,276 [Worker-28: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:16:46,277 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:16:46,522 [Worker-14: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: gregorio.local:EjercicioMavenJUnit:0.0.1-SNAPSHOT @ C:\Users\jovcubni\Desktop\java_github\ejercicios-java\ejercicios\src\EjercicioMavenJUnit\pom.xml.
+2025-02-26 13:16:46,961 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.9.0/junit-jupiter-params-5.9.0-sources.jar
+2025-02-26 13:16:46,971 [Worker-31: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.9.0/junit-jupiter-params-5.9.0-sources.jar
+2025-02-26 13:16:46,974 [Worker-31: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.jupiter:junit-jupiter-params:5.9.0
+2025-02-26 13:17:24,407 [Worker-11: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:17:24,409 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:17:24,412 [Worker-11: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:17:24,413 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-26 13:19:11,502 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating test from maven configuration
+2025-02-26 13:40:05,282 [Worker-4: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:40:05,282 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:40:05,284 [Worker-4: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:40:05,285 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:42:32,028 [Worker-4: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:42:32,029 [Worker-4: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:42:32,031 [Worker-4: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:42:32,033 [Worker-4: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:43:19,237 [Worker-36: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:43:19,239 [Worker-36: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:43:19,241 [Worker-36: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:43:19,242 [Worker-36: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:43:37,763 [Worker-35: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:43:37,764 [Worker-35: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:43:37,768 [Worker-35: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:43:37,769 [Worker-35: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:44:08,377 [Worker-32: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:44:08,378 [Worker-32: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:44:08,381 [Worker-32: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:44:08,383 [Worker-32: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:45:32,579 [Worker-36: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:45:32,581 [Worker-36: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:45:32,584 [Worker-36: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:45:32,586 [Worker-36: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:48:20,835 [Worker-37: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:48:20,836 [Worker-37: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:48:20,838 [Worker-37: Launching test] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:48:20,839 [Worker-37: Launching test] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\test\resources to target\test-classes
+2025-02-26 13:54:21,855 [Worker-37: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:54:21,857 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-26 13:54:21,860 [Worker-37: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2025-02-26 13:54:21,861 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes

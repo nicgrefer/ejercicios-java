@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java\EjercicioMavenJUnit"/>
+			<item value="C:\Users\jovcubni\Desktop\java_github"/>
 			<item value="\\172.26.3.254\dam\Primero\Entornos\03-Maven\Ejemplo09_Calculadora"/>
 			<item value="C:\Users\nicol\OneDrive\Escritorio\java_github\ejercicios-java"/>
 			<item value="C:\Users\jovcubni\Desktop\java_github\ejercicios-java"/>
