@@ -948,17 +948,198 @@ interface Animal {
 ---
 # 🎯 **Tema 7: Arrays y Ventanas**
 
-## 1 arrays
+¡Por supuesto! Te lo detallo un poco más para que lo tengas aún más claro y completo. 🚀📚  
 
-### Arrays
+---
 
-### Matrices
+# **📌 Tema 7: Estructuras de Almacenamiento en Java**  
 
-### Estructuras dinamicas
+Cuando programamos en Java, es fundamental conocer cómo almacenar y organizar datos eficientemente. En este tema exploramos diferentes estructuras de almacenamiento, desde los **arrays**, que tienen un tamaño fijo, hasta las **colecciones dinámicas**, que pueden crecer y adaptarse según las necesidades del programa.
 
+---
 
-## 2 ventanas
+## **1️⃣ Arrays**
+Los **arrays** son una estructura básica que permite almacenar múltiples valores del mismo tipo dentro de una sola variable. Son útiles cuando sabemos de antemano cuántos elementos necesitamos.
 
+📌 **Características:**
+- Todos los elementos son del **mismo tipo** (int, String, etc.).
+- Su tamaño es **fijo** (no se puede modificar después de la creación).
+- Se accede a los elementos mediante un **índice** (empieza en 0).
+- Son más eficientes en memoria en comparación con estructuras dinámicas.
+
+🔹 **Ejemplo de declaración y uso de un array de enteros**:
+```java
+int[] numeros = new int[5];  // Se crea un array con 5 posiciones
+numeros[0] = 10;  // Asignamos valores
+numeros[1] = 20;
+System.out.println(numeros[0]);  // Imprime 10
+```
+
+### **📍 Recorrido de un array**
+Para acceder a todos los elementos, usamos un bucle `for`:
+```java
+for (int i = 0; i < numeros.length; i++) {
+    System.out.println("Elemento en posición " + i + ": " + numeros[i]);
+}
+```
+
+📌 **Puntos importantes sobre los arrays**:
+✅ Son eficientes para acceder a datos mediante su índice.  
+❌ No se pueden redimensionar después de su creación.  
+❌ Se debe manejar con cuidado el acceso a índices fuera de rango (`ArrayIndexOutOfBoundsException`).  
+
+---
+
+## **2️⃣ Arrays Bidimensionales (Matrices)**
+Cuando queremos manejar datos en forma de **tablas** (filas y columnas), utilizamos arrays bidimensionales.
+
+📌 **Ejemplo:**
+```java
+int[][] matriz = {
+    {1, 2, 3}, 
+    {4, 5, 6}, 
+    {7, 8, 9}
+};
+System.out.println(matriz[1][2]);  // Salida: 6 (fila 1, columna 2)
+```
+
+Para recorrer todos los elementos:
+```java
+for (int i = 0; i < matriz.length; i++) {
+    for (int j = 0; j < matriz[i].length; j++) {
+        System.out.print(matriz[i][j] + " ");
+    }
+    System.out.println();
+}
+```
+
+📌 **Uso común:** Tablas de datos, tableros de juegos, gráficos en 2D, etc.
+
+---
+
+## **3️⃣ Búsqueda en Arrays**
+A veces necesitamos encontrar un dato dentro de un array. Existen dos métodos principales:
+
+### 🔎 **Búsqueda Secuencial**
+Es útil para **arrays desordenados**, ya que busca elemento por elemento.
+```java
+public static int busquedaSecuencial(int[] lista, int dato) {
+    for (int i = 0; i < lista.length; i++) {
+        if (lista[i] == dato) return i;  // Si lo encuentra, retorna el índice
+    }
+    return -1;  // No encontrado
+}
+```
+
+### 🔎 **Búsqueda Binaria**
+Más rápida, pero requiere que el **array esté ordenado**. Se basa en dividir repetidamente la lista en mitades.
+```java
+import java.util.Arrays;
+
+int[] lista = {1, 3, 5, 7, 9};
+int index = Arrays.binarySearch(lista, 5);  // Devuelve 2 (posición del 5 en el array)
+```
+
+📌 **Consejo:** Para una gran cantidad de datos, la búsqueda binaria es mucho más eficiente que la secuencial. ⚡
+
+---
+
+## **4️⃣ Ordenación de Arrays**
+Ordenar un array ayuda a organizar los datos y facilita búsquedas eficientes.
+
+### 🔄 **Ordenación con el Algoritmo de la Burbuja**
+Funciona comparando elementos adyacentes y reordenándolos si es necesario.  
+```java
+public static void burbuja(int[] lista) {
+    int n = lista.length;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - 1 - i; j++) {
+            if (lista[j] > lista[j + 1]) {  // Intercambiar si está desordenado
+                int temp = lista[j];
+                lista[j] = lista[j + 1];
+                lista[j + 1] = temp;
+            }
+        }
+    }
+}
+```
+
+📌 **Ordenación rápida con `Arrays.sort()`**
+```java
+Arrays.sort(lista);  // Ordena en orden ascendente
+```
+⚠ `Arrays.sort()` usa el algoritmo Quicksort, que es mucho más rápido que la burbuja.
+
+---
+
+## **5️⃣ Estructuras Dinámicas (Colecciones en Java)**
+Los **arrays** tienen una limitación importante: **su tamaño es fijo**.  
+Para solucionar esto, Java proporciona **colecciones dinámicas**.
+
+### 📍 **Principales tipos de colecciones:**
+| Tipo | Descripción |
+|------|------------|
+| `ArrayList` | Lista dinámica que crece automáticamente. |
+| `LinkedList` | Lista enlazada eficiente para inserciones y eliminaciones. |
+| `HashSet` | Conjunto de datos sin duplicados. |
+| `TreeSet` | Conjunto ordenado sin duplicados. |
+| `HashMap` | Diccionario de pares clave-valor. |
+
+📌 **Ejemplo de `ArrayList`**
+```java
+import java.util.ArrayList;
+ArrayList<String> nombres = new ArrayList<>();
+nombres.add("Ana");
+nombres.add("Carlos");
+System.out.println(nombres.get(0));  // Ana
+```
+
+📌 **Ejemplo de `HashMap`**
+```java
+import java.util.HashMap;
+HashMap<String, Integer> edades = new HashMap<>();
+edades.put("Juan", 25);
+System.out.println(edades.get("Juan"));  // 25
+```
+
+---
+
+## **6️⃣ Pilas y Colas**
+🔹 **Pila (LIFO - Último en entrar, primero en salir)**  
+🔹 **Cola (FIFO - Primero en entrar, primero en salir)**
+
+📌 **Ejemplo de Pila (`Stack`)**
+```java
+import java.util.Stack;
+Stack<Integer> pila = new Stack<>();
+pila.push(10);
+pila.push(20);
+System.out.println(pila.pop());  // 20
+```
+
+📌 **Ejemplo de Cola (`Queue`)**
+```java
+import java.util.LinkedList;
+import java.util.Queue;
+
+Queue<String> cola = new LinkedList<>();
+cola.add("A");
+cola.add("B");
+System.out.println(cola.poll());  // A
+```
+
+---
+
+## **📌 Esquema Resumen**
+| Concepto               | Descripción |
+|------------------------|------------|
+| **Arrays** | Estructura de datos estática para almacenar valores del mismo tipo. |
+| **Arrays bidimensionales** | Matrices que almacenan datos en filas y columnas. |
+| **Búsqueda en Arrays** | Secuencial (para desordenados) y binaria (para ordenados). |
+| **Ordenación** | Algoritmo de la burbuja, `Arrays.sort()`. |
+| **Colecciones** | Estructuras dinámicas (`ArrayList`, `HashMap`, `HashSet`, `TreeSet`). |
+| **Iteradores** | Permiten recorrer colecciones (`Iterator`, `ListIterator`). |
+| **Pilas y Colas** | `Stack` (LIFO) y `Queue` (FIFO). |
 
 
 
