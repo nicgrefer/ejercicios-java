@@ -1142,6 +1142,226 @@ System.out.println(cola.poll());  // A
 | **Pilas y Colas** | `Stack` (LIFO) y `Queue` (FIFO). |
 
 
+¡Genial! Vamos a ver cómo usar **JFrame** para crear ventanas en Java y cómo aplicar cada uno de los conceptos del glosario que me has pasado. 📌🔥  
+
+---
+
+# **📌 Creación y manejo de ventanas con `JFrame` en Java (Swing)**  
+
+Cuando queremos desarrollar interfaces gráficas en Java, utilizamos la biblioteca **Swing**, que proporciona componentes visuales como **ventanas, botones, etiquetas, cuadros de texto, etc.**.  
+
+## **1️⃣ Creando una ventana básica con `JFrame`**  
+El **JFrame** es la base de cualquier ventana en Swing. Para crear una ventana simple:
+
+```java
+import javax.swing.*;
+
+public class MiVentana extends JFrame {
+    public MiVentana() {
+        setTitle("Mi primera ventana"); // Título de la ventana
+        setSize(400, 300);  // Tamaño de la ventana (ancho x alto)
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Cierra el programa al cerrar la ventana
+        setLocationRelativeTo(null); // Centra la ventana en la pantalla
+    }
+
+    public static void main(String[] args) {
+        MiVentana ventana = new MiVentana();
+        ventana.setVisible(true); // Hace visible la ventana
+    }
+}
+```
+📌 **Explicación:**  
+✔ `setTitle("Texto")`: Define el título de la ventana.  
+✔ `setSize(ancho, alto)`: Establece el tamaño.  
+✔ `setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)`: Hace que el programa termine al cerrar la ventana.  
+✔ `setLocationRelativeTo(null)`: Centra la ventana en la pantalla.  
+✔ `setVisible(true)`: Muestra la ventana en pantalla.  
+
+---
+
+## **2️⃣ Centrando la ventana en pantalla**  
+🔹 **Método:** `setLocationRelativeTo(null);`  
+Este método coloca la ventana en el **centro de la pantalla** automáticamente.
+
+---
+
+## **3️⃣ Controles y Componentes en Swing**
+En Swing podemos agregar distintos componentes a un `JFrame`, como botones, etiquetas y cuadros de texto.
+
+📌 **Ejemplo con un botón y una etiqueta:**
+```java
+import javax.swing.*;
+
+public class VentanaConBoton extends JFrame {
+    public VentanaConBoton() {
+        setTitle("Ejemplo con botón");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null); // Posicionamiento manual
+        
+        JButton btnSaludar = new JButton("Saludar");
+        btnSaludar.setBounds(50, 50, 100, 30); // (x, y, ancho, alto)
+
+        JLabel lblMensaje = new JLabel("¡Hola, mundo!");
+        lblMensaje.setBounds(50, 100, 150, 30);
+
+        add(btnSaludar);
+        add(lblMensaje);
+    }
+
+    public static void main(String[] args) {
+        VentanaConBoton ventana = new VentanaConBoton();
+        ventana.setVisible(true);
+    }
+}
+```
+📌 **Explicación:**  
+✔ `JButton`: Se usa para crear botones.  
+✔ `JLabel`: Se usa para mostrar texto estático.  
+✔ `setBounds(x, y, ancho, alto)`: Define la posición y tamaño del componente.  
+✔ `add(componente)`: Agrega el componente a la ventana.  
+
+---
+
+## **4️⃣ Activar/Desactivar un control con `setEnabled(true/false)`**
+Podemos habilitar o deshabilitar un botón u otro control en la ventana.  
+📌 **Ejemplo de un botón desactivado al inicio y activado con otro botón:**
+```java
+import javax.swing.*;
+import java.awt.event.*;
+
+public class ControlActivado extends JFrame {
+    public ControlActivado() {
+        setTitle("Activar/Desactivar botón");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        JButton btnActivar = new JButton("Activar");
+        JButton btnSaludo = new JButton("Saludar");
+        btnSaludo.setEnabled(false); // Desactivado inicialmente
+
+        btnActivar.setBounds(50, 50, 100, 30);
+        btnSaludo.setBounds(50, 100, 100, 30);
+
+        btnActivar.addActionListener(e -> btnSaludo.setEnabled(true)); // Activa el botón
+
+        add(btnActivar);
+        add(btnSaludo);
+    }
+
+    public static void main(String[] args) {
+        new ControlActivado().setVisible(true);
+    }
+}
+```
+📌 **Explicación:**  
+✔ `setEnabled(false)`: Desactiva un botón o componente.  
+✔ `setEnabled(true)`: Lo vuelve a activar.  
+
+---
+
+## **5️⃣ Manejo del foco y eventos de foco**
+🔹 **Método `requestFocus()`**: Permite que un control obtenga el foco (por ejemplo, un campo de texto).  
+🔹 **Eventos de foco (`focusGained` y `focusLost`)**: Detectan cuando un control gana o pierde el foco.
+
+📌 **Ejemplo: Un `JTextField` que cambia de color cuando recibe el foco**
+```java
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class EventosDeFoco extends JFrame {
+    public EventosDeFoco() {
+        setTitle("Eventos de Foco");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        JTextField campo = new JTextField();
+        campo.setBounds(50, 50, 150, 30);
+
+        campo.addFocusListener(new FocusAdapter() {
+            public void focusGained(FocusEvent e) {
+                campo.setBackground(Color.YELLOW); // Cambia de color al obtener el foco
+            }
+
+            public void focusLost(FocusEvent e) {
+                campo.setBackground(Color.WHITE); // Vuelve al color original
+            }
+        });
+
+        add(campo);
+    }
+
+    public static void main(String[] args) {
+        new EventosDeFoco().setVisible(true);
+    }
+}
+```
+📌 **Explicación:**  
+✔ `focusGained()`: Se ejecuta cuando el componente gana el foco.  
+✔ `focusLost()`: Se ejecuta cuando el componente pierde el foco.  
+✔ `requestFocus()`: Se usa para darle el foco a un control automáticamente.  
+
+---
+
+## **6️⃣ Cuadros de diálogo (`JOptionPane`)**
+Swing proporciona `JOptionPane` para mostrar cuadros de diálogo.
+
+📌 **Ejemplo de `showMessageDialog` (mostrar un mensaje)**
+```java
+JOptionPane.showMessageDialog(null, "¡Hola, bienvenido!", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+```
+
+📌 **Ejemplo de `showInputDialog` (pedir un dato al usuario)**
+```java
+String nombre = JOptionPane.showInputDialog("Ingresa tu nombre:");
+System.out.println("Hola, " + nombre);
+```
+
+📌 **Ejemplo de `showConfirmDialog` (pregunta con opciones)**
+```java
+int respuesta = JOptionPane.showConfirmDialog(null, "¿Estás seguro?", "Confirmación", JOptionPane.YES_NO_OPTION);
+if (respuesta == JOptionPane.YES_OPTION) {
+    System.out.println("Dijiste que sí.");
+} else {
+    System.out.println("Dijiste que no.");
+}
+```
+
+---
+
+## **7️⃣ Uso de imágenes (`setIcon()`)**
+Para agregar una imagen a un botón o etiqueta:
+```java
+ImageIcon icono = new ImageIcon("ruta/imagen.png");
+JButton boton = new JButton(icono);
+```
+
+---
+
+## **8️⃣ `JSpinner`: Selector de valores**
+Se usa para seleccionar un valor dentro de un rango.
+
+📌 **Ejemplo:**
+```java
+JSpinner spinner = new JSpinner(new SpinnerNumberModel(10, 0, 100, 5)); // Valor inicial: 10, mínimo: 0, máximo: 100, incrementa de 5 en 5.
+```
+
+---
+
+## **📌 Conclusión y resumen**
+| Concepto | Descripción |
+|----------|------------|
+| `JFrame` | Ventana principal en Swing. |
+| `setEnabled(true/false)` | Activa o desactiva un control. |
+| `setLocationRelativeTo(null)` | Centra la ventana. |
+| `requestFocus()` | Da foco a un control. |
+| `focusGained / focusLost` | Detectan cambios de foco. |
+| `JOptionPane` | Muestra cuadros de diálogo. |
+| `setIcon()` | Asigna imágenes a botones o etiquetas. |
+| `JSpinner` | Control para elegir valores dentro de un rango. |
 
 
 
