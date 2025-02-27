@@ -1150,59 +1150,58 @@ Aquí tienes el contenido ampliado y bien estructurado, combinando todo lo que m
 
 ---
 
-# **📌 Introducción a `JFrame` y `Swing` en Java**  
+# Introducción a `JFrame` y Swing en Java
 
-## **1️⃣ Conceptos Básicos de Swing**  
-**Swing** es un conjunto de bibliotecas en Java para desarrollar **interfaces gráficas de usuario (GUI, Graphical User Interface)**. Forma parte de **Javax.Swing**, que proporciona componentes como botones, etiquetas, cuadros de texto, tablas, etc.  
+## 1. Conceptos Básicos de Swing
 
-📌 **Diferencias entre Swing y AWT**  
-Swing es una mejora de AWT (Abstract Window Toolkit) y ofrece:
-✔ Más flexibilidad y personalización.  
-✔ Mayor cantidad de componentes.  
-✔ No depende del sistema operativo, lo que lo hace más portátil.  
+Swing es una biblioteca de Java que permite desarrollar **interfaces gráficas de usuario (GUI, Graphical User Interface)**. Es una mejora de AWT (Abstract Window Toolkit) y proporciona componentes como botones, etiquetas, cuadros de texto, tablas, etc.
 
-📌 **JFrame**  
-Un **JFrame** es una ventana que puede contener otros elementos gráficos. Es la base de cualquier aplicación gráfica en Swing.  
+### Características de Swing:
+
+✔ Más flexible y personalizable que AWT.\
+✔ Independiente del sistema operativo.\
+✔ Ofrece una amplia gama de componentes gráficos.
+
+### `JFrame`
+
+Un **JFrame** es la ventana principal de una aplicación Swing. Se utiliza para contener otros componentes.
 
 ---
 
-## **2️⃣ Creación y Configuración de `JFrame`**  
+## 2. Creación y Configuración de `JFrame`
 
-📌 **Ejemplo básico de `JFrame`:**  
+### Ejemplo Básico:
+
 ```java
 import javax.swing.JFrame;
 
 public class MiVentana extends JFrame {
     public MiVentana() {
-        setTitle("Mi Ventana Swing");  // Título de la ventana
-        setSize(400, 300);  // Tamaño (ancho x alto)
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  // Cierra la aplicación al cerrar la ventana
-        setLocationRelativeTo(null);  // Centra la ventana
-        setVisible(true);  // Hace visible la ventana
+        setTitle("Mi Ventana Swing"); // Título
+        setSize(400, 300); // Tamaño
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Cierre
+        setLocationRelativeTo(null); // Centrar ventana
+        setVisible(true); // Mostrar
     }
-
+    
     public static void main(String[] args) {
         new MiVentana();
     }
 }
 ```
-📌 **Explicación:**  
-✔ `setTitle("Título")`: Define el título de la ventana.  
-✔ `setSize(ancho, alto)`: Establece el tamaño.  
-✔ `setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)`: Hace que el programa termine al cerrar la ventana.  
-✔ `setLocationRelativeTo(null)`: Centra la ventana en la pantalla.  
-✔ `setVisible(true)`: Muestra la ventana.  
 
 ---
 
-## **3️⃣ Componentes de Swing (`JButton`, `JLabel`, `JTextField`, etc.)**  
-Los `JFrame` pueden contener distintos **componentes gráficos**, como:  
-✔ **JButton**: Botón interactivo.  
-✔ **JLabel**: Etiqueta de texto.  
-✔ **JTextField**: Campo de texto.  
-✔ **JPanel**: Contenedor para organizar otros componentes.  
+## 3. Componentes de Swing (`JButton`, `JLabel`, `JTextField`, etc.)
 
-📌 **Ejemplo con `JButton` y `JLabel`**  
+Podemos agregar diferentes componentes a un `JFrame`:
+✔ **JButton**: Botón interactivo.\
+✔ **JLabel**: Etiqueta de texto.\
+✔ **JTextField**: Campo de texto.\
+✔ **JPanel**: Contenedor de componentes.
+
+### Ejemplo con `JButton` y `JLabel`:
+
 ```java
 import javax.swing.*;
 
@@ -1212,41 +1211,37 @@ public class VentanaConBoton extends JFrame {
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
-
+        
         JButton btnSaludar = new JButton("Saludar");
         btnSaludar.setBounds(50, 50, 100, 30);
-
-        JLabel lblMensaje = new JLabel("¡Hola, mundo!");
+        
+        JLabel lblMensaje = new JLabel("Hola, mundo!");
         lblMensaje.setBounds(50, 100, 150, 30);
-
+        
         add(btnSaludar);
         add(lblMensaje);
     }
-
+    
     public static void main(String[] args) {
         new VentanaConBoton().setVisible(true);
     }
 }
 ```
-📌 **Explicación:**  
-✔ `JButton`: Se usa para crear botones.  
-✔ `JLabel`: Se usa para mostrar texto.  
-✔ `setBounds(x, y, ancho, alto)`: Define la posición y tamaño del componente.  
-✔ `add(componente)`: Agrega el componente a la ventana.  
 
 ---
 
-## **4️⃣ Layouts: Organización de Componentes**  
-Los componentes dentro de un `JFrame` pueden organizarse usando **gestores de diseño (layouts)**:  
+## 4. Layouts: Organización de Componentes
 
-| Layout | Descripción |
-|--------|------------|
-| `FlowLayout` | Organiza los componentes en fila (de izquierda a derecha). |
+Los `JFrame` pueden organizar componentes con **layouts**:
+
+| Layout         | Descripción                                                                   |
+| -------------- | ----------------------------------------------------------------------------- |
+| `FlowLayout`   | Organiza en fila (de izquierda a derecha).                                    |
 | `BorderLayout` | Divide la ventana en 5 regiones (`NORTH`, `SOUTH`, `EAST`, `WEST`, `CENTER`). |
-| `GridLayout` | Organiza en una cuadrícula con filas y columnas. |
-| `BoxLayout` | Organiza los elementos en una caja horizontal o vertical. |
+| `GridLayout`   | Organiza en una cuadrícula de filas y columnas.                               |
 
-📌 **Ejemplo con `FlowLayout`**  
+### Ejemplo con `FlowLayout`:
+
 ```java
 import javax.swing.*;
 import java.awt.*;
@@ -1255,29 +1250,30 @@ public class EjemploFlowLayout extends JFrame {
     public EjemploFlowLayout() {
         setTitle("Ejemplo de FlowLayout");
         setSize(300, 200);
-        setLayout(new FlowLayout()); // Usa FlowLayout
-
+        setLayout(new FlowLayout());
+        
         add(new JButton("Botón 1"));
         add(new JButton("Botón 2"));
         add(new JButton("Botón 3"));
-
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-
+    
     public static void main(String[] args) {
         new EjemploFlowLayout();
     }
 }
 ```
-📌 **FlowLayout coloca los componentes en línea y los ajusta automáticamente.**
 
 ---
 
-## **5️⃣ Manejo de Eventos (`ActionListener`, `FocusListener`)**  
-Para que un botón o campo de texto reaccione al usuario, usamos **eventos**.
+## 5. Manejo de Eventos (`ActionListener`, `FocusListener`)
 
-📌 **Ejemplo: Evento de clic con `ActionListener`**  
+Los eventos permiten que la GUI responda a interacciones del usuario.
+
+### Ejemplo: Evento de clic con `ActionListener`:
+
 ```java
 import javax.swing.*;
 import java.awt.event.*;
@@ -1287,30 +1283,52 @@ public class EventoBoton extends JFrame {
         setTitle("Eventos en Swing");
         setSize(300, 200);
         setLayout(null);
-
+        
         JButton boton = new JButton("Clic aquí");
         boton.setBounds(50, 50, 120, 30);
-
+        
         boton.addActionListener(e -> JOptionPane.showMessageDialog(null, "¡Botón presionado!"));
-
+        
         add(boton);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-
+    
     public static void main(String[] args) {
         new EventoBoton();
     }
 }
 ```
-📌 **Explicación:**  
-✔ `ActionListener`: Detecta clics en un botón.  
-✔ `JOptionPane.showMessageDialog`: Muestra una ventana emergente con un mensaje.  
 
 ---
 
-## **6️⃣ Ejemplo de `JFrame` con varios componentes**  
-Aquí tienes un programa más completo con **JButton, JLabel, JTextField y eventos**:
+## 6. Otros Conceptos Claves
+
+| **Concepto**                  | **Descripción y Ejemplo**                                                                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **`setEnabled(true/false)`**  | Activa o desactiva un control. `boton.setEnabled(false);`                                                  |
+| **`requestFocus()`**          | Da el foco a un control. `campoTexto.requestFocus();`                                                      |
+| **`focusGained / focusLost`** | Detectan cambios de foco. Ver ejemplo abajo.                                                               |
+| **`JOptionPane`**             | Muestra cuadros de diálogo emergentes. `JOptionPane.showMessageDialog(null, "Hola!");`                     |
+| **`setIcon()`**               | Asigna una imagen a un botón o etiqueta. `boton.setIcon(new ImageIcon("imagen.png"));`                     |
+| **`JSpinner`**                | Selector de valores en un rango. `JSpinner spinner = new JSpinner(new SpinnerNumberModel(10, 0, 100, 5));` |
+
+### Ejemplo de `focusGained / focusLost`:
+
+```java
+campoTexto.addFocusListener(new FocusAdapter() {
+    public void focusGained(FocusEvent e) {
+        campoTexto.setBackground(Color.YELLOW);
+    }
+    public void focusLost(FocusEvent e) {
+        campoTexto.setBackground(Color.WHITE);
+    }
+});
+```
+
+---
+
+## 7. Ejemplo Completo
 
 ```java
 import javax.swing.*;
@@ -1324,51 +1342,32 @@ public class VentanaCompleta extends JFrame {
         setTitle("Ejemplo completo");
         setSize(400, 200);
         setLayout(null);
-
+        
         etiqueta = new JLabel("Escribe algo:");
         etiqueta.setBounds(20, 20, 100, 30);
-
+        
         campoTexto = new JTextField();
         campoTexto.setBounds(120, 20, 150, 30);
-
+        
         JButton boton = new JButton("Mostrar");
         boton.setBounds(120, 60, 100, 30);
-
+        
         boton.addActionListener(e -> JOptionPane.showMessageDialog(null, "Texto: " + campoTexto.getText()));
-
+        
         add(etiqueta);
         add(campoTexto);
         add(boton);
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-
+    
     public static void main(String[] args) {
         new VentanaCompleta();
     }
 }
 ```
 
-📌 **Explicación:**  
-✔ `JTextField`: Campo de texto.  
-✔ `getText()`: Obtiene el contenido de un campo de texto.  
-✔ `JOptionPane.showMessageDialog()`: Muestra el contenido en una ventana emergente.  
 
-
----
-
-## **📌 Conclusión y resumen**
-| Concepto | Descripción |
-|----------|------------|
-| `JFrame` | Ventana principal en Swing. |
-| `setEnabled(true/false)` | Activa o desactiva un control. |
-| `setLocationRelativeTo(null)` | Centra la ventana. |
-| `requestFocus()` | Da foco a un control. |
-| `focusGained / focusLost` | Detectan cambios de foco. |
-| `JOptionPane` | Muestra cuadros de diálogo. |
-| `setIcon()` | Asigna imágenes a botones o etiquetas. |
-| `JSpinner` | Control para elegir valores dentro de un rango. |
 
 
 
