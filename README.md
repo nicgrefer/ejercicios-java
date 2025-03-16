@@ -1142,11 +1142,6 @@ System.out.println(cola.poll());  // A
 | **Pilas y Colas** | `Stack` (LIFO) y `Queue` (FIFO). |
 
 
-¡Genial! Vamos a ver cómo usar **JFrame** para crear ventanas en Java y cómo aplicar cada uno de los conceptos del glosario que me has pasado. 📌🔥  
-
----
-
-Aquí tienes el contenido ampliado y bien estructurado, combinando todo lo que mencionaste. 🔥📌  
 
 ---
 
