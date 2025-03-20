@@ -5,9 +5,13 @@
 package com.gf.tema10;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -144,44 +148,55 @@ public class GUIInsertarDatos extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
-    private void insertarFila(){
-        Connection conn = null;
+private void insertarFila(){
+    Connection conn = null;
+    
+    try {
+        //1. Abrir conexión
+        conn = guiPrincipal.abrirConexion();
+        
+        //2. Generar la consulta (insert)
+        String sql = "INSERT INTO tabla_a (a2, a3, a4) VALUES (?, ?, ?)";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        
+        ps.setString(1, this.jTextFielda2.getText());
+        ps.setDouble(2, Double.parseDouble(this.jTextFielda3.getText()));
+        
+        // Convertir String a java.sql.Date con formato específico
+        String fechaString = this.jTextFielda4.getText();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        sdf.setLenient(false); // Evita que acepte fechas inválidas
+        java.sql.Date fechaSQL = null;
         
         try {
-            //1.abrir conexion
-            conn = guiPrincipal.abrirConexion();
-            //2.generar la consulta (insert)
-            
-            String sql = "insert into tabla_a (a2,a3,a4) values (?,?,?)";
-            PreparedStatement ps=conn.prepareStatement(sql);
-            ps.setString(1, this.jTextFielda2.getText());
-            ps.setDouble(2, Double.parseDouble(this.jTextFielda3.getText()));
-            
-            //Parsear de String a Date
-//            
-//            ps.setDate(3, this.jTextFielda4.getText());
-
-            if(ps.executeUpdate()>0){
-                //ejecutamos la consulta
-                JOptionPane.showMessageDialog(this, "Inserccion realizada", "Insertar", JOptionPane.PLAIN_MESSAGE);
-            }else{
-                JOptionPane.showMessageDialog(this, "Error al insertar a la BD", "Insertar", JOptionPane.ERROR_MESSAGE);
-            }
-
-            //3.cerrar conexion.
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos", "Conexion BD", JOptionPane.ERROR_MESSAGE);
-        }finally{
-            try {
-                conn.close();
-            } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(this, "Error al cerrar la conexion con la BD", "Desconexion BD", JOptionPane.ERROR_MESSAGE);
-            }
-            
+            java.util.Date fechaUtil = sdf.parse(fechaString);
+            fechaSQL = new java.sql.Date(fechaUtil.getTime());
+        } catch (ParseException ex) {
+            Logger.getLogger(GUIInsertarDatos.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, "Error en el formato de la fecha. Use formato dd/MM/yyyy", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
         
+        ps.setDate(3, fechaSQL);
         
+        if (ps.executeUpdate() > 0) {
+            // Ejecución exitosa
+            JOptionPane.showMessageDialog(this, "Inserción realizada", "Insertar", JOptionPane.PLAIN_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al insertar en la BD", "Insertar", JOptionPane.ERROR_MESSAGE);
+        }
+        
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos", "Conexión BD", JOptionPane.ERROR_MESSAGE);
+    } finally {
+        try {
+            if (conn != null) conn.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Error al cerrar la conexión con la BD", "Desconexión BD", JOptionPane.ERROR_MESSAGE);
+        }
     }
+}
+
         
     
     /**

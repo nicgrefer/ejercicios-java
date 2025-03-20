@@ -62,8 +62,8 @@ public class EjemploCRUD extends javax.swing.JFrame {
         jMenuBD = new javax.swing.JMenu();
         jMenuItemConectar = new javax.swing.JMenuItem();
         jMenuCRUD = new javax.swing.JMenu();
-        jMenuItemInsert = new javax.swing.JMenuItem();
         jMenuItemSelect = new javax.swing.JMenuItem();
+        jMenuItemInsert = new javax.swing.JMenuItem();
         jMenuItemUpdate = new javax.swing.JMenuItem();
         jMenuItemDelete = new javax.swing.JMenuItem();
         jMenuApp = new javax.swing.JMenu();
@@ -85,15 +85,6 @@ public class EjemploCRUD extends javax.swing.JFrame {
 
         jMenuCRUD.setText("CRUD");
 
-        jMenuItemInsert.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItemInsert.setText("Insert");
-        jMenuItemInsert.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemInsertActionPerformed(evt);
-            }
-        });
-        jMenuCRUD.add(jMenuItemInsert);
-
         jMenuItemSelect.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemSelect.setText("Select");
         jMenuItemSelect.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +93,15 @@ public class EjemploCRUD extends javax.swing.JFrame {
             }
         });
         jMenuCRUD.add(jMenuItemSelect);
+
+        jMenuItemInsert.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemInsert.setText("Insert");
+        jMenuItemInsert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemInsertActionPerformed(evt);
+            }
+        });
+        jMenuCRUD.add(jMenuItemInsert);
 
         jMenuItemUpdate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemUpdate.setText("Update");
