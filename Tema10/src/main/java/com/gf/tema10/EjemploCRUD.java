@@ -105,10 +105,20 @@ public class EjemploCRUD extends javax.swing.JFrame {
 
         jMenuItemUpdate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemUpdate.setText("Update");
+        jMenuItemUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUpdateActionPerformed(evt);
+            }
+        });
         jMenuCRUD.add(jMenuItemUpdate);
 
         jMenuItemDelete.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemDelete.setText("Delete");
+        jMenuItemDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemDeleteActionPerformed(evt);
+            }
+        });
         jMenuCRUD.add(jMenuItemDelete);
 
         jMenuBar.add(jMenuCRUD);
@@ -198,6 +208,19 @@ public class EjemploCRUD extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jMenuItemSelectActionPerformed
+
+    private void jMenuItemUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdateActionPerformed
+        // Abrimos la ventana para introducir los nuevos datos
+        GUIUpdate guiUpdate = new GUIUpdate(this, true);
+        guiUpdate.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItemUpdateActionPerformed
+
+    private void jMenuItemDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDeleteActionPerformed
+        // Abrimos la ventana para introducir los nuevos datos
+        GUIDelet guidelet = new GUIDelet(this, true);
+        guidelet.setVisible(true);
+    }//GEN-LAST:event_jMenuItemDeleteActionPerformed
 
     /**
      * @param args the command line arguments
