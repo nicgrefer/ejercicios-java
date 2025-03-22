@@ -185,26 +185,49 @@ public class GUIDelet extends javax.swing.JDialog {
     }//GEN-LAST:event_BorrarActionPerformed
 
     private void borrar(){
-        if (valorPK.isEmpty()){
-              JOptionPane.showMessageDialog(this, "Debe ingresar una clave primaria.", "Error", JOptionPane.ERROR_MESSAGE);
-         }else{
-            java.sql.Connection conn = null;
-            PreparedStatement ps = null;
-
-
-
-            JOptionPane.showConfirmDialog(this, "Desas eliminar el registro don id "+valorPK);
-
-           try {
-               // 1 abrir conexion
-               conn = guiPrincipal.abrirConexion(); 
-           } catch (SQLException ex) {
-              JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos", "Error", ERROR);
-           }
-
-        } 
+    if (valorPK.isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar una clave primaria.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
     }
-    
+
+    int confirmacion = JOptionPane.showConfirmDialog(this, "¿Deseas eliminar el registro con id " + valorPK + "?", "Confirmación", JOptionPane.YES_NO_OPTION);
+
+    if (confirmacion == JOptionPane.YES_OPTION) {
+        java.sql.Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            // 1. Abrir conexión
+            conn = guiPrincipal.abrirConexion();
+
+            // 2. Preparar la consulta SQL
+            String sql = "DELETE FROM tabla_a WHERE a1 = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, Integer.parseInt(valorPK));
+
+            // 3. Ejecutar la consulta
+            int filasAfectadas = ps.executeUpdate();
+
+            // 4. Mostrar mensaje
+            if (filasAfectadas > 0) {
+                JOptionPane.showMessageDialog(this, "Registro eliminado correctamente.");
+            } else {
+                JOptionPane.showMessageDialog(this, "No se encontró el registro con esa clave primaria.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            try {
+                if (ps != null) ps.close();
+                if (conn != null) conn.close();
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this, "Error al cerrar la base de datos", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+}
+  
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
         // TODO add your handling code here:
         this.dispose();

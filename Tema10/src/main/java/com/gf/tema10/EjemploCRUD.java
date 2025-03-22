@@ -194,9 +194,9 @@ public class EjemploCRUD extends javax.swing.JFrame {
                 String a2=rs.getString("a2");
                 double a3= rs.getDouble("a3");
                 Date a4 = rs.getDate("a4");
-                System.out.printf("%d -- %s -- %.2f -- %s %n", a1,a2,a3,a4);
+                System.out.printf("%d -- %s -- %.2f -- %s %n", a1,a2,a3,a4);      
             }
-            
+             System.out.println("-------------------------------");
             
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(this, "Error con la conexion con la BD", "Desconexion BD", JOptionPane.ERROR_MESSAGE);
