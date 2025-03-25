@@ -10,8 +10,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -66,6 +64,7 @@ public class EjemploCRUD extends javax.swing.JFrame {
         jMenuItemInsert = new javax.swing.JMenuItem();
         jMenuItemUpdate = new javax.swing.JMenuItem();
         jMenuItemDelete = new javax.swing.JMenuItem();
+        jMenuItemDeleteV2 = new javax.swing.JMenuItem();
         jMenuApp = new javax.swing.JMenu();
         jMenuItemSalir = new javax.swing.JMenuItem();
 
@@ -120,6 +119,9 @@ public class EjemploCRUD extends javax.swing.JFrame {
             }
         });
         jMenuCRUD.add(jMenuItemDelete);
+
+        jMenuItemDeleteV2.setText("Delete V2");
+        jMenuCRUD.add(jMenuItemDeleteV2);
 
         jMenuBar.add(jMenuCRUD);
 
@@ -265,6 +267,7 @@ public class EjemploCRUD extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCRUD;
     private javax.swing.JMenuItem jMenuItemConectar;
     private javax.swing.JMenuItem jMenuItemDelete;
+    private javax.swing.JMenuItem jMenuItemDeleteV2;
     private javax.swing.JMenuItem jMenuItemInsert;
     private javax.swing.JMenuItem jMenuItemSalir;
     private javax.swing.JMenuItem jMenuItemSelect;
