@@ -4,9 +4,11 @@
  */
 package ejer.ejer1.login;
 
+import static com.gf.tema10.EjemploCRUD.conn;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -66,13 +68,18 @@ public class Login extends javax.swing.JFrame {
         });
 
         Cancelar.setText("Cancelar");
+        Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Usuario");
 
         jLabel2.setText("Contraseña");
 
         Reguistrar.setForeground(new java.awt.Color(0, 0, 255));
-        Reguistrar.setText("¿Todavia no te as reguistrado?");
+        Reguistrar.setText("¿Todavía no te has registrado?");
         Reguistrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ReguistrarMouseClicked(evt);
@@ -92,9 +99,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(8, 8, 8))
+                    .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,40 +144,63 @@ public class Login extends javax.swing.JFrame {
         nuevaVentana.setVisible(true);
     }//GEN-LAST:event_ReguistrarMouseClicked
 
+         private int intentosRestantes = 3; // Contador de intentos
+    
     private void InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioActionPerformed
-            // Guardamos datos
-    usuario= intUsuario.getText().trim();
-    pasword=intCodigo.getText().trim();
-    bloqueado  = false;
-    PreparedStatement ps = null;
+        usuario = intUsuario.getText().trim();
+        pasword = new String(intCodigo.getPassword()).trim();
 
-    // Verificar si está vacío
-    if (usuario == null || pasword == null || usuario.isEmpty() || pasword.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Datos incompletos", "Error", JOptionPane.ERROR_MESSAGE);
-    }else{
-        try {
-            System.out.println("datos no nulos");
-            //conectamos a la vase
-
-            conn = DriverManager.getConnection(urlBD, user, pasword);
-            
-            String sql = "select login,password from usuario where login = ?";
-            ps = conn.prepareStatement(sql);
-            
-            ps.setString(1, usuario);
-            
-            
-           
-            
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Error al conectarse con la base", "Error", ERROR);
+        if (usuario.isEmpty() || pasword.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Datos incompletos", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
         }
-        
-        
-    }
-    
-    
+
+        if (bloqueado) {
+            JOptionPane.showMessageDialog(this, "Has superado los intentos. Usuario bloqueado.", "Bloqueado", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try { 
+            conn = DriverManager.getConnection(urlBD, user, passwd);
+            String sql = "SELECT password FROM usuario WHERE login = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, usuario);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                String storedPassword = rs.getString("password");
+
+                if (storedPassword.equals(pasword)) {
+                    JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso");
+                    intentosRestantes = 3;
+                    Usuario dentro = new Usuario(this, true);
+                    dentro.setVisible(true);
+                } else {
+                    intentosRestantes--;
+                    if (intentosRestantes <= 0) {
+                        bloqueado = true;
+                        JOptionPane.showMessageDialog(this, "Has superado los intentos. Usuario bloqueado.", "Bloqueado", JOptionPane.ERROR_MESSAGE);
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Contraseña incorrecta. Intentos restantes: " + intentosRestantes, "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Usuario no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null, "Mensaje de error", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_InicioActionPerformed
+
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
+        try {
+            // TODO add your handling code here:
+            conn.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+    }//GEN-LAST:event_CancelarActionPerformed
 
     /**
      * @param args the command line arguments

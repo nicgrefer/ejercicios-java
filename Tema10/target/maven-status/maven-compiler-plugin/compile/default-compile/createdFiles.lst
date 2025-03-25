@@ -10,7 +10,7 @@ com\gf\tema10\Tabla_a.class
 com\gf\tema10\GUIDelet1V2$1.class
 com\gf\tema10\GUIInsertarDatos$1.class
 ejer\ejer1\login\Login$2.class
-ejer\ejer1\login\Registro$1$1.class
+ejer\ejer1\login\Registro$3.class
 com\gf\tema10\EjemploCRUD$5.class
 com\gf\tema10\EjemploCRUD.class
 com\gf\tema10\GUIInsertarDatos$3$1.class
@@ -18,12 +18,15 @@ com\gf\tema10\GUIUpdate$5.class
 com\gf\tema10\EjemploCRUD$3.class
 com\gf\tema10\GUIDelet$4.class
 com\gf\tema10\GUIUpdate$3.class
+ejer\ejer1\login\Registro$3$1.class
 ejer\ejer1\login\Usuario$1$1.class
 com\gf\tema10\GUIInsertarDatos$3.class
+ejer\ejer1\login\Login$4.class
 ejer\ejer1\login\Usuario$1.class
 com\gf\tema10\EjemploCRUD$7.class
 ejer\ejer1\login\Login$1.class
 ejer\ejer1\login\Login.class
+ejer\ejer1\login\Registro$2.class
 com\gf\tema10\GUIDelet$1.class
 com\gf\tema10\GUIInsertarDatos.class
 com\gf\tema10\EjemploCRUD$2.class
