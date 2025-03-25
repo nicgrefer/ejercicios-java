@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
- *
+  *<
  * @author nicol
  */
 public class GUIDelet extends javax.swing.JDialog {
