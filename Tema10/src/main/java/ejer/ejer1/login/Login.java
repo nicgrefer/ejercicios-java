@@ -27,7 +27,7 @@ public class Login extends javax.swing.JFrame {
     public static String passwd=""; //Contrasenia del usuario
     public static Connection conn;
     
-    private String usuario;
+    protected String usuario;
     private String pasword;
     private boolean bloqueado;
     

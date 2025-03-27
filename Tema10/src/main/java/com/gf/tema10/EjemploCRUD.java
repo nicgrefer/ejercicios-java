@@ -2,51 +2,71 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.gf.tema10;
+package com.gf.crud;
 
+import java.awt.Dimension;
+import java.awt.Image;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author sandr
+ * @author macarena
  */
 public class EjemploCRUD extends javax.swing.JFrame {
-    public static String bd="ejemplo";
-    public static String urlBD= "jdbc:mysql://localhost:3306/"+bd; //Direccion de nuestro sql
-    public static String user= "root"; //usuario de la BD
-    public static String passwd=""; //Contrasenia del usuario
+
+    public static String bd = "ejemplo";
+    public static String urlBD = "jdbc:mysql://localhost:3306/" + bd;
+    public static String user = "root";
+    public static String passwd = "";
     public static Connection conn;
     public static GUIInsertarDatos guiInsertar;
-    
-    /**
-     * Creates new form Ejemplo1
-     */
+    public static GUIBorrarDatos guiBorrar;
+    public static GUIModificarDatos guiActualizar;
+    //Los archivos externos que necesite el proyecto MAVEN deben de estar en src/main/resources.
+    //Entonces para las imágenes creamos una carpeta resources/images
+    //Luego tenemos que cargar la imagen como un recurso con el meétodo getResource(URL)
+    private URL imagenURL;
+
     public EjemploCRUD() {
         initComponents();
         setFrame();
-        
     }
 
-    private void setFrame(){
-        this.setTitle("Primer ejemplo JDBC");
-        this.setLocationRelativeTo(null);
+    private void setFrame() {
+        this.setTitle("Primer ejemplo JDBC"); 
+        this.setResizable(false);
+
+        //ASIGNAMOS LA IMAGEN A LA JLABEL
+        this.imagenURL = this.getClass().getResource("/images/imagen_inicial.png");
+        //a)
+//        this.jLabel1.setIcon(new ImageIcon(imagenURL));
+        //PARA QUE QUEDE LA IMAGEN ESCALADA AL TAMAÑO DE LA JLABEL
+        //b)
+        ImageIcon imagen = new ImageIcon(imagenURL);              
+        Image imagenEscalada=imagen.getImage().getScaledInstance(this.jLabel1.getWidth(),this.jLabel1.getHeight(), Image.SCALE_DEFAULT);
+        this.jLabel1.setIcon(new ImageIcon(imagenEscalada));
+        
+        this.setLocationRelativeTo(null);  
     }
-    
-    public Connection abrirConexion() throws SQLException{
-        try{
-            return DriverManager.getConnection(urlBD,user,passwd);
-        }catch(SQLException ex){
-            JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos", "Conexion BD", JOptionPane.ERROR_MESSAGE);
+
+    public Connection abrirConexion() {
+        try {
+            return DriverManager.getConnection(urlBD, user, passwd);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Error al conectar con BD",
+                    "Conexion BD", JOptionPane.ERROR_MESSAGE);
+            return null;
         }
-        return null;
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -56,19 +76,24 @@ public class EjemploCRUD extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuBD = new javax.swing.JMenu();
         jMenuItemConectar = new javax.swing.JMenuItem();
         jMenuCRUD = new javax.swing.JMenu();
-        jMenuItemSelect = new javax.swing.JMenuItem();
+        jMenuItemSekect = new javax.swing.JMenuItem();
         jMenuItemInsert = new javax.swing.JMenuItem();
         jMenuItemUpdate = new javax.swing.JMenuItem();
         jMenuItemDelete = new javax.swing.JMenuItem();
-        jMenuItemDeleteV2 = new javax.swing.JMenuItem();
-        jMenuApp = new javax.swing.JMenu();
+        jMenu3App = new javax.swing.JMenu();
         jMenuItemSalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 102)));
+        jLabel1.setPreferredSize(new java.awt.Dimension(400, 250));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 140));
 
         jMenuBD.setText("BD");
 
@@ -84,14 +109,14 @@ public class EjemploCRUD extends javax.swing.JFrame {
 
         jMenuCRUD.setText("CRUD");
 
-        jMenuItemSelect.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItemSelect.setText("Select");
-        jMenuItemSelect.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemSekect.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemSekect.setText("Select");
+        jMenuItemSekect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemSelectActionPerformed(evt);
+                jMenuItemSekectActionPerformed(evt);
             }
         });
-        jMenuCRUD.add(jMenuItemSelect);
+        jMenuCRUD.add(jMenuItemSekect);
 
         jMenuItemInsert.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemInsert.setText("Insert");
@@ -120,12 +145,9 @@ public class EjemploCRUD extends javax.swing.JFrame {
         });
         jMenuCRUD.add(jMenuItemDelete);
 
-        jMenuItemDeleteV2.setText("Delete V2");
-        jMenuCRUD.add(jMenuItemDeleteV2);
-
         jMenuBar.add(jMenuCRUD);
 
-        jMenuApp.setText("Aplicación");
+        jMenu3App.setText("Aplicación");
 
         jMenuItemSalir.setText("Salir");
         jMenuItemSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -133,96 +155,87 @@ public class EjemploCRUD extends javax.swing.JFrame {
                 jMenuItemSalirActionPerformed(evt);
             }
         });
-        jMenuApp.add(jMenuItemSalir);
+        jMenu3App.add(jMenuItemSalir);
 
-        jMenuBar.add(jMenuApp);
+        jMenuBar.add(jMenu3App);
 
         setJMenuBar(jMenuBar);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItemInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInsertActionPerformed
-        // Abrimos la ventana para introducir los nuevos datos
-        guiInsertar=new GUIInsertarDatos(this, true);
-        guiInsertar.setVisible(true);
-    }//GEN-LAST:event_jMenuItemInsertActionPerformed
-
     private void jMenuItemConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConectarActionPerformed
-        try {
-            // TODO add your handling code here:
-            //Conectar
-            conn=abrirConexion();
-            if(conn != null){
-                JOptionPane.showMessageDialog(this, "Conexion realizada con exito", "Conexion", JOptionPane.PLAIN_MESSAGE);
-                this.jMenuBD.setEnabled(false);
-            }
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos", "Conexion BD", JOptionPane.ERROR_MESSAGE);
+        conn = abrirConexion();
+        if (conn != null) {
+            JOptionPane.showMessageDialog(this, "Conexión realizada con exito",
+                    "Conexion '" + bd + "'", JOptionPane.PLAIN_MESSAGE);
+            this.jMenuBD.setEnabled(false);
         }
+
     }//GEN-LAST:event_jMenuItemConectarActionPerformed
 
     private void jMenuItemSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSalirActionPerformed
-        try{
+        try {
             conn.close();
             this.dispose();
-        }catch(SQLException ex){
-            JOptionPane.showMessageDialog(this, "Error al cerrar la conexion con la BD", "Desconexion BD", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Error al cerrar conexión con BD",
+                    "Desconexion BD", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jMenuItemSalirActionPerformed
 
-    private void jMenuItemSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSelectActionPerformed
+    private void jMenuItemSekectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSekectActionPerformed
         try {
-            //coonectamos con la tabla
-            conn=DriverManager.getConnection(urlBD,user,passwd);
-            //ejecutamos consulta select
-            String sql = "select * from tabla_a;";
-            Statement st=conn.createStatement();
-            ResultSet rs= st.executeQuery(sql);
-            while(rs.next()){
+            //1.abrir conexion
+            conn = DriverManager.getConnection(urlBD, user, passwd);
+            //2.ejecutamos consulta SELECT
+            String sql = "select * from tabla_a";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) {
                 //procesamos la fila actual del conjunto de filas
-                int a1= rs.getInt("a1");
-                String a2=rs.getString("a2");
-                double a3= rs.getDouble("a3");
+                int a1 = rs.getInt("a1");
+                String a2 = rs.getString("a2");
+                double a3 = rs.getDouble("a3");
                 Date a4 = rs.getDate("a4");
-                System.out.printf("%d -- %s -- %.2f -- %s %n", a1,a2,a3,a4);      
+                //mostramos la fila por consola
+                System.out.printf("%d -- %s -- %.2f -- %s %n", a1, a2, a3, a4);
             }
-             System.out.println("-------------------------------");
-            
+
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Error con la conexion con la BD", "Desconexion BD", JOptionPane.ERROR_MESSAGE);
-        } finally{
+            JOptionPane.showMessageDialog(this, "Error al conectar con BD",
+                    "Error BD", JOptionPane.ERROR_MESSAGE);
+            System.out.println(ex.getMessage());
+        } finally {
             try {
                 conn.close();
             } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(this,"Error al cerrar BD","Desconexion BD", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Error al cerrar BD",
+                        "Error BD", JOptionPane.ERROR_MESSAGE);
             }
         }
-    }//GEN-LAST:event_jMenuItemSelectActionPerformed
 
-    private void jMenuItemUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdateActionPerformed
-        // Abrimos la ventana para introducir los nuevos datos
-        GUIUpdate guiUpdate = new GUIUpdate(this, true);
-        guiUpdate.setVisible(true);
-        
-    }//GEN-LAST:event_jMenuItemUpdateActionPerformed
+
+    }//GEN-LAST:event_jMenuItemSekectActionPerformed
+
+    private void jMenuItemInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemInsertActionPerformed
+        //abrimos la ventana para introducir los nuevos datos
+        guiInsertar = new GUIInsertarDatos(this, true);
+        guiInsertar.setVisible(true);
+
+    }//GEN-LAST:event_jMenuItemInsertActionPerformed
 
     private void jMenuItemDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDeleteActionPerformed
-        // Abrimos la ventana para introducir los nuevos datos
-        GUIDelet guidelet = new GUIDelet(this, true);
-        guidelet.setVisible(true);
+        //abrimos la ventana para elegir el registro a borrar en la BD
+        guiBorrar = new GUIBorrarDatos(this, true);
+        guiBorrar.setVisible(true);
     }//GEN-LAST:event_jMenuItemDeleteActionPerformed
+
+    private void jMenuItemUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdateActionPerformed
+        //abrimos la ventana para elegir el registro a modificiar en la BD
+        guiActualizar = new GUIModificarDatos(this, true);
+        guiActualizar.setVisible(true);
+    }//GEN-LAST:event_jMenuItemUpdateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -261,16 +274,16 @@ public class EjemploCRUD extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenuApp;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu3App;
     private javax.swing.JMenu jMenuBD;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuCRUD;
     private javax.swing.JMenuItem jMenuItemConectar;
     private javax.swing.JMenuItem jMenuItemDelete;
-    private javax.swing.JMenuItem jMenuItemDeleteV2;
     private javax.swing.JMenuItem jMenuItemInsert;
     private javax.swing.JMenuItem jMenuItemSalir;
-    private javax.swing.JMenuItem jMenuItemSelect;
+    private javax.swing.JMenuItem jMenuItemSekect;
     private javax.swing.JMenuItem jMenuItemUpdate;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,42 +2,36 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package com.gf.tema10;
+package com.gf.crud;
+
 
 import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author sandr
+ * @author macarena
  */
 public class GUIInsertarDatos extends javax.swing.JDialog {
 
-    /**
-     * Creates new form GUIInsertarDatos
-     */
-    
     private EjemploCRUD guiPrincipal;
     
     public GUIInsertarDatos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        guiPrincipal =(EjemploCRUD) parent;
-        setFrame();
-
+        guiPrincipal=(EjemploCRUD) parent;
+        setFrame();        
     }
 
-    public void setFrame(){
-        this.setTitle("Insercción de datos en la BD: " + EjemploCRUD.bd);
+    private void setFrame(){    
+        this.setTitle("Inserción de datos en la BD " + EjemploCRUD.bd);
         this.setLocationRelativeTo(guiPrincipal);
     }
     /**
@@ -52,9 +46,9 @@ public class GUIInsertarDatos extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextFielda2 = new javax.swing.JTextField();
-        jTextFielda4 = new javax.swing.JTextField();
-        jTextFielda3 = new javax.swing.JTextField();
+        jTextField1colA2 = new javax.swing.JTextField();
+        jTextField2colA3 = new javax.swing.JTextField();
+        jTextFieldcolA4 = new javax.swing.JTextField();
         jButtonAceptar = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
 
@@ -66,6 +60,7 @@ public class GUIInsertarDatos extends javax.swing.JDialog {
 
         jLabel3.setText("Columna a4:");
 
+        jButtonAceptar.setMnemonic('A');
         jButtonAceptar.setText("Aceptar");
         jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +68,7 @@ public class GUIInsertarDatos extends javax.swing.JDialog {
             }
         });
 
+        jButtonCancelar.setMnemonic('C');
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,162 +80,104 @@ public class GUIInsertarDatos extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldcolA4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextFielda4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextFielda3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextFielda2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                        .addComponent(jButtonCancelar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonAceptar)))
-                .addGap(20, 20, 20))
+                            .addComponent(jTextField2colA3, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                            .addComponent(jTextField1colA2))
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonCancelar))))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jButtonAceptar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jTextFielda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButtonCancelar)
-                        .addGap(18, 18, 18)))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTextField1colA2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAceptar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextFielda3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextFielda4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addContainerGap(33, Short.MAX_VALUE))
+                    .addComponent(jTextField2colA3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonCancelar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextFieldcolA4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-        // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
-        // Hacemos la inserccion en la base de datos
+        //hacemos la inserción en la BD
         insertarFila();
         this.dispose();
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
-private void insertarFila(){
-    Connection conn = null;
-    
-    try {
-        //1. Abrir conexión
-        conn = guiPrincipal.abrirConexion();
-        
-        //2. Generar la consulta (insert)
-        String sql = "INSERT INTO tabla_a (a2, a3, a4) VALUES (?, ?, ?)";
-        PreparedStatement ps = conn.prepareStatement(sql);
-        
-        ps.setString(1, this.jTextFielda2.getText());
-        ps.setDouble(2, Double.parseDouble(this.jTextFielda3.getText()));
-        
-        // Convertir String a java.sql.Date con formato específico
-        String fechaString = this.jTextFielda4.getText();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        sdf.setLenient(false); // Evita que acepte fechas inválidas
-        java.sql.Date fechaSQL = null;
-        
+    private void insertarFila(){
+        Connection conn=null;
         try {
-            java.util.Date fechaUtil = sdf.parse(fechaString);
-            fechaSQL = new java.sql.Date(fechaUtil.getTime());
+            //1.abrir conexion
+            conn=guiPrincipal.abrirConexion();
+            //2. ejecutar consulta: INSERT
+            String sql="insert into tabla_a (a2,a3,a4) values (?,?,?)";
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ps.setString(1, this.jTextField1colA2.getText());
+            ps.setDouble(2, Double.parseDouble(this.jTextField2colA3.getText()));
+            //parsear String -> Date
+            String fechaString=this.jTextFieldcolA4.getText();
+            DateFormat df=DateFormat.getDateInstance();            
+            java.util.Date fecha=df.parse(fechaString);
+            java.sql.Date fechaDate=new java.sql.Date(fecha.getTime());
+            ps.setDate(3, fechaDate);
+            ////////////////////////
+            //comprobamos operación
+            if(ps.executeUpdate()>0){
+                 JOptionPane.showMessageDialog(this, "Inserción realizada",
+                    "Insertar", JOptionPane.PLAIN_MESSAGE);
+            }else{
+                 JOptionPane.showMessageDialog(this, "Error al insertar en BD",
+                    "Insertar", JOptionPane.ERROR_MESSAGE);
+            }            
+        } catch (SQLException ex) {
+             JOptionPane.showMessageDialog(this, "Error de BD",
+                    "Insertar", JOptionPane.ERROR_MESSAGE);
+             System.out.println(ex.getMessage());
         } catch (ParseException ex) {
             Logger.getLogger(GUIInsertarDatos.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Error en el formato de la fecha. Use formato dd/MM/yyyy", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        
-        ps.setDate(3, fechaSQL);
-        
-        if (ps.executeUpdate() > 0) {
-            // Ejecución exitosa
-            JOptionPane.showMessageDialog(this, "Inserción realizada", "Insertar", JOptionPane.PLAIN_MESSAGE);
-        } else {
-            JOptionPane.showMessageDialog(this, "Error al insertar en la BD", "Insertar", JOptionPane.ERROR_MESSAGE);
-        }
-        
-    } catch (SQLException ex) {
-        JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos", "Conexión BD", JOptionPane.ERROR_MESSAGE);
-    } finally {
-        try {
-            if (conn != null) conn.close();
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(this, "Error al cerrar la conexión con la BD", "Desconexión BD", JOptionPane.ERROR_MESSAGE);
+        } finally {
+            //3. cerrar conexion
+            try {
+                conn.close();
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this, "Error al cerrar BD",
+                        "Error BD", JOptionPane.ERROR_MESSAGE);
+            }
         }
     }
-}
-
-        
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIInsertarDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIInsertarDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIInsertarDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIInsertarDatos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                GUIInsertarDatos dialog = new GUIInsertarDatos(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    
+    
+   
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAceptar;
@@ -247,8 +185,8 @@ private void insertarFila(){
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextFielda2;
-    private javax.swing.JTextField jTextFielda3;
-    private javax.swing.JTextField jTextFielda4;
+    private javax.swing.JTextField jTextField1colA2;
+    private javax.swing.JTextField jTextField2colA3;
+    private javax.swing.JTextField jTextFieldcolA4;
     // End of variables declaration//GEN-END:variables
 }
