@@ -7,6 +7,7 @@ package ejer.ejer1.login;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,28 +19,26 @@ import javax.swing.JOptionPane;
  */
 public class Registro extends javax.swing.JDialog {
 
-    
-    public static String bd="usuarios";
-    public static String urlBD= "jdbc:mysql://localhost:3306/"+bd; //Direccion de nuestro sql
-    public static String user= "root"; //usuario de la BD
-    public static String passwd=""; //Contrasenia del usuario
+    public static String bd = "usuarios";
+    public static String urlBD = "jdbc:mysql://localhost:3306/" + bd; //Direccion de nuestro sql
+    public static String user = "root"; //usuario de la BD
+    public static String passwd = ""; //Contrasenia del usuario
     public static Connection conn;
-    
-    
+
     /**
      * Creates new form Registro
      */
     private Login principal;
-    
+
     public Registro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         principal = (Login) parent;
         setFrame();
-        
+
     }
-    
-    public void setFrame(){
+
+    public void setFrame() {
         this.setLocationRelativeTo(null);
         this.setTitle("Registro");
     }
@@ -148,38 +147,54 @@ public class Registro extends javax.swing.JDialog {
     }//GEN-LAST:event_CancelarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
         String nombre = intUsuario.getText();
         String code1 = new String(intCodigo.getPassword());
         String code2 = new String(intCodigo3.getPassword());
 
-        
-        if (code1.equals(code2)){
-            System.out.println("La contraseña es la misma");
-            
-            String sql = "INSERT INTO usuario (login, password, blocked) VALUES (?, ?, ?)";
-            try {
-                conn = DriverManager.getConnection(urlBD, user, passwd);
-                PreparedStatement ps = conn.prepareStatement(sql);
-                
+        if (!code1.equals(code2)) {
+            JOptionPane.showMessageDialog(this, "Las contraseñas no coinciden", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try {
+            conn = DriverManager.getConnection(urlBD, user, passwd);
+
+            // Verificar si el usuario ya existe
+            String sql1 = "SELECT login FROM usuario WHERE login = ?";
+            try (PreparedStatement psCheck = conn.prepareStatement(sql1)) {
+                psCheck.setString(1, nombre);
+                try (ResultSet rs = psCheck.executeQuery()) {
+                    if (rs.next()) {
+                        JOptionPane.showMessageDialog(this, "Este usuario ya existe", "Error", JOptionPane.ERROR_MESSAGE);
+                        return;
+                    }
+                }
+            }
+
+            // Insertar nuevo usuario
+            String sql = "INSERT INTO usuarios (login, password, blocked) VALUES (?, ?, ?)";
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
                 ps.setString(1, nombre);
                 ps.setString(2, code1);
                 ps.setInt(3, 0);
-                
-                ps.executeUpdate(); // Ejecutar la inserción
-                JOptionPane.showMessageDialog(this, "Usuario incluido", "exito",JOptionPane.INFORMATION_MESSAGE );
-                this.setVisible(false);
-                
-            } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null, "Mensaje de error", "Error", JOptionPane.ERROR_MESSAGE);
+                ps.executeUpdate();
             }
-            
-            
-        }else{
-            System.out.println("Contraseñas distintas. Error");
+
+            JOptionPane.showMessageDialog(this, "Usuario incluido", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+            this.setVisible(false);
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, "Error de base de datos: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            ex.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
