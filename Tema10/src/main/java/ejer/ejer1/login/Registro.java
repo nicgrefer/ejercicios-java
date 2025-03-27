@@ -168,7 +168,7 @@ public class Registro extends javax.swing.JDialog {
                 ps.setInt(3, 0);
                 
                 ps.executeUpdate(); // Ejecutar la inserción
-                JOptionPane.showMessageDialog(this, "Usuario incluido", "exito", ABORT);
+                JOptionPane.showMessageDialog(this, "Usuario incluido", "exito",JOptionPane.INFORMATION_MESSAGE );
                 this.setVisible(false);
                 
             } catch (SQLException ex) {

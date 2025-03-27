@@ -4,7 +4,7 @@
  */
 package ejer.ejer1.login;
 
-import static com.gf.tema10.EjemploCRUD.conn;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
