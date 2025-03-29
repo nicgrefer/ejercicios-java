@@ -16,6 +16,8 @@
 
 **🔹T7 [Arrays y Ventanas](https://github.com/nicgrefer/ejercicios-java/blob/main/README.md#-tema-7-arrays-y-ventanas)**
 
+**🔹T10 Bincular con Bases de datos**
+
 >[!NOTE]
 > La siguiente informacion ha sido redactada por CHat
 
@@ -1362,10 +1364,98 @@ public class VentanaCompleta extends JFrame {
 }
 ```
 
+# T10 Bincular con bases de datos
 
+Para poder vincular java con `BBDD` ay que insertar el siguiente dependencia en el `maven proyect` 
+````xml
+<dependencies>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.2.0</version>
+        </dependency>
+    </dependencies>
+````
 
+Con esto insertado ya podemos empezar.
 
+***
 
+Entre las cosas principales que se necesitan son:
 
+- El nombre de la `base de datos`
+- La url
+- El usuario
+- La contraseña
+- La clase **`Conection`**
 
+de esta forma queda algo tal que así 
+````java
+    public static String bd = "ejemplo";
+    public static String urlBD = "jdbc:mysql://localhost:3306/" + bd;
+    public static String user = "root";
+    public static String passwd = "";
+    public static Connection conn; 
+````
+>[!NOTE]
+>Esto es siempre igual lo unico que cambia es el nombre de la **Base de datos**
+---
+Con estos datos ahora podemos *conectarnos* a la base de datos y hacer consultas.
 
+## Conectarnos para hacer las *`operaciones`* 
+Para esto se usa el `conn` anteriormente crerado y se le da valores 
+
+````java
+conn = DriverManager.getConnection(urlBD, user, passwd);
+````
+
+## Crerar la consulta
+
+Para hacer esto tenemos que crear un `String` donde pongamos la consulta, pudiendo ser de dos estilos. 
+
+- Que tenga ya todo puesto por codigo
+- Que el usuario meta algun valor
+
+### Usuario añade valores 
+
+En este caso una consulta podreia quedar algo como: 
+````java
+String sql = "SELECT password FROM usuario WHERE login = ?";
+````
+Por lo tanto tenemos que dar valor a tosos los `?`  que ay. Esto se hace con el **Prepared** (`PreparedStatement ps = conn.prepareStatement(sql);`) y luego se usa el **ps** para ir dando valor a las incognitas ` ps.setString(1, usuario);`.
+
+Una vez acabado se ejecuta con `ResultSet rs = ps.executeQuery();` y en este caso almacenamos la respuesta en **`rs`**
+### Ya todo puesto
+
+En este caso la unica diferencia es la forma de *ejecutarse*(`Statement st = conn.createStatement();`) en el amterior lo *preparas*(`prepareStatement`) y en este le *creas* 
+
+````java
+String sql = "select * from tabla_a";
+Statement st = conn.createStatement();
+ResultSet rs = st.executeQuery(sql);
+````
+
+## A la hora de comprovar si nos da solucion la consulta **`rs`**
+
+Usamos la funcion `next.rs()` de esta forma si es `true` significa que hay una fila mas de resultado ej:
+
+````java
+ try {
+            //1.abrir conexion
+            conn = DriverManager.getConnection(urlBD, user, passwd);
+            //2.ejecutamos consulta SELECT
+            String sql = "select * from tabla_a";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) {
+                //procesamos la fila actual del conjunto de filas
+                int a1 = rs.getInt("a1");
+                String a2 = rs.getString("a2");
+                double a3 = rs.getDouble("a3");
+                Date a4 = rs.getDate("a4");
+                //mostramos la fila por consola
+                System.out.printf("%d -- %s -- %.2f -- %s %n", a1, a2, a3, a4);
+            }
+````
+
+Para ver ejemplos de uso pincha [aqí](Tema10/src/main/java)
