@@ -1,4 +1,4 @@
-package model;
+package ejer.ejer1.login_v2.java.model;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

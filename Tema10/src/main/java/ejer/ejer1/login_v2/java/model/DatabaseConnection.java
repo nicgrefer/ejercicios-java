@@ -1,4 +1,4 @@
-package model;
+package ejer.ejer1.login_v2.java.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

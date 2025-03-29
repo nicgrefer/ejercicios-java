@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
+package ejer.ejer1.login_v2.java.view;
 
 import java.awt.Cursor;
 import java.awt.Desktop;
@@ -16,7 +16,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import model.DatabaseConnection;
 import model.Usuario;
-import model.UsuarioDAO;
+import ejer.ejer1.login_v2.java.model.UsuarioDAO;
 
 /**
  *
