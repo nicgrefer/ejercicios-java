@@ -190,7 +190,7 @@ public class LoginView extends javax.swing.JFrame {
         String passwd = getPassword();
 
         // Consultamos si el usuario con ese login existe en la BD
-        Usuario usuario = usuarioDAO.getUsuarioByLogin(login);
+        ejer.ejer1.login_v2.java.model.Usuario usuario = usuarioDAO.getUsuarioByLogin(login);
         if (usuario != null) {
             if (usuario.getBlocked() == 1) {
                 JOptionPane.showMessageDialog(this, "Usuario bloqueado", "Acceso", JOptionPane.ERROR_MESSAGE);

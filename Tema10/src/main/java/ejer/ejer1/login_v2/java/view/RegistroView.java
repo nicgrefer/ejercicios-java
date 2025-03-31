@@ -153,23 +153,22 @@ public class RegistroView extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCancelarActionPerformed
 
     private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
-
-        String user = this.jTextField1.getText();
-        String passwd = getPassword();
-        String passwdConfirm = getPasswordConfirm();
-        
-        if(!passwd.equals(passwdConfirm)){
-            JOptionPane.showMessageDialog(this, "La contraseña y su confirmación no coinciden", "Registro usuario", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-        
-        // Damos de alta el nuevo usuario en la BD
-        if(usuarioDAO.createUsuario(new Usuario(user, passwd, 0))){
-            JOptionPane.showMessageDialog(this, "Usuario registrado", "Registro usuario", JOptionPane.INFORMATION_MESSAGE);            
-        }else{
-            JOptionPane.showMessageDialog(this, "Error de registro", "Registro usuario", JOptionPane.ERROR_MESSAGE);
-        }
-        this.dispose();
+    String user = this.jTextField1.getText();
+    String passwd = getPassword();
+    String passwdConfirm = getPasswordConfirm();
+    
+    if (!passwd.equals(passwdConfirm)) {
+        JOptionPane.showMessageDialog(this, "La contraseña y su confirmación no coinciden", "Registro usuario", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+    
+    // Damos de alta el nuevo usuario en la BD
+    if (usuarioDAO.createUsuario(new Usuario(user, passwd, 0))) { 
+        JOptionPane.showMessageDialog(this, "Usuario registrado", "Registro usuario", JOptionPane.INFORMATION_MESSAGE);            
+    } else {
+        JOptionPane.showMessageDialog(this, "Error de registro", "Registro usuario", JOptionPane.ERROR_MESSAGE);
+    }
+    this.dispose();
     }//GEN-LAST:event_botonAceptarActionPerformed
 
     public String getUser() {

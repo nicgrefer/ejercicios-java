@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package com.gf.crud;
+package com.gf.tema10;
 
 import java.awt.Color;
 import java.sql.Connection;
@@ -24,6 +24,7 @@ public class GUIBorrarDatos extends javax.swing.JDialog {
 
     public GUIBorrarDatos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        
         initComponents();
         guiPrincipal = (EjemploCRUD) parent;
         setFrame();
@@ -126,6 +127,11 @@ public class GUIBorrarDatos extends javax.swing.JDialog {
                 jComboBox1ItemStateChanged(evt);
             }
         });
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("PK");
 
@@ -226,6 +232,10 @@ public class GUIBorrarDatos extends javax.swing.JDialog {
         this.jTextField2.setText(String.valueOf(objeto.getA3()));
         this.jTextField3.setText(String.valueOf(objeto.getA4()));
     }//GEN-LAST:event_jComboBox1ItemStateChanged
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void borrarFila(Tabla_A obj) {
         Connection conn = null;

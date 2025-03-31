@@ -29,6 +29,10 @@ public class UsuarioDAO {
         this.databaseConnection = databaseConnection;
     }
 
+    public UsuarioDAO(model.DatabaseConnection databaseConnection) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Operación INSERT de un nuevo usuario
     public boolean createUsuario(Usuario usuario) {
         String sql = "INSERT INTO usuario (login, password, blocked) VALUES (?, ?, ?)";
