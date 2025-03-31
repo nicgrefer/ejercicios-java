@@ -2,7 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package ejer.ejer2.Productos.view;
+package Productos.view;
+
+import Productos.model.DatabaseConnection;
+import Productos.model.Productos;
+import Productos.model.TipoProducto;
+import Productos.model.TipoProductoDAO;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -10,14 +22,45 @@ package ejer.ejer2.Productos.view;
  */
 public class Almacen extends javax.swing.JDialog {
 
+    private DatabaseConnection databaseConnection;
+    private TipoProductoDAO tipoProductoDAO;
+    private DefaultComboBoxModel<TipoProducto> modeloCombo;
+
+
+    
+    
     /**
      * Creates new form Almacen
      */
     public Almacen(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        this.databaseConnection = new DatabaseConnection();
+        this.tipoProductoDAO = new TipoProductoDAO(databaseConnection);
+        this.modeloCombo = new DefaultComboBoxModel<>();
+
         initComponents();
         setFreim();
+        cargarTiposProducto();
     }
+    
+       private void cargarTiposProducto() {
+        try {
+            // Obtener la lista de TipoProducto desde el DAO
+            List<TipoProducto> tipos = tipoProductoDAO.getAllTiposProducto();
+            
+            modeloCombo.addElement(new TipoProducto(0, "(elige uno)")); 
+            // Agregar cada TipoProducto al modelo
+            for (TipoProducto tipo : tipos) {
+                modeloCombo.addElement(tipo);
+            }
+            jComboBox1.setModel(modeloCombo);                       
+           
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Error al cargar los tipos de producto: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }
+
     
     public void setFreim(){
         this.setLocationRelativeTo(null);
@@ -34,21 +77,14 @@ public class Almacen extends javax.swing.JDialog {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Tipo de producto");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Listado de productos"));
 
@@ -81,6 +117,14 @@ public class Almacen extends javax.swing.JDialog {
                 .addGap(0, 20, Short.MAX_VALUE))
         );
 
+        jComboBox1.setEditable(true);
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox1ItemStateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,8 +132,8 @@ public class Almacen extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(jLabel1)
-                .addGap(43, 43, 43)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -111,11 +155,25 @@ public class Almacen extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
+       // Hacer casting directo a TipoProducto
+        TipoProducto tipo = (TipoProducto) jComboBox1.getSelectedItem();
+
+        if (tipo.getTipo().equals("A")) {
+            System.out.println("tipo 1");
+           
+            
+        } else if (tipo.getTipo().equals("B")) {
+            System.out.println("tipo 2");
+            
+        } else if (tipo.getTipo().equals("C")) {
+            System.out.println("tipo 3");
+            
+        } else {
+            System.out.println("No es ningun tipo");
+        }
+       
+    }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -160,7 +218,7 @@ public class Almacen extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
