@@ -25,4 +25,3 @@ public class App {
         loginView.setVisible(true);
     }
 }
-
