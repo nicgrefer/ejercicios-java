@@ -1,0 +1,5 @@
+[
+    { "alumno": "Juan Pérez", "asignatura": "Matemáticas", "nota": 8.5 },
+    { "alumno": "Ana López", "asignatura": "Historia", "nota": 7.0 },
+    { "alumno": "Carlos Ramírez", "asignatura": "Programación", "nota": 9.2 }
+]
