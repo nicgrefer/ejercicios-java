@@ -7,6 +7,8 @@ package model;
 /**
  *
  * @author jovcubni
+ * 1 --> Seleccionado
+ * 0 --> No seleccionado
  */
 public class Respuesta {
     

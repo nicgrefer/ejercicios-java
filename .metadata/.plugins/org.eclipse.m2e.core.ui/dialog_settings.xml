@@ -49,6 +49,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="gf"/>
 			<item value="Ejercicio1JUNIT"/>
 			<item value="gf.local"/>
 			<item value="Ejemplo07_String_adom"/>
@@ -65,6 +66,7 @@
 			<item value="queBajon"/>
 		</list>
 		<list key="artifactId">
+			<item value="EjercicioVistaControlador"/>
 			<item value="Ejercicio1JUNIT"/>
 			<item value="Ejemplo09_Calculadora"/>
 			<item value="Ejemplo07_Commons_Math"/>

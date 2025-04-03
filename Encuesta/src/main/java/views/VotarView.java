@@ -4,7 +4,14 @@
  */
 package views;
 
+import java.awt.Dimension;
+import java.awt.event.KeyEvent;
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
 import model.DatabaseConnection;
+import model.Respuesta;
+import model.RespuestasDAO;
+
 
 /**
  *
@@ -13,17 +20,34 @@ import model.DatabaseConnection;
 public class VotarView extends javax.swing.JFrame {
 
     
-     private DatabaseConnection databaseConnection; // Se declara como instancia, no estática
+     private DatabaseConnection databaseConnection; // Se declara como instancia, no estática3
+     private RespuestasDAO respuestasDAO;
 
     /**
      * Creates new form BotarView
      * @param databaseConnection La conexión a la base de datos
      */
-    public VotarView(DatabaseConnection databaseConnection) {
+    public VotarView(DatabaseConnection databaseConnection, RespuestasDAO respuestasDAO) {
         this.databaseConnection = databaseConnection; // Guarda la conexión
         initComponents(); // Inicializa los componentes gráficos
+        this.respuestasDAO = respuestasDAO;
+        setFrame();
     }
 
+    public ButtonGroup grupoOpciones = new ButtonGroup();
+    public void setFrame(){
+        this.setName("Encuesta");
+        this.setLocationRelativeTo(null);
+        //Butongrup
+        grupoOpciones.add(Si); 
+        grupoOpciones.add(no);
+        grupoOpciones.add(nsnc);
+
+        //
+        this.setMinimumSize(new Dimension(500, 250));
+        this.pack();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,12 +61,21 @@ public class VotarView extends javax.swing.JFrame {
         PanelPregunta = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         PanelBotones = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        votar = new javax.swing.JButton();
+        resultados = new javax.swing.JButton();
         PanelOpciones = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jPanel2 = new javax.swing.JPanel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        Si = new javax.swing.JRadioButton();
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        jPanel3 = new javax.swing.JPanel();
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        nsnc = new javax.swing.JRadioButton();
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        jPanel4 = new javax.swing.JPanel();
+        filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        no = new javax.swing.JRadioButton();
+        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 102, 255));
@@ -50,7 +83,6 @@ public class VotarView extends javax.swing.JFrame {
         PanelContenedor.setForeground(new java.awt.Color(255, 255, 255));
         PanelContenedor.setLayout(new java.awt.BorderLayout());
 
-        PanelPregunta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 255, 0)));
         PanelPregunta.setPreferredSize(new java.awt.Dimension(544, 32));
         PanelPregunta.setLayout(new java.awt.BorderLayout());
 
@@ -63,32 +95,76 @@ public class VotarView extends javax.swing.JFrame {
 
         PanelContenedor.add(PanelPregunta, java.awt.BorderLayout.PAGE_START);
 
-        PanelBotones.setBackground(new java.awt.Color(255, 255, 255));
-        PanelBotones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 204)));
         PanelBotones.setLayout(new java.awt.GridLayout(0, 1, 0, 7));
 
-        jButton1.setText("Votar");
-        PanelBotones.add(jButton1);
+        votar.setText("Votar");
+        votar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                votarMouseClicked(evt);
+            }
+        });
+        votar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                votarActionPerformed(evt);
+            }
+        });
+        votar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                votarKeyReleased(evt);
+            }
+        });
+        PanelBotones.add(votar);
 
-        jButton2.setText("Resultados de la encuesta");
-        PanelBotones.add(jButton2);
+        resultados.setText("Resultados de la encuesta");
+        resultados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resultadosActionPerformed(evt);
+            }
+        });
+        resultados.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                resultadosKeyReleased(evt);
+            }
+        });
+        PanelBotones.add(resultados);
 
         PanelContenedor.add(PanelBotones, java.awt.BorderLayout.PAGE_END);
 
-        PanelOpciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 102)));
         PanelOpciones.setLayout(new java.awt.GridLayout(0, 1));
 
-        jRadioButton1.setText("SI");
-        jRadioButton1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PanelOpciones.add(jRadioButton1);
+        jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel2.add(filler1);
 
-        jRadioButton2.setText("NO");
-        jRadioButton2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PanelOpciones.add(jRadioButton2);
+        Si.setText("SI");
+        Si.setHideActionText(true);
+        Si.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Si.setPreferredSize(new java.awt.Dimension(100, 21));
+        jPanel2.add(Si);
+        jPanel2.add(filler2);
 
-        jRadioButton3.setText("NS/NC");
-        jRadioButton3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PanelOpciones.add(jRadioButton3);
+        PanelOpciones.add(jPanel2);
+
+        jPanel3.setLayout(new javax.swing.BoxLayout(jPanel3, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel3.add(filler4);
+
+        nsnc.setText("NS/NC");
+        nsnc.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nsnc.setPreferredSize(new java.awt.Dimension(100, 21));
+        jPanel3.add(nsnc);
+        jPanel3.add(filler3);
+
+        PanelOpciones.add(jPanel3);
+
+        jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel4.add(filler6);
+
+        no.setText("NO");
+        no.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        no.setPreferredSize(new java.awt.Dimension(100, 21));
+        jPanel4.add(no);
+        jPanel4.add(filler5);
+
+        PanelOpciones.add(jPanel4);
 
         PanelContenedor.add(PanelOpciones, java.awt.BorderLayout.CENTER);
 
@@ -96,6 +172,64 @@ public class VotarView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void votarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_votarKeyReleased
+        // TODO add your handling code here:..
+        if (evt.getKeyCode()== KeyEvent.VK_ENTER){
+            this.votar.doClick();
+        }
+    }//GEN-LAST:event_votarKeyReleased
+
+    private void resultadosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_resultadosKeyReleased
+        // TODO add your handling code here:
+        if (evt.getKeyCode()== KeyEvent.VK_ENTER){
+            this.resultados.doClick();
+        }
+    }//GEN-LAST:event_resultadosKeyReleased
+
+    // Boton Votar
+    private void votarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_votarMouseClicked
+        //Si no vota --> Mensaje
+        if (this.grupoOpciones.getSelection()== null){
+            JOptionPane.showMessageDialog(this, "Tienes que aceptar una opcion");
+        }else{ //Responde --> Guarfar Opciones
+            Respuesta respuesta = new Respuesta();
+            if (this.Si.isSelected()){
+                respuesta.setYes(1);
+                respuesta.setNo(0);
+                respuesta.setNs_nc(0);
+            }else if (this.no.isSelected()){
+                respuesta.setYes(0);
+                respuesta.setNo(1);
+                respuesta.setNs_nc(0);
+            }else if (this.nsnc.isSelected()){
+                respuesta.setYes(0);
+                respuesta.setNo(0);
+                respuesta.setNs_nc(1);
+            }
+            
+           if (respuestasDAO.insertRespuestas(respuesta)) {
+                JOptionPane.showMessageDialog(this, "Gracias por votar");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al registrar tu voto");
+            }
+ 
+            grupoOpciones.clearSelection(); 
+        }
+        
+    }//GEN-LAST:event_votarMouseClicked
+
+    private void resultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadosActionPerformed
+        // TODO add your handling code here:
+        ResultadosView resultadosView = new ResultadosView(this, true);
+        resultadosView.setFreim();
+        resultadosView.setVisible(true);
+
+    }//GEN-LAST:event_resultadosActionPerformed
+
+    private void votarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_votarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_votarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,11 +240,20 @@ public class VotarView extends javax.swing.JFrame {
     private javax.swing.JPanel PanelContenedor;
     private javax.swing.JPanel PanelOpciones;
     private javax.swing.JPanel PanelPregunta;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JRadioButton Si;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.Box.Filler filler2;
+    private javax.swing.Box.Filler filler3;
+    private javax.swing.Box.Filler filler4;
+    private javax.swing.Box.Filler filler5;
+    private javax.swing.Box.Filler filler6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JRadioButton no;
+    private javax.swing.JRadioButton nsnc;
+    private javax.swing.JButton resultados;
+    private javax.swing.JButton votar;
     // End of variables declaration//GEN-END:variables
 }

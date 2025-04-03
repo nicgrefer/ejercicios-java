@@ -28,7 +28,7 @@ public class RespuestasDAO {
     // -> Insercion de las respuesta 
     
     public boolean insertRespuestas (Respuesta respuesta) {
-        String sql = "INSERT INTO respuestas (yes, no, ns_nc) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO respuesta (y, n, ns_nc) VALUES (?, ?, ?)";
         try (java.sql.Connection conn = databaseConnection.getConnection(); 
              PreparedStatement ps = conn.prepareStatement(sql)) {
                 ps.setInt(1, respuesta.getYes());
@@ -62,5 +62,9 @@ public class RespuestasDAO {
         return respuesta;
     }
     
+     ////////////////////////////////////////////////////////////
+     //Añadir select count (*) from resp..                    //
+     //select count (*) from res.. where y = 1 -> total_votos//
+     /////////////////////////////////////////////////////////
     
 }
