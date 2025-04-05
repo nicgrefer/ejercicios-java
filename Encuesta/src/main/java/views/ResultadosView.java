@@ -11,19 +11,26 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import model.RespuestasDAO;
+
+
 
 /**
  *
  * @author jovcubni
  */
 public class ResultadosView extends javax.swing.JDialog {
+    
+    private RespuestasDAO respuestasDAO;
+
 
     /**
      * Creates new form ResultadosView
      */
-    public ResultadosView(java.awt.Frame parent, boolean modal) {
+    public ResultadosView(java.awt.Frame parent, boolean modal, RespuestasDAO respuestasDAO ) {
         super(parent, modal);
         initComponents();
+        this.respuestasDAO = respuestasDAO;
         setFreim();
     }
 
@@ -31,25 +38,53 @@ public class ResultadosView extends javax.swing.JDialog {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+   
+
+    
     public void setFreim(){
         DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
         String tituloVentana = dtf.format(LocalDateTime.now());
         this.setTitle(tituloVentana);
         this.jEditorPane1.setContentType("text/html");
         this.jEditorPane1.setEditable(false);
+        this.jEditorPane1.getCaret().deinstall(jEditorPane1);
         this.setLocationRelativeTo(null);
         this.setMinimumSize(new Dimension (300,200)); 
         this.setPreferredSize(new Dimension (300,200));
 
+         calcularRespuesta();
         
+    }
+    
         ///////////////////////
         //Formateo porcentaje//
         ///////////////////////
+   
+    private void calcularRespuesta() {
+    try {
+        int total = respuestasDAO.contarTodas();
+        int nY = respuestasDAO.contarYes();
+        int nN = respuestasDAO.contarNo();
+        int nNSNC = respuestasDAO.contarNsNc();
+
+        // Calcular porcentaje
         NumberFormat nf = NumberFormat.getPercentInstance();
         nf.setMaximumFractionDigits(2);
-        double numero = 0.34;
-        String resultado = nf.format(numero);
+
+        String html = "<html><body>";
+        html += "<h2>Resultados de la encuesta</h2>";
+        html += "<p><b>Total respuestas:</b> " + total + "</p>";
+        html += "<p><b>Sí:</b> " + nY + " (" + nf.format((double)nY / total) + ")</p>";
+        html += "<p><b>No:</b> " + nN + " (" + nf.format((double)nN / total) + ")</p>";
+        html += "<p><b>NS/NC:</b> " + nNSNC + " (" + nf.format((double)nNSNC / total) + ")</p>";
+        html += "</body></html>";
+
+        jEditorPane1.setText(html);
+    } catch (Exception e) {
+        jEditorPane1.setText("<html><body><p>Error al cargar los resultados.</p></body></html>");
+        e.printStackTrace();
     }
+}
     
     /**
      * This method is called from within the constructor to initialize the form.

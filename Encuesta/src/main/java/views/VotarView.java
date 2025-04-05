@@ -221,7 +221,7 @@ public class VotarView extends javax.swing.JFrame {
 
     private void resultadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadosActionPerformed
         // TODO add your handling code here:
-        ResultadosView resultadosView = new ResultadosView(this, true);
+        ResultadosView resultadosView = new ResultadosView(this, true,this.respuestasDAO);
         resultadosView.setFreim();
         resultadosView.setVisible(true);
 
