@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-04-2025 a las 12:23:31
+-- Tiempo de generación: 07-04-2025 a las 18:40:58
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.0.30
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -37,11 +37,11 @@ CREATE TABLE `imagenes` (
 --
 
 INSERT INTO `imagenes` (`id`, `url`) VALUES
-(1, 'https://www.google.es/imgres?q=perro&imgurl=https%3A%2F%2Fwww.veterinariadrbrenes.com%2Fwp-content%2Fuploads%2F2019%2F10%2FC%25C3%25B3mo-seleccionar-a-un-perro-dentro-de-una-camada-blog-1000x500.jpg%3Fx42009&imgrefurl=https%3A%2F%2Fwww.veterinariadrbrenes.com%2Fnoticias%2Fcomo-seleccionar-a-un-perro-dentro-de-una-camada%2F&docid=DklsFuYtyw5OfM&tbnid=Ieww1bleJTyMWM&vet=12ahUKEwjXk7aqvsWMAxUtRKQEHfnrAesQM3oECGUQAA..i&w=1000&h=500&hcb=2&ved=2ahUKEwjXk7aqvsWMAxUtRKQEHfnrAesQM3oECGUQAA'),
-(2, 'https://www.google.es/url?sa=i&url=https%3A%2F%2Fhospitalveterinariodonostia.com%2Ftodo-sobre-el-caracter-y-personalidad-de-los-gatos%2F&psig=AOvVaw2FZkc6jqbrqdX-LLPiXrLT&ust=1744100434187000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMif4Mq-xYwDFQAAAAAdAAAAABAE'),
-(3, 'https://www.google.es/url?sa=i&url=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FOryctolagus_cuniculus&psig=AOvVaw2hfBE0bq3Qdv8fRUW5lZM2&ust=1744100455668000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCf6tK-xYwDFQAAAAAdAAAAABAE'),
-(4, 'https://www.google.es/url?sa=i&url=https%3A%2F%2Fwww.masquesaludanimal.es%2Fposts%2Frazas-ovejas-curiosas.aspx&psig=AOvVaw0Vzf0jkjOhyGQeutuZiMZA&ust=1744100481499000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKCAkeC-xYwDFQAAAAAdAAAAABAJ'),
-(5, 'https://www.google.es/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fes%2Fview%2Fminecraft-minecraft-movie-bee-png-gif-7426016964241706941&psig=AOvVaw1l2eKK6-4su9n8znQa4Fu4&ust=1744100518750000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiy0vG-xYwDFQAAAAAdAAAAABAE');
+(1, 'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=300'),
+(2, 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300'),
+(3, 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rabbit_in_montana.jpg/300px-Rabbit_in_montana.jpg'),
+(4, 'https://th.bing.com/th/id/R.587095a8a4db4a957e339cd59f3b85d1?rik=qIAk5waVy4dnxw&riu=http%3a%2f%2fwww.recreoviral.com%2fwp-content%2fuploads%2f2015%2f08%2fFotograf%c3%adas-de-caballos-hermosos-1.jpg&ehk=lDc16oSEHaa2WxGD32w4MdJMNGDe13bMYd7sJbl1zqM%3d&risl=&pid=ImgRaw&r=0'),
+(5, 'https://th.bing.com/th/id/R.ea754954d98a22226e91037dce77b7b5?rik=qa3nwJNVJpeHKQ&pid=ImgRaw&r=0');
 
 --
 -- Índices para tablas volcadas

@@ -14,14 +14,14 @@ import java.sql.SQLException;
  */
 public class DatabaseConection {
     
-    private String url = "jdbc:mysql://localchost:3306/galeria";
+    private String url = "jdbc:mysql://localhost:3306/galeria";
     private String user = "root";
     private String code = "";
     private Connection conn;
     
     public Connection getConnection() throws SQLException{
         
-        conn = DriverManager.getConnection(url, user, user);
+        conn = DriverManager.getConnection(url, user, code);
         return conn;
     }
     

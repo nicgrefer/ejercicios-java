@@ -1,56 +1,75 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package view;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
 import models.DatabaseConection;
 import models.Imagenes;
 import models.ImagenesDAO;
+import javax.swing.Timer; // Importar Timer
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-/**
- *
- * @author jovcubni
- */
 public class Galeria extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Galeria
-     *
-     */
-    
-    public ImagenesDAO imagenesDAO;
-    
+    private ImagenesDAO imagenesDAO;
+    private List<Imagenes> listaImagenes; // Lista de imágenes
+    private int indiceActual = 0; // Índice de la imagen actual
+    private Timer timer; // Timer para el bucle
+
     public Galeria() {
         initComponents();
         setFreim();
-        DatabaseConection conn = new DatabaseConection(); 
+        DatabaseConection conn = new DatabaseConection();
         imagenesDAO = new ImagenesDAO(conn);
+        
 
-        cargarImagen();
+        // Cargar las imágenes y empezar el bucle
+        cargarImagenesYComenzar();
     }
-    
-    public void setFreim(){
+
+    public void setFreim() {
         this.setLocationRelativeTo(null);
+         this.setMinimumSize(new Dimension (544,544)); 
+        this.setPreferredSize(new Dimension (544,544));
+        this.jTextPane1.getCaret().deinstall(jTextPane1);
         this.setTitle("Galeria de imagenes");
         this.jTextPane1.setContentType("text/html");
     }
-    
-    public void cargarImagen() {
-    List<Imagenes> lista = imagenesDAO.cargarImagenes();
 
-    if (lista != null && !lista.isEmpty()) {
-        // Mostrar la primera imagen por ejemplo:
-        Imagenes img = lista.get(0);
+    // Método para cargar imágenes y comenzar el Timer
+    public void cargarImagenesYComenzar() {
+        listaImagenes = imagenesDAO.cargarImagenes();
+
+        if (listaImagenes != null && !listaImagenes.isEmpty()) {
+            // Mostrar la primera imagen inicialmente
+            mostrarImagen(indiceActual);
+
+            // Configurar el Timer
+            int retardoInicial = jSlider1.getValue() * 1000; // Convertir segundos a milisegundos
+            timer = new Timer(retardoInicial, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Avanzar al siguiente índice
+                    indiceActual++;
+                    if (indiceActual >= listaImagenes.size()) {
+                        indiceActual = 0; // Reiniciar al inicio (bucle)
+                    }
+                    mostrarImagen(indiceActual); // Mostrar la siguiente imagen
+                }
+            });
+            timer.start(); // Iniciar el Timer
+        }
+    }
+
+    // Método para mostrar una imagen en el JTextPane
+    private void mostrarImagen(int indice) {
+        Imagenes img = listaImagenes.get(indice);
         String url = img.getUrl();
-
-        // Mostrar imagen en el JTextPane (como HTML con imagen):
-        jTextPane1.setContentType("text/html");
         jTextPane1.setText("<html><body><img src='" + url + "' width='300'/></body></html>");
     }
-}
+
+ 
 
 
     /**
@@ -66,9 +85,9 @@ public class Galeria extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jSlider1 = new javax.swing.JSlider();
         Titulo = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        jLabel3 = new javax.swing.JLabel();
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0));
         Galeria = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
@@ -97,37 +116,14 @@ public class Galeria extends javax.swing.JFrame {
 
         getContentPane().add(Spiner, java.awt.BorderLayout.PAGE_END);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Bienvenido al mundo JAVA");
+        Titulo.setLayout(new java.awt.GridLayout(1, 1));
+        Titulo.add(filler4);
 
-        javax.swing.GroupLayout TituloLayout = new javax.swing.GroupLayout(Titulo);
-        Titulo.setLayout(TituloLayout);
-        TituloLayout.setHorizontalGroup(
-            TituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TituloLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(TituloLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(filler3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        TituloLayout.setVerticalGroup(
-            TituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TituloLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
-            .addGroup(TituloLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(TituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(filler3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("BIEMBENIDO AL MUNDO JAVA!!");
+        Titulo.add(jLabel3);
+        Titulo.add(filler3);
 
         getContentPane().add(Titulo, java.awt.BorderLayout.PAGE_START);
 
@@ -144,11 +140,10 @@ public class Galeria extends javax.swing.JFrame {
 
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         // TODO add your handling code here:
-        
         int sec = jSlider1.getValue();
-        
-        
-        
+        if (timer != null) {
+            timer.setDelay(sec * 1000); // Actualizar el retardo en milisegundos
+        }        
     }//GEN-LAST:event_jSlider1StateChanged
 
    
@@ -156,12 +151,16 @@ public class Galeria extends javax.swing.JFrame {
     private javax.swing.JPanel Galeria;
     private javax.swing.JPanel Spiner;
     private javax.swing.JPanel Titulo;
-    private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.Box.Filler filler4;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
+
+    private void setMinimumSize(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
