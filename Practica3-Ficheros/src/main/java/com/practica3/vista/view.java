@@ -49,9 +49,9 @@ public class view extends javax.swing.JFrame {
         button1 = new java.awt.Button();
         PanelSuperior = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        id = new javax.swing.JRadioButton();
+        apellido = new javax.swing.JRadioButton();
+        Departamento = new javax.swing.JRadioButton();
         PanelInferior = new javax.swing.JPanel();
         PanelBotones = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -72,14 +72,29 @@ public class view extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ordenar por"));
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("ID");
+        buttonGroup1.add(id);
+        id.setText("ID");
+        id.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                idItemStateChanged(evt);
+            }
+        });
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Apellido");
+        buttonGroup1.add(apellido);
+        apellido.setText("Apellido");
+        apellido.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                apellidoItemStateChanged(evt);
+            }
+        });
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Departamento");
+        buttonGroup1.add(Departamento);
+        Departamento.setText("Departamento");
+        Departamento.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                DepartamentoItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,11 +102,11 @@ public class view extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jRadioButton1)
+                .addComponent(id)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(apellido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jRadioButton3)
+                .addComponent(Departamento)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -99,9 +114,9 @@ public class view extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
+                    .addComponent(id)
+                    .addComponent(apellido)
+                    .addComponent(Departamento))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -267,15 +282,75 @@ public class view extends javax.swing.JFrame {
             if (resultado == JFileChooser.APPROVE_OPTION) {
                 // añadir al archivo orijinal los nuevos datos
                 File nuevosDatos = archivoAñado.getSelectedFile();
-                empleados = CSVajustes.añadirDatos(archivoEmpleado,nuevosDatos);
+                empleados = CSVajustes.añadirDatos(archivoEmpleado, nuevosDatos);
 
             }
         }
     }//GEN-LAST:event_BotonAñadirDatosActionPerformed
 
+    private void idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_idItemStateChanged
+        // Ordenar por id
+        if (empleados == null || empleados.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No hay empleados para ordenar.", "Info", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+
+        String criterio = "ID";
+
+        CSVajustes.ordenarListaEmpleados(empleados, criterio);
+
+        // Actualizar modeloLista
+        modeloLista.clear();
+        for (Employees emp : empleados) {
+            modeloLista.addElement(emp);
+        }
+    }//GEN-LAST:event_idItemStateChanged
+
+    private void apellidoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_apellidoItemStateChanged
+        // TODO add your handling code here:
+        
+        if (empleados == null || empleados.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No hay empleados para ordenar.", "Info", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+
+        String criterio = "Apellido";
+
+        CSVajustes.ordenarListaEmpleados(empleados, criterio);
+
+        // Actualizar modeloLista
+        modeloLista.clear();
+        for (Employees emp : empleados) {
+            modeloLista.addElement(emp);
+        }
+    }//GEN-LAST:event_apellidoItemStateChanged
+
+    private void DepartamentoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_DepartamentoItemStateChanged
+        // TODO add your handling code here:
+        
+        if (empleados == null || empleados.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No hay empleados para ordenar.", "Info", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+
+        String criterio = "Departamento";
+
+        CSVajustes.ordenarListaEmpleados(empleados, criterio);
+
+        // Actualizar modeloLista
+        modeloLista.clear();
+        for (Employees emp : empleados) {
+            modeloLista.addElement(emp);
+        }
+    }//GEN-LAST:event_DepartamentoItemStateChanged
+
+    
+    
+    
+    // Funcion para ordenar
     /**
-         * @param args the command line arguments
-         */
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -312,19 +387,19 @@ public class view extends javax.swing.JFrame {
     private javax.swing.JButton BotonAñadirDatos;
     private javax.swing.JButton BotonBuscar;
     private javax.swing.JButton BotonCargarDAtos;
+    private javax.swing.JRadioButton Departamento;
     private javax.swing.JList ListaDatos;
     private javax.swing.JPanel PanelBotones;
     private javax.swing.JPanel PanelInferior;
     private javax.swing.JPanel PanelInfo;
     private javax.swing.JPanel PanelSuperior;
+    private javax.swing.JRadioButton apellido;
     private java.awt.Button button1;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JRadioButton id;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.Box.Filler marjen1;
     private javax.swing.Box.Filler marjen2;
