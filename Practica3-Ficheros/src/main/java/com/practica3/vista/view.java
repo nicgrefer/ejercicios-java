@@ -280,16 +280,19 @@ public class view extends javax.swing.JFrame {
             int resultado = archivoAñado.showOpenDialog(this);
             // Verificamos si el usuario ha seleccionado un archivo
             if (resultado == JFileChooser.APPROVE_OPTION) {
-                // añadir al archivo orijinal los nuevos datos
+                // añadir al archivo original los nuevos datos
                 File nuevosDatos = archivoAñado.getSelectedFile();
                 empleados = CSVajustes.añadirDatos(archivoEmpleado, nuevosDatos);
-
+                
+                modeloLista.clear();
+                for (Employees emp : empleados ){
+                    modeloLista.addElement(emp);
+                }
             }
         }
     }//GEN-LAST:event_BotonAñadirDatosActionPerformed
 
     // Funciones para ordenar
-
     
     private void idItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_idItemStateChanged
         // Ordenar por id

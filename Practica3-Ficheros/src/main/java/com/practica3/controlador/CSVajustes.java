@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -38,11 +39,29 @@ public class CSVajustes {
         List<Employees> listaBase = leerEmpleadosDesdeCSV(base);
         List<Employees> listaAñado = leerEmpleadosDesdeCSV(añado);
 
-        return null;
+        List<Employees> listaMezcla = new ArrayList<>(listaBase);
+        listaMezcla.addAll(listaAñado);
+
+        guardarEmpleadoscsv(base, listaMezcla);
+
+        return listaMezcla;
+    }
+
+    public static void guardarEmpleadoscsv(File archivo, List<Employees> empleados) {
+        try (PrintWriter writer = new PrintWriter(archivo)) {
+            for (Employees e : empleados) {
+                String linea = e.getId() + "," + e.getNombre() + "," + e.getApellido() + "," + e.getDepart();
+                writer.println(linea);
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al guardar el archivo CSV: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     public static void ordenarListaEmpleados(List<Employees> empleados, String criterio) {
-        if (empleados == null || empleados.isEmpty()) return;
+        if (empleados == null || empleados.isEmpty()) {
+            return;
+        }
 
         switch (criterio) {
             case "ID":
